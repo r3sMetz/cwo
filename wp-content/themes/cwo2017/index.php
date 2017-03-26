@@ -1,2 +1,2 @@
 <?php
-   //Index of death!
+   //Index of death
