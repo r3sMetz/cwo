@@ -7,4 +7,7 @@
     <? wp_head();?>
 </head>
 <body>
+<? if(is_front_page()):?>
+<div id="fullpage">
+<?php endif;?>
 

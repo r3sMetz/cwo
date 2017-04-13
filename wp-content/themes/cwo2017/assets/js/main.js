@@ -1,7 +1,10 @@
 var main = (function(){
     function setup(){
         //Hello, im there!
-        console.log("main.js running")
+        console.log("main.js running");
+
+        //FullPage
+        $('#fullpage').fullpage();
     }
 
     return {

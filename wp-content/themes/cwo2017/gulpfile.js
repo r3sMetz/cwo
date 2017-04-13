@@ -16,8 +16,9 @@ var paths = {
     scripts: ['assets/js/*.js'],
     plugins: [
         'bower_components/jquery/dist/jquery.js',
+        'bower_components/fullpage.js/jquery.fullPage.js'
     ],
-    css : []
+    css : ['bower_components/fullpage.js/jquery.fullPage.css']
 };
 
 gulp.task('sass', function () {
