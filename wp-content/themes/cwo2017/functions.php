@@ -1,5 +1,6 @@
 <?php
     //Global Helpers
+    require('includes/helper/global_helper.php');
 
     //Special Helpers
 
