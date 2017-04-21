@@ -1,4 +1,4 @@
-<header class="front-page_header section active">
+<header class="section front-page_header active">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">

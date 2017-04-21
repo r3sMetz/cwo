@@ -1,0 +1,1 @@
+<div class="section front-page_footer"></div>
