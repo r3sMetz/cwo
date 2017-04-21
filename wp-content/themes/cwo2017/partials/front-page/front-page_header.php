@@ -7,8 +7,11 @@
 		</div>
 
 		<div class="row">
-            <div class="col-md-12">
+            <div class="col-md-5">
                 <img class="front-page_header_welcome" src="<?cwo_theImagePath('welcome.png');?>" alt="CWO">
+            </div>
+            <div class="col-md-7">
+
             </div>
         </div>
 	</div>
