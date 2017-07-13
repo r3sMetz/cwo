@@ -16,6 +16,7 @@
   "author": "wp-includes",
   "license": "ISC",
   "devDependencies": {
+    "browser-sync": "^2.18.12",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-concat": "^2.6.1",
@@ -24,5 +25,8 @@
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^2.1.2",
     "gulp-watch": "^4.3.11"
+  },
+  "dependencies": {
+    "gulp-clean-css": "^3.6.0"
   }
 }
