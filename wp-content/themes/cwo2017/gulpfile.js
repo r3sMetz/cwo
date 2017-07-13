@@ -25,7 +25,7 @@ var paths = {
 gulp.task('serve',function() {
 
     browserSync.init({
-        proxy  : 'tutorial',
+        proxy  : 'cwo',
         notify : false
     });
 
