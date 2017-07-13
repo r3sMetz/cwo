@@ -1,5 +1,6 @@
 .idea/
-node_modules/
+.indea/*
 ARCHIVE/
-**/.*
-!.gitignore
+.htaccess
+node_modules
+bower_components
