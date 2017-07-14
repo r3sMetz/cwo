@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'Demon';
+  src:
+       url('fonts/demon/DemonLetter.eot'), /* IE9 Compat Modes */
+       url('fonts/demon/DemonLetter.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/demon/DemonLetter.woff') format('woff'), /* Pretty Modern Browsers */
+       url('fonts/demon/DemonLetter.ttf')  format('truetype'); /* Safari, Android, iOS */
+   font-style: normal;
+}
+
+@font-face {
+  font-family: 'font_regular';
+  src:
+        url('fonts/regular/myriad_regular.eot'), /* IE9 Compat Modes */
+       url('fonts/regular/myriad_regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/regular/myriad_regular.woff') format('woff'), /* Pretty Modern Browsers */
+       url('fonts/regular/myriad_regular.ttf')  format('truetype'); /* Safari, Android, iOS */
+   font-style: normal;
+}
+
+@font-face {
+  font-family: 'font_bold';
+  src:
+       url('fonts/bold/myriad_bold.eot'), /* IE9 Compat Modes */
+       url('fonts/bold/myriad_bold.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/bold/myriad_bold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('fonts/bold/myriad_bold.ttf')  format('truetype'); /* Safari, Android, iOS */
+  font-style: normal;
+}
