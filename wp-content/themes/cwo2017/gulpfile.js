@@ -8,7 +8,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var cleanCss = require('gulp-clean-css');
 var livereload = require('gulp-livereload');
 var uglify = require('gulp-uglify');
-var browserSync = require('browser-sync').create('test');
+var browserSync = require('browser-sync').create();
 
 
 var paths = {
@@ -16,7 +16,7 @@ var paths = {
     php: '**/*.php',
     scripts: ['assets/js/*.js'],
     plugins: [
-        'bower_components/jquery/dist/jquery.js',
+        'bower_components/jquery/dist/jquery.js'
     ],
     css : []
 };

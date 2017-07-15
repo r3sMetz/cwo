@@ -6,6 +6,6 @@
     <title><?bloginfo('name');?></title>
     <? wp_head();?>
 </head>
-<body>
+<body class="bg-black">
 
 

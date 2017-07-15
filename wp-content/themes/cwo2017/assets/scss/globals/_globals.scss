@@ -1,16 +1,29 @@
 //Global Elements
-body, html {
-  background-color: black;
-  color: $color-white;
-  font-family: $font_regular;
-}
-
 .container {
   max-width: 980px;
 }
 
 //Images
-img {
+img.maxImage {
   max-width: 100%;
   height: auto;
 }
+
+//Backgrounds
+.bg-black {
+  background-color: $color-black;
+}
+
+.bg-white {
+  background-color: $color-white;
+}
+
+.bg-red {
+  background-color: $color-lightRed;
+}
+
+.bg-horned {
+
+}
+
+

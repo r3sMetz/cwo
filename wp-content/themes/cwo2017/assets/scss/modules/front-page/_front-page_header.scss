@@ -1,0 +1,19 @@
+.front-page_header {
+  &_top {
+    padding:  12*$gap-std 0;
+    background-image: url('../img/header_top.jpg');
+    background-size: cover;
+    background-position: center center;
+  }
+
+  &_bottom {
+    .next_event {
+      padding-top: $gap-std*2;
+      padding-bottom: $gap-std*2;
+
+      h3 {
+        margin: $gap-std*3 0;
+      }
+    }
+  }
+}
