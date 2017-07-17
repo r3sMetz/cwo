@@ -1,0 +1,83 @@
+//Default Mixin for Breakpoint
+@mixin breakpoint($width:$screen-md,$minOrMax:'min-width') {
+  @media screen and ($minOrMax : $width) {
+    @content;
+  }
+}
+
+//Default Mixin for Orientation
+@mixin orientation($orientaion) {
+  @media screen and (orientation : $orientaion) {
+    @content;
+  }
+}
+
+//Margin (Top or Bottom) not for Last-Child
+@mixin notForLastChild($direction:'bottom'){
+  &:last-child {
+    @if$direction=='top'{
+      margin-top: 0;
+    }
+    @else {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@mixin noPseudoClasses($link-color) {
+  &:hover, &:active, &:visited, &:focus {
+    color: $link-color;
+    outline: none;
+    border: 0;
+    text-decoration: none;
+  }
+}
+
+//Show Hover only on non-mobile devices
+@mixin noTouchHover {
+  @include breakpoint {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+//One Property - Different Breakpoints
+@mixin propertyBreakpoint($property,$std,$sm,$md,$lg,$xl) {
+  #{$property} : $std;
+  @if $std != false {
+    #{$property} : $std;
+  }
+  @if $sm != false {
+    @include breakpoint($screen-sm) {
+      #{$property} : $sm;
+    }
+  }
+
+  @if $md != false {
+    @include breakpoint($screen-md) {
+      #{$property} : $md;
+    }
+  }
+
+  @if $lg != false {
+    @include breakpoint($screen-lg) {
+      #{$property} : $lg;
+    }
+  }
+
+  @if $xl != false {
+    @include breakpoint($screen-xl) {
+      #{$property} : $xl;
+    }
+  }
+}
+
+//Mixin for Slider-Nav-Buttons (Mobile sizing)
+@mixin sliderNavWidth($property){
+  #{$property} : 30px;
+
+  @include breakpoint($screen-lg) {
+      #{$property} : 20px;
+  }
+}

@@ -14,7 +14,7 @@
 	<div class="front-page_header_bottom">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-3 col-sm-offset-9 bg-red next_event text-center">
+				<div class="col-sm-3 col-sm-offset-9 bg-red bg-horned next_event text-center">
 					<p class="demonBold">Samstag, 18.02 2017</p>
 					<h3 class="demonHead color-black text-uppercase">Steel Crusade 32</h3>
 					<p>Die Celtic Warriors Otzenhausen<br/>präsenieren das 32 Steel Crusade</p>
