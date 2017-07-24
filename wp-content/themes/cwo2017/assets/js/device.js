@@ -8,20 +8,31 @@ var device = (function () {
         return mobileExp.test(navigator.userAgent);
     }
 
+    function isPhone(){
+        return getDeviceWidth() < screen.sm && isMobile()
+    }
+
+    function isTablet(){
+        return getDeviceWidth() < screen.lg && getDeviceWidth() >= screen.sm &&  isMobile()
+    }
+
+    function isDesktop(){
+        return getDeviceWidth() >= screen.lg && isMobile === false;
+    }
 
     /**
      * @Desc Disables/Enables Mobile Touch Scrolling
      */
     function toggleScrollability(control) {
         //Disable
-        if (control == 0) {
+        if (control === 0) {
             document.ontouchmove = function (e) {
                 e.preventDefault();
             };
         }
 
         //Enable
-        else if (control == 1) {
+        else if (control === 1) {
             document.ontouchmove = function (e) {
                 return true;
             };
@@ -59,6 +70,32 @@ var device = (function () {
 
 
     /**
+     * @Desc Get (current) Device Width
+     */
+     function getDeviceWidth(){
+        return window.innerWidth;
+     }
+
+     /**
+     * @Desc Get (current) Device Height
+     */
+     function getDeviceHeight(){
+        return window.innerHeight;
+     }
+
+
+    /**
+     * @Desc Checks if Browsers JS supports FileAPI
+     */
+     function fileAPI(){
+        return 'File'       in window &&
+               'FileReader' in window &&
+               'FileList'   in window &&
+               'Blob'       in window;
+     }
+
+
+    /**
      * @Desc: Object for Bootstrap(Version) Screen-Sizes
      */
     var screen = {
@@ -74,7 +111,13 @@ var device = (function () {
     return {
         screen              : screen,
         isMobile            : isMobile(),
+        isPhone             : isPhone(),
+        isTablet            : isTablet(),
+        isDesktop           : isDesktop(),
         toggleScrollability : toggleScrollability,
-        browser             : getBrowser()
+        browser             : getBrowser(),
+        height              : getDeviceHeight,
+        width               : getDeviceWidth,
+        supportsFileAPI     : fileAPI()
     }
 })();

@@ -1,6 +1,6 @@
 <div class="front-page_header pos-rel">
 	<!-- Header Top -->
-	<div class="front-page_header_top">
+	<div class="front-page_header_top full_height_element">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-6 front-page_header_top_welcome">
