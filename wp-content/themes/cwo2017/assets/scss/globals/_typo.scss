@@ -32,6 +32,13 @@ h1,h2,h3,h4,h5 {
   font-size: $font-size-bold;
 }
 
+.demonNormal{
+  position: relative;
+  top: 6px;
+  font-family: $font-demon;
+  font-size: 12px;
+}
+
 //Text Colors
 .color{
   &-black {color: $color-black;}

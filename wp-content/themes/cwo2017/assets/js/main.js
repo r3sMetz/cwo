@@ -4,7 +4,7 @@ var main = (function(){
         console.log("main.js running");
 
         //SetAllFullHeight Elements to FullHeight
-        fullHeight.build();
+        //fullHeight.build();
     }
 
     return {

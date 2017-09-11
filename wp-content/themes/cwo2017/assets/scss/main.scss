@@ -6,11 +6,15 @@
 /* Variablen */
 @import "globals/variables";
 @import "globals/mixin";
+@import "globals/burger_nav_mixin";
 
 /* Globals */
 @import "globals/globals";
 @import "globals/fonts";
 @import "globals/typo";
+
+/* Global Modules */
+@import "modules/cwo_navbar";
 
 /* FrontPage */
 @import "modules/front-page/front-page_header";

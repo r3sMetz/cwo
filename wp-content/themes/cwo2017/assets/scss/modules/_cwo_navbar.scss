@@ -1,0 +1,16 @@
+.cwo_navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 15px;
+  background: transparent;
+  width: 100%;
+
+  img {
+    max-width: 150px;
+    @include breakpoint() {
+      max-width: 345px;
+    }
+    height: auto;
+  }
+}
