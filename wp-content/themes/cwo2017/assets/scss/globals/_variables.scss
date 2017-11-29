@@ -1,7 +1,10 @@
 /* Fonts */
-$font-demon   : 'Demon', 'Helvetica', sans-serif;
-$font-regular : 'font_regular', 'Helvetica', sans-serif;
-$font-bold    : 'font_bold', 'Helvetica', sans-serif;
+$font-demon     : 'Demon', 'Helvetica', sans-serif;
+$font-heavy     : 'Heavy', 'Helvetica', sans-serif;
+$font-lord      : 'Lord', 'Helvetica', sans-serif;
+$font-barbarian : 'Barbarian', 'Helvetica', sans-serif;
+$font-regular   : 'font_regular', 'Helvetica', sans-serif;
+$font-bold      : 'font_bold', 'Helvetica', sans-serif;
 
 /* Font Sizing */
 $font-size-regular  : 14px;
@@ -23,3 +26,9 @@ $transition-long    : 800ms;
 /* Sizes + Gaps */
 $padding-std : 15px;
 $gap-std     : 1rem;
+$gap-md      : 2rem;
+$gap-lg      : 3rem;
+
+/* Containers */
+$container-max: 1080px;
+$fullPage-max : 1920px;

@@ -9,6 +9,46 @@
 }
 
 @font-face {
+  font-family: 'Heavy';
+  src:
+       url('fonts/heavy/heavy_metal.eot'), /* IE9 Compat Modes */
+       url('fonts/heavy/heavy_metal.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/heavy/heavy_metal.woff') format('woff'), /* Pretty Modern Browsers */
+       url('fonts/heavy/heavy_metal.ttf')  format('truetype'); /* Safari, Android, iOS */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Barbarian';
+  src:
+       url('fonts/barbarian/barbarian.eot'), /* IE9 Compat Modes */
+       url('fonts/barbarian/barbarian.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/barbarian/barbarian.woff') format('woff'), /* Pretty Modern Browsers */
+       url('fonts/barbarian/barbarian.ttf')  format('truetype'); /* Safari, Android, iOS */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lord';
+  src:
+       url('fonts/lord/metal_lord.eot'), /* IE9 Compat Modes */
+       url('fonts/lord/metal_lord.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/lord/metal_lord.woff') format('woff'), /* Pretty Modern Browsers */
+       url('fonts/lord/metal_lord.ttf')  format('truetype'); /* Safari, Android, iOS */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'font_bold';
+  src:
+       url('fonts/bold/myriad_bold.eot'), /* IE9 Compat Modes */
+       url('fonts/bold/myriad_bold.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/bold/myriad_bold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('fonts/bold/myriad_bold.ttf')  format('truetype'); /* Safari, Android, iOS */
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'font_regular';
   src:
         url('fonts/regular/myriad_regular.eot'), /* IE9 Compat Modes */

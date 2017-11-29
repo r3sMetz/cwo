@@ -1,4 +1,7 @@
 <?php
+    //Constants
+    require('includes/constants.php');
+
     //Global Helpers
     require('includes/helper/global_helper.php');
 

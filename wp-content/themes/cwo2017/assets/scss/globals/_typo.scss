@@ -12,12 +12,6 @@ h1,h2,h3,h4,h5 {
   padding: 0;
   font-size: $font-size-regular;
 }
-.demonHead {
-  position: relative;
-  top: 6px;
-  font-family: $font-demon;
-  font-size: $font-size-headline;
-}
 
 //Text (Family + Sizing)
 .bolded {
@@ -25,18 +19,52 @@ h1,h2,h3,h4,h5 {
   font-size: $font-size-bold;
 }
 
-.demonBold {
-  position: relative;
-  top: 6px;
-  font-family: $font-demon;
-  font-size: $font-size-bold;
+.font{
+  &-std {
+    font-family: $font-regular !important;
+  }
+  &-bold {
+    font-family: $font-bold !important;
+  }
+  &-demon {
+    font-family: $font-demon !important;
+  }
+  &-lord {
+    font-family: $font-lord !important;
+  }
+  &-heavy {
+    font-family: $font-heavy !important;
+  }
+  &-barbarian {
+    font-family: $font-barbarian !important;
+  }
 }
 
-.demonNormal{
-  position: relative;
-  top: 6px;
-  font-family: $font-demon;
-  font-size: 12px;
+.fontsize{
+  &-std {
+    font-size: $font-size-regular;
+  }
+  &-bold {
+    font-size: $font-size-bold;
+  }
+  &-headline {
+    font-size: $font-size-headline;
+  }
+  &-headline-big {
+    font-size: $font-size-headline*1.5;
+  }
+}
+
+.letter-space{
+  &-sm{
+    letter-spacing: 1px;
+  }
+  &-md {
+    letter-spacing: 2px;
+  }
+  &-lg {
+    letter-spacing: 3px;
+  }
 }
 
 //Text Colors

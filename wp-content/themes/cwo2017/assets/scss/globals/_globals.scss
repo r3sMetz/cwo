@@ -1,10 +1,18 @@
 //Global Elements
 .container {
-  max-width: 980px;
+  max-width: $container-max;
 }
 
+//Positions
 .pos-rel {
   position: relative;
+}
+
+//Displays
+.dp{
+  &-inline-block {
+    display: inline-block;
+  }
 }
 
 //Images
@@ -12,6 +20,13 @@ img.maxImage {
   max-width: 100%;
   height: auto;
 }
+
+//Containers
+.fullPageWrapper {
+  max-width: $fullPage-max;
+  margin: 0 auto;
+}
+
 
 //Backgrounds
 .bg-black {
@@ -30,9 +45,14 @@ img.maxImage {
 
 }
 
-.fullPageWrapper {
-  max-width: 1920px;
-  margin: 0 auto;
+.bg{
+  &-std {
+    background-size: cover;
+    background-position: center;
+  }
+  &-repeat{
+    background-repeat: repeat;
+  }
 }
 
 

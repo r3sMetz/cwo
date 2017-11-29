@@ -1,18 +1,46 @@
-.front-page_header{
+.front-page_header {
+  /** The Header **/
   &_top {
     height: 50vh;
-    background-image: url('../img/header_top.jpg');
-    background-size: cover;
-    background-position: center;
-
-
-    @include orientation(landscape){
+    background-image: url('../img/jpg/header_top.jpg');
+    display: flex;
+    align-items: center;
+    @include orientation(landscape) {
       height: 75vh;
     }
-    @include breakpoint($screen-sm){
-      @include orientation(landscape){
+    @include breakpoint($screen-sm) {
+      @include orientation(landscape) {
         height: 100vh;
       }
     }
   }
+  /** Headline **/
+  &_headline {
+    @include breakpoint{
+      text-align: left !important;
+    }
+    h1 {
+      @include breakpoint {
+        font-size: 150%;
+      }
+      span.da_head {
+        font-size: 260%;
+        @include breakpoint {
+          font-size: 305%;
+          left: -5px;
+          margin-bottom: 5px;
+        }
+      }
+
+      span:last-child{
+        @include breakpoint{
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+  &_content {
+    background: green;
+  }
+  /** Single Next Event **/
 }
