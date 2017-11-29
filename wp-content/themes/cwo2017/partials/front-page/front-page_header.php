@@ -5,7 +5,7 @@
             <div class="row">
                 <!-- Headline -->
                 <div class="col-sm-4 col-md-6 text-center front-page_header_headline">
-                    <h1><span class="font-lord da_head pos-rel dp-inline-block">Willkommen</span><br/><span>Bei Test Celtic Warriors Otzenhausen</span></h1>
+                    <h1><span class="font-lord da_head pos-rel dp-inline-block">Willkommen</span><br/><span>Bei den Celtic Warriors Otzenhausen</span></h1>
                 </div>
                 <!-- Images -->
                 <div class="col-sm-4 col-md-3 hidden-xs">Image</div>
