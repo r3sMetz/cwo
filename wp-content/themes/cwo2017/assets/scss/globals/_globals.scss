@@ -41,17 +41,15 @@ img.maxImage {
   background-color: $color-lightRed;
 }
 
-.bg-horned {
-
+.bg-pommes {
+  background-image: url('../img/png/bg_pommes.png');
+  background-size: 100%;
 }
 
 .bg{
   &-std {
     background-size: cover;
     background-position: center;
-  }
-  &-repeat{
-    background-repeat: repeat;
   }
 }
 

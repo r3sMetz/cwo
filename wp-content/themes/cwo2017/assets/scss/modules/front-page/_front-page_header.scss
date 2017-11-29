@@ -1,4 +1,4 @@
-.front-page_header {
+.front-page_header{
   /** The Header **/
   &_top {
     height: 50vh;
@@ -39,8 +39,8 @@
       }
     }
   }
-  &_content {
-    background: green;
-  }
   /** Single Next Event **/
+  &_next_event{
+    padding: 30px 15px 15px 15px;
+  }
 }

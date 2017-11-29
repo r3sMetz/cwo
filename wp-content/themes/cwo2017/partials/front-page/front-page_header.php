@@ -4,14 +4,14 @@
         <div class="container">
             <div class="row">
                 <!-- Headline -->
-                <div class="col-sm-4 col-md-6 text-center front-page_header_headline">
+                <div class="col-sm-4 col-md-5 text-center front-page_header_headline">
                     <h1><span class="font-lord da_head pos-rel dp-inline-block">Willkommen</span><br/><span>Bei den Celtic Warriors Otzenhausen</span></h1>
                 </div>
                 <!-- Images -->
                 <div class="col-sm-4 col-md-3 hidden-xs">Image</div>
                 <!-- Next Event (Desktop)  -->
-                <div class="col-sm-4 col-md-3 hidden-xs">
-                    <div class="front-pageHeader_nextEvent desktop bg-redHorn text-center">
+                <div class="col-sm-4 col-md-4 hidden-xs">
+                    <div class="front-page_header_next_event desktop bg-pommes text-center">
                         <h2 class="font-demon fontsize-headline-big color-black">Steel Crusade 31</h2>
                         Die Celtic Warriors Otzenhausen<br/>
                         präsentieren das 31. Steelcursade:
