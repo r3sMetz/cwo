@@ -9,9 +9,12 @@
 @import "globals/burger_nav_mixin";
 
 /* Globals */
+@import "globals/normalize";
 @import "globals/globals";
 @import "globals/fonts";
 @import "globals/typo";
+@import "globals/gapping";
+@import "globals/lists";
 
 /* Global Modules */
 @import "modules/cwo_navbar";

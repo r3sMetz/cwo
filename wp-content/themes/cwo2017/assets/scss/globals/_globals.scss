@@ -43,7 +43,9 @@ img.maxImage {
 
 .bg-pommes {
   background-image: url('../img/png/bg_pommes.png');
-  background-size: 100%;
+  @include breakpoint($screen-sm){
+    background-size: 100%;
+  }
 }
 
 .bg{

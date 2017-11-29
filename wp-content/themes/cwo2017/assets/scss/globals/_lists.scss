@@ -1,0 +1,20 @@
+.list{
+  &-dashed{
+    li{
+      &:not(:last-child){
+        margin-bottom: $gap-std;
+      }
+      &:before,&:after{
+        content: "-";
+        font-size: 125%;
+        line-height: 1;
+      }
+      &:before{
+        margin-right: 5px;
+      }
+      &:after {
+        margin-left: 5px;
+      }
+    }
+  }
+}

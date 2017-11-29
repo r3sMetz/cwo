@@ -28,6 +28,7 @@ h1,h2,h3,h4,h5 {
   }
   &-demon {
     font-family: $font-demon !important;
+    position: relative; top: 6px;
   }
   &-lord {
     font-family: $font-lord !important;
