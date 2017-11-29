@@ -14,12 +14,20 @@
       }
     }
   }
+
+  &_content_wrapper{
+    display: flex;
+    align-items: center;
+  }
   /** Headline **/
-  &_headline {
+  &_headline {;
     @include breakpoint{
       text-align: left !important;
     }
     h1 {
+      @include breakpoint($screen-xs,'max-width') {
+        font-size: 135%;
+      }
       @include breakpoint {
         font-size: 150%;
       }
@@ -36,6 +44,15 @@
         @include breakpoint{
           text-transform: uppercase;
         }
+      }
+    }
+  }
+  /** Images **/
+  &_images {
+    img {
+      border-radius: 4px;
+      &:first-child{
+        margin-bottom: $gap-md;
       }
     }
   }

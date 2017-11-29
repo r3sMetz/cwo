@@ -2,13 +2,16 @@
     <div class="front-page_header">
         <div class="front-page_header_top bg-std">
             <div class="container">
-                <div class="row">
+                <div class="row front-page_header_content_wrapper">
                     <!-- Headline -->
                     <div class="col-sm-4 col-md-5 text-center front-page_header_headline">
                         <h1><span class="font-lord da_head pos-rel dp-inline-block">Willkommen</span><br/><span>Bei den Celtic Warriors Otzenhausen</span></h1>
                     </div>
                     <!-- Images -->
-                    <div class="col-sm-4 col-md-3 hidden-xs">Image</div>
+                    <div class="col-sm-4 col-md-3 hidden-xs front-page_header_images">
+                        <img class="maxImage" src="<?php echo CWO_PNG_URI;?>/header_bild_1.png" alt="CWO">
+                        <img class="maxImage" src="<?php echo CWO_PNG_URI;?>/header_bild_2.png" alt="CWO">
+                    </div>
                     <!-- Next Event (Desktop)  -->
                     <div class="col-sm-4 col-md-4 hidden-xs">
                         <div class="front-page_header_next_event desktop bg-pommes text-center puffer-both-xl">
