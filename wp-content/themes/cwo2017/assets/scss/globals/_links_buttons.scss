@@ -1,0 +1,19 @@
+.cwo-btn{
+  transition: color $transition-short, background-color $transition-short;
+  display: inline-block;
+  text-align: center;
+  padding: $gap-std $gap-std $gap-std/2 $gap-std;
+  font-family: $font-demon;
+  &-red{
+    background-color: $color-lightRed;
+    color: $color-white;
+    @include noTouchHover{
+      color: $color-white;
+      background-color: $color-darkRed;
+    }
+    @include noPseudoClasses($color-white);
+  }
+  &.fullWidth{
+    width: 100%;
+  }
+}

@@ -5,8 +5,11 @@
     /*** Navbar ***/
     get_template_part('modules/navbar');
 
-	/** Header * */
+	/** Header ***/
 	get_template_part('partials/front-page/front-page_header');
+
+	/** History  ***/
+	get_template_part('partials/front-page/front-page_history');
 
     /** HTML End **/
     get_template_part('modules/html_end');

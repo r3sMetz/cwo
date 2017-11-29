@@ -1,0 +1,16 @@
+.front-page_history{
+  @include breakpoint($screen-sm){
+    background-image: url('../img/png/bg_history.png');
+  }
+   &_middle {
+    @include breakpoint() {
+      padding: 0 60px;
+    }
+   }
+   .row {
+    @include breakpoint() {
+      display: flex;
+      align-items: center;
+    }
+   }
+}

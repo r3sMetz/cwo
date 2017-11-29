@@ -15,10 +15,12 @@
 @import "globals/typo";
 @import "globals/gapping";
 @import "globals/lists";
+@import "globals/links_buttons";
 
 /* Global Modules */
 @import "modules/cwo_navbar";
 
 /* FrontPage */
 @import "modules/front-page/front-page_header";
+@import "modules/front-page/front-page_history";
 
