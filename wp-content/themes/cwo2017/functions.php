@@ -11,8 +11,10 @@
     require('includes/admin_hides.php');
 
     //Menues
+    require('includes/menues.php');
 
     //Posttypes
+    require('includes/post_types/veranstaltungen.php');
 
     //Theme Setup
     require('includes/theme-setup.php');

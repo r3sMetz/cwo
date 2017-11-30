@@ -55,4 +55,22 @@ img.maxImage {
   }
 }
 
-
+//Dashed
+.dashed-top-left {
+  position: relative;
+  &:before {
+    content: "";
+    width: 2rem;
+    height: 2px;
+    background-color: $color-white;
+    position: absolute;
+    top: -$gap-md;
+    left: 0;
+  }
+  &.half-width:before{
+    width: 100%;
+    @include breakpoint{
+      width: 40%;
+    }
+  }
+}

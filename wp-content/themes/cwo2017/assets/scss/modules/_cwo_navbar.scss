@@ -5,11 +5,17 @@
   padding-top: 15px;
   background: transparent;
   width: 100%;
+  z-index: 10;
+  transition: background-color $transition-short;
+
+  &.scrolled{
+    background-color: rgba($color-black,.95);
+  }
 
   img {
-    max-width: 150px;
+    max-width: 120px;
     @include breakpoint() {
-      max-width: 345px;
+      max-width: 200px;
     }
     height: auto;
   }

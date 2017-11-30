@@ -7,5 +7,6 @@
     <? wp_head();?>
 </head>
 <body class="bg-black">
+<div id="fadeOverlay"></div>
 
 

@@ -1,4 +1,7 @@
 .front-page_hq{
+  @include breakpoint {
+    background-image: url('../img/png/bg_vorstand.png');
+  }
   //Mobile
   .the_hq {
     img {
@@ -33,7 +36,7 @@
       position: absolute;
       width: 100%;
       left: 0;
-      padding: 15px 30px;
+      padding: 30px 30px 15px 30px;
       bottom: 0;
       background-color: rgba($color-black,.25);
        @media screen and (min-width: $screen-xs) and (max-width: $screen-sm){

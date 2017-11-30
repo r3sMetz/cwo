@@ -1,4 +1,4 @@
-<div class="cwo_navbar hidden">
+<div class="cwo_navbar puffer-both-md">
 	<div class="fullPageWrapper">
 		<div class="container">
 			<div class="row">

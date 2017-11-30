@@ -3,8 +3,8 @@ var main = (function(){
         //Hello, im there!
         console.log("main.js running");
 
-        //SetAllFullHeight Elements to FullHeight
-        //fullHeight.build();
+        //Scroll Events
+        events.scroll();
     }
 
     return {
@@ -12,3 +12,4 @@ var main = (function(){
     }
 })();
 $(document).ready(main.setup);
+window.onpageshow = fadeOverlay.pageShow;

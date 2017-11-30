@@ -10,7 +10,16 @@ var events = (function(){
     function setEventHandlerForClick(){}
 
     function setEventHandlerForScroll(){
+        $(window).on('scroll',function(){
+            console.log("Scroll");
+            var pos    = $(window).scrollTop(),
+                navbar = $('.cwo_navbar');
 
+            if(pos > 0)
+                navbar.addClass('scrolled');
+            else
+                navbar.removeClass('scrolled');
+        })
     }
 
 

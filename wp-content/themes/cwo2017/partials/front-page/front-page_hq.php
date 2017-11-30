@@ -13,28 +13,28 @@
 					<div class="col-md-3 col-sm-6 text-center pos-rel">
 						<img src="<?php echo CWO_JPG_URI;?>/vorstand_dummy.jpg" alt="CWO - Vorstand">
 						<div class="single_hq_content text-left">
-							<h3 class="font-demon fontsize-headline gap-bottom-sm">Position</h3>
+							<h3 class="font-demon fontsize-headline gap-bottom-sm dashed-top-left">Position</h3>
 							<p>James Hetfield</p>
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-6 text-center pos-rel">
 						<img src="<?php echo CWO_JPG_URI;?>/vorstand_dummy.jpg" alt="CWO - Vorstand">
 						<div class="single_hq_content text-left">
-							<h3 class="font-demon fontsize-headline gap-bottom-sm">Position</h3>
+							<h3 class="font-demon fontsize-headline gap-bottom-sm dashed-top-left">Position</h3>
 							<p>James Hetfield</p>
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-6 text-center pos-rel">
 						<img src="<?php echo CWO_JPG_URI;?>/vorstand_dummy.jpg" alt="CWO - Vorstand">
 						<div class="single_hq_content text-left">
-							<h3 class="font-demon fontsize-headline gap-bottom-sm">Position</h3>
+							<h3 class="font-demon fontsize-headline gap-bottom-sm dashed-top-left">Position</h3>
 							<p>James Hetfield</p>
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-6 text-center pos-rel">
 						<img src="<?php echo CWO_JPG_URI;?>/vorstand_dummy.jpg" alt="CWO - Vorstand">
 						<div class="single_hq_content text-left">
-							<h3 class="font-demon fontsize-headline gap-bottom-sm">Position</h3>
+							<h3 class="font-demon fontsize-headline gap-bottom-sm dashed-top-left">Position</h3>
 							<p>James Hetfield</p>
 						</div>
 					</div>
@@ -43,28 +43,28 @@
 					<div class="col-md-3 col-sm-6 text-center pos-rel">
 						<img src="<?php echo CWO_JPG_URI;?>/vorstand_dummy.jpg" alt="CWO - Vorstand">
 						<div class="single_hq_content text-left">
-							<h3 class="font-demon fontsize-headline gap-bottom-sm">Position</h3>
+							<h3 class="font-demon fontsize-headline gap-bottom-sm dashed-top-left">Position</h3>
 							<p>James Hetfield</p>
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-6 text-center pos-rel">
 						<img src="<?php echo CWO_JPG_URI;?>/vorstand_dummy.jpg" alt="CWO - Vorstand">
 						<div class="single_hq_content text-left">
-							<h3 class="font-demon fontsize-headline gap-bottom-sm">Position</h3>
+							<h3 class="font-demon fontsize-headline gap-bottom-sm dashed-top-left">Position</h3>
 							<p>James Hetfield</p>
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-6 text-center pos-rel">
 						<img src="<?php echo CWO_JPG_URI;?>/vorstand_dummy.jpg" alt="CWO - Vorstand">
 						<div class="single_hq_content text-left">
-							<h3 class="font-demon fontsize-headline gap-bottom-sm">Position</h3>
+							<h3 class="font-demon fontsize-headline gap-bottom-sm dashed-top-left">Position</h3>
 							<p>James Hetfield</p>
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-6 text-center pos-rel">
 						<img src="<?php echo CWO_JPG_URI;?>/vorstand_dummy.jpg" alt="CWO - Vorstand">
 						<div class="single_hq_content text-left">
-							<h3 class="font-demon fontsize-headline gap-bottom-sm">Position</h3>
+							<h3 class="font-demon fontsize-headline gap-bottom-sm dashed-top-left">Position</h3>
 							<p>James Hetfield</p>
 						</div>
 					</div>
