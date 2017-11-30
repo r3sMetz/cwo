@@ -48,6 +48,16 @@
       margin-bottom: $gap-xl;
     }
   }
+  &-mobile-bottom{
+    @include breakpoint($screen-md,'max-width') {
+      &-md {
+        margin-bottom: $gap-md
+      }
+      &-lg {
+        margin-bottom: $gap-lg
+      }
+    }
+  }
 }
 
 .puffer{

@@ -3,8 +3,27 @@
     background-image: url('../img/png/bg_history.png');
   }
    &_middle {
+    @include breakpoint($screen-md,'max-width'){
+      h2{
+        @include buildDashedHeadline;
+      }
+    }
     @include breakpoint() {
       padding: 0 60px;
+      height: 100%;
+      .v-line {
+        height: 350px;
+        margin: 0 auto;
+        width: 1px;
+        background-color: $color-white;
+        display: block;
+        &:first-child {
+          margin-bottom: $gap-md;
+        }
+        &:last-child {
+          margin-top: $gap-md;
+        }
+      }
     }
    }
    .row {

@@ -12,9 +12,12 @@
 					<img class="maxImage" src="<?php echo CWO_PNG_URI;?>/bildvorschau_3.png" alt="CWO - Bildergallerie">
 				</div>
 				<!-- Middle -->
-				<div class="col-md-2s front-page_history_middle">
-
-					<h2 class="text-center fontsize-headline font-demon">History</h2>
+				<div class="col-md-2s front-page_history_middle gap-mobile-bottom-lg">
+                    <span class="v-line visible-md visible-lg"></span>
+					<h2 class="text-center fontsize-headline font-demon">
+					    <span class="dashed_line"></span><span class="dashed_text">History</span><span class="dashed_line"></span>
+                    </h2>
+					<span class="v-line visible-md visible-lg"></span>
 				</div>
 				<!-- Text -->
 				<div class="col-md-5">
