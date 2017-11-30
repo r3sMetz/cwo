@@ -1,15 +1,28 @@
 'use strict';
 
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var watch = require('gulp-watch');
-var concat = require('gulp-concat');
-var autoprefixer = require('gulp-autoprefixer');
-var cleanCss = require('gulp-clean-css');
-var livereload = require('gulp-livereload');
-var uglify = require('gulp-uglify');
-var browserSync = require('browser-sync').create();
+/**
+ * raum3 gulpfile - Version Dec 2017 - Bootstrap4 ready -
+ */
 
+var gulp          = require('gulp');
+var sass          = require('gulp-sass');
+var watch         = require('gulp-watch');
+var concat        = require('gulp-concat');
+var autoprefixer  = require('autoprefixer');
+var postcss       = require('gulp-postcss');
+var flexbugsfixes = require('postcss-flexbugs-fixes');
+var cleanCss      = require('gulp-clean-css');
+var livereload    = require('gulp-livereload');
+var uglify        = require('gulp-uglify');
+var browserSync   = require('browser-sync').create();
+
+
+var processors = [
+    flexbugsfixes,
+    autoprefixer({
+        browsers: ['last 2 versions','> 0.1%']
+    })
+];
 
 var paths = {
     scss: 'assets/scss/**/*.scss',
@@ -40,9 +53,7 @@ gulp.task('sass',function(){
     gulp.src('assets/scss/main.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(concat('styles.css'))
-        .pipe(autoprefixer({
-            browsers: '> 5%'
-        }))
+        .pipe(postcss(processors))
         .pipe(cleanCss({compatibility: 'ie8'}))
         .pipe(gulp.dest('assets/css'))
 });
@@ -62,9 +73,7 @@ gulp.task('plugins', function(){
         .pipe(gulp.dest('assets/js/build'));
     gulp.src(paths.css)
         .pipe(concat('plugins.css'))
-        .pipe(autoprefixer({
-            browsers: '> 5%'
-        }))
+        .pipe(postcss(processors))
         .pipe(cleanCss({compatibility: 'ie8'}))
         .pipe(gulp.dest('assets/css'));
 });
