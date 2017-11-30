@@ -11,5 +11,8 @@
 	/** History  ***/
 	get_template_part('partials/front-page/front-page_history');
 
+	/** HeadQuarter **/
+	get_template_part('partials/front-page/front-page_hq');
+
     /** HTML End **/
     get_template_part('modules/html_end');

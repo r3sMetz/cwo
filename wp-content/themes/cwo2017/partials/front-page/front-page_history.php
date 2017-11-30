@@ -14,7 +14,7 @@
 				<!-- Middle -->
 				<div class="col-md-2s front-page_history_middle gap-mobile-bottom-lg">
                     <span class="v-line visible-md visible-lg"></span>
-					<h2 class="text-center fontsize-headline font-demon">
+					<h2 class="text-center fontsize-headline font-demon padded">
 					    <span class="dashed_line"></span><span class="dashed_text">History</span><span class="dashed_line"></span>
                     </h2>
 					<span class="v-line visible-md visible-lg"></span>

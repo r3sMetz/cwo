@@ -1,0 +1,45 @@
+.front-page_hq{
+  //Mobile
+  .the_hq {
+    img {
+      height: auto;
+      display: block;
+      width: 100%;
+      @media screen and (min-width: $screen-xs) and (max-width: $screen-sm){
+        width: 60%;
+        margin: 0 auto;
+      }
+    }
+    @include breakpoint($screen-md, 'max-width') {
+
+      .col-md-3 {
+        margin-bottom: $gap-md;
+      }
+      .row:last-child {
+        .col-md-3:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    //Desktop
+    @include breakpoint {
+      .row:first-child {
+        margin-bottom: 30px !important;
+      }
+    }
+
+    //All Sizes
+    .single_hq_content{
+      position: absolute;
+      width: 100%;
+      left: 0;
+      padding: 15px 30px;
+      bottom: 0;
+      background-color: rgba($color-black,.25);
+       @media screen and (min-width: $screen-xs) and (max-width: $screen-sm){
+        width: 60%;
+        left: 20%;
+      }
+    }
+  }
+}
