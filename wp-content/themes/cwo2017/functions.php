@@ -15,6 +15,8 @@
 
     //Posttypes
     require('includes/post_types/veranstaltungen.php');
+    require('includes/post_types/galerien.php');
+    require('includes/post_types/mitglieder.php');
 
     //Theme Setup
     require('includes/theme-setup.php');

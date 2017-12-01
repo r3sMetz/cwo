@@ -17,7 +17,8 @@ function add_post_type_veranstaltungen(){
 					//'exclude_from_search' => true,  // you should exclude it from search results
 					//'show_in_nav_menus' => false,  // you shouldn't be able to add it to menus
 					'has_archive' => false,  // it shouldn't have archive page
-					'menu_icon'=>'dashicons-universal-access',
+					'menu_icon'=>'dashicons-calendar-alt',
+					'show_in_rest' => true,
 					'supports'=>array(
 						'title',
 					),
