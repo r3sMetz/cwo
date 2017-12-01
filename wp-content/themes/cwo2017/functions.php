@@ -4,6 +4,7 @@
 
     //Global Helpers
     require('includes/helper/global_helper.php');
+    require('includes/helper/helper_front-page.php');
 
     //Special Helpers
 
