@@ -1,0 +1,26 @@
+.text{
+  //Center
+  &-center{
+    &-xs{
+      text-align: center !important;
+    }
+  }
+
+  //Left
+  &-left{
+    @include breakpoint($screen-sm) {
+      &-sm {
+        text-align: left !important;
+      }
+    }
+  }
+
+  //Right
+  &-right {
+    &-sm {
+      @include breakpoint($screen-sm) {
+        text-align: right !important;
+      }
+    }
+  }
+}
