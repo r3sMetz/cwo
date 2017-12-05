@@ -21,8 +21,10 @@
   /** Headline **/
   &_headline {;
     h1 {
-      @include breakpoint($screen-xs, 'max-width') {
-        font-size: 135%;
+      opacity: .25;
+      font-size: 135%;
+      @include breakpoint($screen-sm){
+        font-size: 200%;
       }
       @include breakpoint {
         font-size: 300%;
