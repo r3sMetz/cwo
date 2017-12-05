@@ -1,6 +1,6 @@
 <div class="fullPageWrapper">
     <div class="front-page_header">
-        <div class="front-page_header_top bg-std" style="<?php echo get_field('hintergrund_header')['url'];?>">
+        <div class="front-page_header_top bg-std bg-dude mobile-bg">
             <div class="container">
                 <div class="row front-page_header_content_wrapper">
                     <!-- Headline -->

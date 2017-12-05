@@ -1,0 +1,53 @@
+.bg {
+  //Sizing
+  &-std {
+    background-size: cover;
+    background-position: center;
+  }
+
+  //Colors & Patterns
+  &-black {
+    background-color: $color-black;
+  }
+
+  &-white {
+    background-color: $color-white;
+  }
+
+  &-red {
+    background-color: $color-lightRed;
+  }
+
+  &-pommes {
+    background-image: url('../img/png/bg_pommes.png');
+    @include breakpoint($screen-sm) {
+      background-size: 100%;
+    }
+  }
+
+  //Images
+  &-dude{
+    &.mobile-bg {
+      background-image: url('../img/jpg/header_top.jpg');
+    }
+    @include breakpoint {
+      background-image: url('../img/jpg/header_top.jpg');
+    }
+  }
+  &-crowd {
+   &.mobile-bg {
+     background-image: url('../img/png/bg_history.png');
+   }
+   @include breakpoint{
+    background-image: url('../img/png/bg_history.png');
+   }
+  }
+  &-fired{
+    &.mobile-bg {
+      background-image: url('../img/png/bg_vorstand.png');
+    }
+    @include breakpoint{
+      background-image: url('../img/png/bg_vorstand.png');
+    }
+  }
+}

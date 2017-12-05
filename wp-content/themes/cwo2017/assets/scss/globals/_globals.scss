@@ -27,34 +27,6 @@ img.maxImage {
   margin: 0 auto;
 }
 
-
-//Backgrounds
-.bg-black {
-  background-color: $color-black;
-}
-
-.bg-white {
-  background-color: $color-white;
-}
-
-.bg-red {
-  background-color: $color-lightRed;
-}
-
-.bg-pommes {
-  background-image: url('../img/png/bg_pommes.png');
-  @include breakpoint($screen-sm){
-    background-size: 100%;
-  }
-}
-
-.bg{
-  &-std {
-    background-size: cover;
-    background-position: center;
-  }
-}
-
 //Header
 .fullHeightHeader{
 
