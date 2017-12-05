@@ -1,4 +1,4 @@
-.front-page_header{
+.front-page_header {
   /** The Header **/
   &_top {
     height: 50vh;
@@ -11,20 +11,24 @@
       @include orientation(landscape) {
         height: 100vh;
       }
+      @media screen and (min-width: 1600px) and (min-height: 2000px) {
+        height: auto;
+        padding: $gap-xl;
+      }
     }
   }
 
-  &_content_wrapper{
+  &_content_wrapper {
     display: flex;
     align-items: center;
   }
   /** Headline **/
   &_headline {;
-    @include breakpoint{
+    @include breakpoint {
       text-align: left !important;
     }
     h1 {
-      @include breakpoint($screen-xs,'max-width') {
+      @include breakpoint($screen-xs, 'max-width') {
         font-size: 135%;
       }
       @include breakpoint {
@@ -32,15 +36,16 @@
       }
       span.da_head {
         font-size: 260%;
+        margin-bottom: 10px;
         @include breakpoint {
           font-size: 305%;
           left: -5px;
-          margin-bottom: 5px;
+          margin-bottom: 15px
         }
       }
 
-      span:last-child{
-        @include breakpoint{
+      span:last-child {
+        @include breakpoint {
           text-transform: uppercase;
         }
       }
@@ -50,13 +55,13 @@
   &_images {
     img {
       border-radius: 4px;
-      &:first-child{
+      &:first-child {
         margin-bottom: $gap-md;
       }
     }
   }
   /** Single Next Event **/
-  &_next_event{
+  &_next_event {
     padding-left: 15px;
     padding-right: 15px;
   }
