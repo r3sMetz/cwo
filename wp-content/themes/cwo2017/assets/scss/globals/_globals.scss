@@ -23,7 +23,8 @@ img.maxImage {
 
 //Containers
 .fullPageWrapper {
-  max-width: $fullPage-max;
+  //max-width: $fullPage-max;
+  width: 100%;
   margin: 0 auto;
 }
 

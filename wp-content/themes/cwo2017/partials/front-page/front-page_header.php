@@ -1,4 +1,4 @@
-<!-- <div class="fullPageWrapper"> -->
+<div class="fullPageWrapper">
     <div class="front-page_header">
         <div class="front-page_header_top bg-std bg-dude mobile-bg">
             <div class="container">
@@ -81,4 +81,4 @@
             </div>
         </div>
     </div>
-<!-- </div> -->
+<</div>
