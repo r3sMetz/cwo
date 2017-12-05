@@ -50,4 +50,12 @@
       background-image: url('../img/png/bg_vorstand.png');
     }
   }
+  &-cleancrowd{
+    &.mobile-bg {
+      background-image: url('../img/png/bg_crowd.png');
+    }
+    @include breakpoint{
+      background-image: url('../img/png/bg_crowd.png');
+    }
+  }
 }
