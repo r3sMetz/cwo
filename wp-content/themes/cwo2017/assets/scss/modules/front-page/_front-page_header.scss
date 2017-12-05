@@ -11,7 +11,7 @@
       @include orientation(landscape) {
         height: 100vh;
       }
-      @media screen and (min-width: 1600px) and (min-height: 2000px) {
+      @media screen and (min-width: 1800px) and (min-height: 1300px) {
         height: auto;
         padding: $gap-xl;
       }
