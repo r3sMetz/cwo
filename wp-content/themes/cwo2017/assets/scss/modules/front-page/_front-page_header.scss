@@ -11,9 +11,6 @@
       @include orientation(landscape) {
         height: 100vh;
       }
-      @media screen and (min-width: 1800px) and (min-height: 1300px) {
-        height: 80vh;
-      }
     }
   }
 
