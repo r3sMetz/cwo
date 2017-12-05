@@ -1,16 +1,18 @@
 <div class="fullPageWrapper">
     <div class="front-page_header">
-        <div class="front-page_header_top bg-std">
+        <div class="front-page_header_top bg-std" style="<?php echo get_field('hintergrund_header')['url'];?>">
             <div class="container">
                 <div class="row front-page_header_content_wrapper">
                     <!-- Headline -->
                     <div class="col-sm-4 col-md-5 text-center front-page_header_headline">
-                        <h1><span class="font-lord da_head pos-rel dp-inline-block">Willkommen</span><br/><span>Bei den Celtic Warriors Otzenhausen</span></h1>
+                        <h1>
+                            <span class="font-lord da_head pos-rel dp-inline-block"><?php the_field('headline');?></span><br/>
+                            <span><?php the_field('subline');?></span></h1>
                     </div>
                     <!-- Images -->
                     <div class="col-sm-4 col-md-3 hidden-xs front-page_header_images">
-                        <img class="maxImage" src="<?php echo CWO_PNG_URI;?>/header_bild_1.png" alt="CWO">
-                        <img class="maxImage" src="<?php echo CWO_PNG_URI;?>/header_bild_2.png" alt="CWO">
+                        <img class="maxImage" src="<?php echo get_field('headervorschau_oben')['sizes']['medium_large'];?>" alt="CWO">
+                        <img class="maxImage" src="<?php echo get_field('headervorschau_unten')['sizes']['medium_large'];?>" alt="CWO">
                     </div>
                     <!-- Next Event (Desktop)  -->
                     <div class="col-sm-4 col-md-4 hidden-xs">

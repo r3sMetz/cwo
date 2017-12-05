@@ -2,7 +2,6 @@
   /** The Header **/
   &_top {
     height: 50vh;
-    background-image: url('../img/jpg/header_top.jpg');
     display: flex;
     align-items: center;
     @include orientation(landscape) {
