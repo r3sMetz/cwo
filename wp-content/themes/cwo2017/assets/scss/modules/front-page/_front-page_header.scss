@@ -14,10 +14,6 @@
     }
   }
 
-  &_content_wrapper {
-    display: flex;
-    align-items: center;
-  }
   /** Headline **/
   &_headline {;
     h1 {
@@ -41,19 +37,5 @@
         font-size: 50px;
       }
     }
-  }
-  /** Images **/
-  &_images {
-    img {
-      border-radius: 4px;
-      &:first-child {
-        margin-bottom: $gap-md;
-      }
-    }
-  }
-  /** Single Next Event **/
-  &_next_event {
-    padding-left: 15px;
-    padding-right: 15px;
   }
 }

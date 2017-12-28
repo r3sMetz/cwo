@@ -12,39 +12,5 @@
                 </div>
             </div>
         </div>
-
-        <!-- Next Event (Mobile) -->
-        <div class="front-page_header_nextEvent mobile visible-xs">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 text-center bg-pommes puffer-both-lg">
-                        <p class="font-demon fontsize-headline gap-bottom-md">Samstag 18.02.2017</p>
-                        <h2 class="font-demon fontsize-headline-big color-black gap-bottom-md">Steel Crusade 31</h2>
-                        <p class="gap-bottom-md">
-                            Die Celtic Warriors Otzenhausen<br/>
-                            präsentieren das 31. Steelcursade:
-                        </p>
-
-                        <ul class="list-unstyled color-black font-demon text-uppercase list-dashed gap-bottom-md">
-                            <li>Revolution 9</li>
-                            <li>Desdemonia</li>
-                            <li>Fusion Bomb</li>
-                        </ul>
-
-                        <ul class="list-unstyled gap-bottom-md">
-                            <li>Einlass 19:30</li>
-                            <li>Beginn: 20:00Uhr</li>
-                            <li>Eintritt: 5Euro</li>
-                        </ul>
-
-                        <p>
-                            Jugendraum<br/>
-                            Ringwalstraße 8<br/>
-                            66620 Otzenhausen
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
