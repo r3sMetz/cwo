@@ -8,6 +8,9 @@ get_template_part( 'modules/navbar' );
 /** Header ***/
 get_template_part( 'partials/front-page/front-page_header' );
 
+/** Next Event **/
+get_template_part('partials/front-page/front-page_nextEvent');
+
 /** History  ***/
 get_template_part( 'partials/front-page/front-page_history' );
 

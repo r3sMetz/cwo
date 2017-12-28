@@ -4,7 +4,7 @@
 			<div class="row gap-bottom-sm">
 				<div class="col-md-12">
 					<h2 class="font-demon fontsize-headline dashed-headline gap-bottom-lg text-center">
-					<span class="dashed_line"></span><div class="dashed_text">Vorstand</div><span class="dashed_line"></span>
+					<span class="dashed_line"></span><span class="dashed_text">Vorstand</span><span class="dashed_line"></span>
 					</h2>
 				</div>
 			</div>

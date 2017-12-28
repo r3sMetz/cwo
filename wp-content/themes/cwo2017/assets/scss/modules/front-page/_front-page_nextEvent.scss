@@ -1,0 +1,9 @@
+.front-page_nextEvent{
+  @include breakpoint($screen-sm) {
+    background-image: url('../img/png/bg_next_event.png');
+  }
+
+  .feature_list li:not(:last-child){
+    margin-bottom: $gap-std;
+  }
+}
