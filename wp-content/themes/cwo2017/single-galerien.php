@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: Galerien Übersicht
+ * Template Name: Galerie
  */
 
 /** HTML Begin **/
@@ -9,8 +9,6 @@ get_template_part( 'modules/html_begin' );
 /*** Navbar ***/
 get_template_part( 'modules/navbar' );
 
-/** Header ***/
-get_template_part( 'partials/page-bilder/page-bilder_content' );
 
 
 /** HTML End **/

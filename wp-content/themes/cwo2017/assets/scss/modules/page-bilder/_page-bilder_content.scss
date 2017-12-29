@@ -1,0 +1,29 @@
+.page-bilder_content{
+  display: flex;
+  align-items: center;
+
+  //Galery Wrapper
+  .galery_wrapper{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  //Single Galery
+  .single_galery{
+    transition: filter $transition-short, color $transition-short;
+    margin: $gap-md 0;
+    width: 100%;
+    @include breakpoint($screen-sm){
+      margin: 2.5vw 0;
+      width: 200px;
+    }
+    @include breakpoint($screen-lg){
+      filter: grayscale(.75);
+    }
+    @include noTouchHover{
+      filter: grayscale(0);
+      color: $color-darkRed;
+    }
+  }
+}
