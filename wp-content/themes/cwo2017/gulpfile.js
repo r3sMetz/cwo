@@ -29,7 +29,8 @@ var paths = {
     php: '**/*.php',
     scripts: ['assets/js/*.js'],
     plugins: [
-        'bower_components/jquery/dist/jquery.js'
+        'bower_components/jquery/dist/jquery.js',
+        'bower_components/slick-carousel/slick/slick.min.js'
     ],
     css : []
 };
