@@ -5,6 +5,9 @@ var main = (function(){
 
         //Scroll Events
         events.scroll();
+
+        //Single Galerie: Slider(both)
+        if($('.single-galerien_content').length) galerieSlider.setup();
     }
 
     return {

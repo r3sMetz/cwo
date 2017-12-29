@@ -12,27 +12,6 @@ function cwo_getGaleries(){
 			'month' => $datum_array[1],
 			'url'   => get_permalink($galery->ID)
 		);
-		$return_array[] = array(
-			'title' => get_the_title($galery->ID),
-			'thumb' => get_field('titelbild',$galery->ID)['sizes']['thumbnail'],
-			'year'  => $datum_array[0],
-			'month' => $datum_array[1],
-			'url'   => get_permalink($galery->ID)
-		);
-		$return_array[] = array(
-			'title' => get_the_title($galery->ID),
-			'thumb' => get_field('titelbild',$galery->ID)['sizes']['thumbnail'],
-			'year'  => $datum_array[0],
-			'month' => $datum_array[1],
-			'url'   => get_permalink($galery->ID)
-		);
-		$return_array[] = array(
-			'title' => get_the_title($galery->ID),
-			'thumb' => get_field('titelbild',$galery->ID)['sizes']['thumbnail'],
-			'year'  => $datum_array[0],
-			'month' => $datum_array[1],
-			'url'   => get_permalink($galery->ID)
-		);
 	}
 
 	return $return_array;

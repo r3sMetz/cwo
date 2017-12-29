@@ -1,0 +1,30 @@
+.single-galerien_content{
+  .galery_slider{
+    overflow: hidden;
+
+    &.the_big_slider{
+      margin-top: $gap-xl;
+      @include breakpoint($screen-sm){
+        margin-top: 0;
+      }
+    }
+  }
+  .slider_nav{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: color $transition-short;
+    @include noTouchHover{
+      color: $color-darkRed;
+    }
+
+    &.prev_slide{
+      left: 15px;
+    }
+
+    &.next_slide{
+      right: 15px;
+    }
+  }
+}

@@ -31,6 +31,12 @@ img.maxImage {
 //Min-FullPage_BG
 .fullPageElement{
   min-height: 100vh;
+  @include breakpoint($screen-sm) {
+    &.flexed_center {
+      display: flex;
+      align-items: center;
+    }
+  }
 }
 
 

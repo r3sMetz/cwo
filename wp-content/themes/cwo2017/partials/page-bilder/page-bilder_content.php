@@ -1,5 +1,5 @@
 <div class="fullPageWrapper">
-	<div class="page-bilder_content bg-std fullPageElement bg-fired">
+	<div class="page-bilder_content bg-std fullPageElement bg-fired flexed_center">
         <div class="container">
 
 		    <!-- Gallery Thumbs -->
