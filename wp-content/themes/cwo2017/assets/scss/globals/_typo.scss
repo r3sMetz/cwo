@@ -14,7 +14,7 @@ h1,h2,h3,h4,h5 {
 }
 
 //Text (Family + Sizing)
-.bolded {
+.bolded,strong{
   font-family: $font-bold;
   font-size: $font-size-bold;
 }

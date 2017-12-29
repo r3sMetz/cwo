@@ -7,6 +7,7 @@
     require('includes/helper/helper_front-page.php');
 
     //Special Helpers
+    require('includes/helper/helper_events.php');
     require('includes/helper/helper-page-bilder.php');
 
     //AdminPanel
