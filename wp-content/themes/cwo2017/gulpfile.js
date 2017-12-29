@@ -30,7 +30,8 @@ var paths = {
     scripts: ['assets/js/*.js'],
     plugins: [
         'bower_components/jquery/dist/jquery.js',
-        'bower_components/slick-carousel/slick/slick.min.js'
+        'bower_components/slick-carousel/slick/slick.min.js',
+        'bower_components/reframe.js/dist/jquery.reframe.min.js'
     ],
     css : []
 };

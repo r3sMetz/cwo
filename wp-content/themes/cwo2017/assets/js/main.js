@@ -3,11 +3,15 @@ var main = (function(){
         //Hello, im there!
         console.log("main.js running");
 
-        //Scroll Events
+        //Events
         events.scroll();
+        events.click();
 
         //Single Galerie: Slider(both)
         if($('.single-galerien_content').length) galerieSlider.setup();
+
+        //Reframe Iframe (Page Horst)
+        if($('.page-memorial_content').length) $('iframe').reframe();
     }
 
     return {

@@ -1,0 +1,28 @@
+{
+  "name": "reframe.js",
+  "description": "Reframe.js: responsive iframes for embedded content",
+  "main": "dist/reframe.js",
+  "authors": [
+    "Jeff Wainwright <jjwainwright2@gmail.com> (http://jeffry.in)"
+  ],
+  "license": "Copyright (c) 2016 Dollar Shave Club, Inc.",
+  "homepage": "https://github.com/dollarshaveclub/reframe.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "version": "2.1.14",
+  "_release": "2.1.14",
+  "_resolution": {
+    "type": "version",
+    "tag": "2.1.14",
+    "commit": "4842e533975097027aafbe1282d4c7e671350c16"
+  },
+  "_source": "https://github.com/dollarshaveclub/reframe.js.git",
+  "_target": "^2.1.14",
+  "_originalSource": "reframe.js",
+  "_direct": true
+}

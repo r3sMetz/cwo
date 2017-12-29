@@ -7,7 +7,10 @@ var events = (function(){
 
         });
     }
-    function setEventHandlerForClick(){}
+    function setEventHandlerForClick(){
+        //Fade Overlay
+        fadeOverlay.setClickEvents();
+    }
 
     function setEventHandlerForScroll(){
         $(window).on('scroll',function(){
