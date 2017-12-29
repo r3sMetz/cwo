@@ -7,6 +7,9 @@ var main = (function(){
         events.scroll();
         events.click();
 
+        //Frontpage: History Slider
+        if($('.the_history').length) historySlider.setup();
+
         //Single Galerie: Slider(both)
         if($('.single-galerien_content').length) galerieSlider.setup();
 

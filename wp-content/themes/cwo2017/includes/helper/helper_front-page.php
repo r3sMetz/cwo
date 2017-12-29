@@ -22,3 +22,13 @@
 		}
 		return array_chunk($hq_array,4);
 	}
+
+	function build_history_array(){
+		$return_aray = array();
+		while(have_rows('history_verwalten')) {
+			the_row();
+			$return_aray[] = get_sub_field('text');
+		}
+
+		return $return_aray;
+	}

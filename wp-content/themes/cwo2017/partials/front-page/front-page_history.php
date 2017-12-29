@@ -22,20 +22,19 @@
 				<!-- Text -->
 				<div class="col-md-5">
 					<img class="maxImage" src="<?php echo CWO_PNG_URI;?>/skull_history.png" alt="CWO - History">
-					<p class="gap-top-md">
-						Bacon ipsum dolor amet sirloin shankle jerky leberkas. Frankfurter picanha ground round pork loin, kevin meatloaf fatback burgdoggen
-						kielbasa meatball beef ribs. Swine bresaola t-bone, beef ribs sausage jowl fatback. Bacon bresaola sausage pork loin boudin fatback.
-						Filet mignon shankle ground round, andouille kielbasa turkey boudin prosciutto. Turducken alcatra frankfurter buffalo swine turkey,
-						salami biltong ham hock pork chop. Turkey porchetta rump beef venison fatback andouille, spare ribs alcatra burgdoggen.
-						<br/><br/>
-						Alcatra beef cow pork loin. Pancetta tongue leberkas ham hock ball tip, drumstick biltong jowl. Turducken frankfurter kevin flank corned
-						beef brisket landjaeger andouille short loin shankle. Burgdoggen porchetta short loin kevin jowl buffalo kielbasa shankle boudin
-						meatball shank. Corned beef shank strip steak, doner leberkas drumstick rump brisket frankfurter hamburger andouille pastrami sirloin.
-						<br/><br/>
-						Meatball short loin shank doner turkey. Brisket hamburger sausage pork chop. Corned beef sausage alcatra t-bone chicken short loin rump
-						ham. Drumstick pork venison, biltong tail prosciutto short ribs strip steak alcatra ribeye tri-tip kevin salami. Fatback jerky beef
-						burgdoggen shankle short loin. Tail bresaola venison alcatra frankfurter burgdoggen, ham hock pastrami ground round kevin short loin cow
-					</p>
+					<?php $the_history = build_history_array();?>
+					<div class="the_history gap-bottom-sm">
+                        <?php foreach($the_history as $page):?>
+                            <p class="history_page">
+                            <?php echo $page;?>
+                            </p>
+                        <?php endforeach;?>
+                    </div>
+                    <ul class="list-inline the_history_navigation">
+                        <?php foreach ($the_history as $key => $page):?>
+                            <li data-index="<?php echo $key;?>"<?php echo $key===0 ? ' class="active"' : '';?>></li>
+                        <?php endforeach;?>
+                    </ul>
 				</div>
 			</div>
 		</div>

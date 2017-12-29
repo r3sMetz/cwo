@@ -1,10 +1,10 @@
-.front-page_history{
-  @include breakpoint($screen-sm){
+.front-page_history {
+  @include breakpoint($screen-sm) {
     background-image: url('../img/png/bg_history.png');
   }
-   &_middle {
-    @include breakpoint($screen-md,'max-width'){
-      h2{
+  &_middle {
+    @include breakpoint($screen-md, 'max-width') {
+      h2 {
         @include buildDashedHeadline;
       }
     }
@@ -25,11 +25,33 @@
         }
       }
     }
-   }
-   .row {
+  }
+  .row {
     @include breakpoint() {
       display: flex;
       align-items: center;
     }
-   }
+  }
+
+  .the_history_navigation {
+    padding-left: 5px;
+  }
+  li {
+    display: inline-block;
+    background-color: $color-white;
+    height: 1em;
+    width: 1em;
+    border-radius: 50%;
+    transition: background-color $transition-short;
+    cursor: pointer;
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+    &.active {
+      background-color: $color-darkRed;
+    }
+    @include noTouchHover {
+      background-color: $color-darkRed;
+    }
+  }
 }

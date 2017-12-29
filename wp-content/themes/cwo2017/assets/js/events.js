@@ -14,7 +14,6 @@ var events = (function(){
 
     function setEventHandlerForScroll(){
         $(window).on('scroll',function(){
-            console.log("Scroll");
             var pos    = $(window).scrollTop(),
                 navbar = $('.cwo_navbar');
 
