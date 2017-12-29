@@ -4,12 +4,12 @@
 			<div class="row">
 				<!-- Images -->
 				<div class="col-md-2 hidden-xs hidden-sm">
-					<img class="maxImage gap-bottom-md" src="<?php echo CWO_PNG_URI;?>/bildvorschau_1.png" alt="CWO - Bildergallerie">
-					<a class="cwo-btn cwo-btn-red fullWidth" href="#">Zur Bildergalerie</a>
+					<img class="maxImage gap-bottom-md" src="<?php cwo_theACFImage(get_the_ID(),'bild_links-langlich');?>" alt="CWO - Bildergallerie">
+					<a class="cwo-btn cwo-btn-red fullWidth fadeLink" href="<?php echo get_permalink(15);?>">Zur Bildergalerie</a>
 				</div>
 				<div class="col-md-3 hidden-xs hidden-sm">
-					<img class="maxImage gap-bottom-md" src="<?php echo CWO_PNG_URI;?>/bildvorschau_2.png" alt="CWO - Bildergallerie">
-					<img class="maxImage" src="<?php echo CWO_PNG_URI;?>/bildvorschau_3.png" alt="CWO - Bildergallerie">
+					<img class="maxImage gap-bottom-md" src="<?php cwo_theACFImage(get_the_ID(),'bild_rechts-oben');?>" alt="CWO - Bildergalerie">
+					<img class="maxImage" src="<?php cwo_theACFImage(get_the_ID(),'bild_rechts-unten');?>" alt="CWO - Bildergalerie">
 				</div>
 				<!-- Middle -->
 				<div class="col-md-2s front-page_history_middle gap-mobile-bottom-lg">

@@ -5,6 +5,22 @@ function cwo_theImagePath( $image ) {
 	echo get_template_directory_uri().'/assets/img/'.$image;
 }
 
+//Get ACF Image
+function cwo_theACFImage($id,$field,$size='url'){
+	$the_image = get_field($field,$id);
+	if($the_image){
+		if($size != 'url'){
+			if($the_image['sizes'][$size])
+				echo $the_image['sizes'][$size];
+			else $the_image['url'];
+
+		}
+
+		else
+			echo $the_image['url'];
+	}
+}
+
 
 //PosttypeQuery
 function r3_query($post_type,$orderBy='title',$order='ASC',$postsPerPage = -1) {
