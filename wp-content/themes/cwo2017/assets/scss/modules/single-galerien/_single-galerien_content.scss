@@ -1,13 +1,6 @@
 .single-galerien_content{
   .galery_slider{
     overflow: hidden;
-
-    &.the_big_slider{
-      margin-top: $gap-xl;
-      @include breakpoint($screen-sm){
-        margin-top: 0;
-      }
-    }
   }
   .slider_nav{
     position: absolute;

@@ -1,7 +1,7 @@
-<div class="page-memorial_content fullPageElement flexed_center puffer-both-xl">
+<div class="page-memorial_content fullPageElement flexed_center puffer-both-xl margin-top-mobile">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-4 text-center">
+			<div class="col-md-4 text-center gap-mobile-bottom-md">
 				<img src="<?php echo CWO_JPG_URI;?>/horst_1.jpg" alt="RIP Horst!" class="maxImage">
 			</div>
 			<div class="col-md-8">
