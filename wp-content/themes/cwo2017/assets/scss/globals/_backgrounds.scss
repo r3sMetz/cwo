@@ -58,4 +58,12 @@
       background-image: url('../img/png/bg_crowd.png');
     }
   }
+  &-clouds{
+   &.mobile-bg {
+      background-image: url('../img/png/memorial_BG.png');
+    }
+    @include breakpoint{
+      background-image: url('../img/png/memorial_BG.png');
+    }
+  }
 }
