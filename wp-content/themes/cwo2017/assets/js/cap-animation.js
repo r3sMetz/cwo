@@ -27,7 +27,7 @@ var capAnimation = (function(){
 
             //Load All Laughs
             $.each(all_laughs, function (index) {
-                all_laughs[index] = new Audio(defaults.template_directory_uri + '/assets/wav/lache_' + index + '.wav')
+                all_laughs[index] = new Audio(defaults.template_directory_uri + '/assets/mp3/lache_' + index + '.mp3')
             });
 
             //Set Intervall for Cap Animation
