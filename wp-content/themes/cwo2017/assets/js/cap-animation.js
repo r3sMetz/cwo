@@ -1,4 +1,20 @@
 var capAnimation = (function(){
+    /** Private **/
+    //Set Initial Laugh Status (which laugh has been choosen)
+    var last_laugh = false;
+
+    //Init Laugh Array
+    var all_laughs = Array(4);
+
+    //Recursive Laughfinder
+    function findNewLaugh(){
+        var the_laugh = Math.floor(Math.random() * all_laughs.length);
+
+        if(the_laugh !== last_laugh)
+            return the_laugh;
+        else
+            return findNewLaugh();
+    }
 
     /** Public **/
     function setup(){
@@ -9,14 +25,10 @@ var capAnimation = (function(){
             //Show that cap has Interaction
             the_cap.addClass('playable');
 
-            //Init Laugh Array
-            var all_laughs = Array(4);
-
             //Load All Laughs
             $.each(all_laughs, function (index) {
                 all_laughs[index] = new Audio(defaults.template_directory_uri + '/assets/wav/lache_' + index + '.wav')
             });
-
 
             //Set Intervall for Cap Animation
             setInterval(function () {
@@ -26,9 +38,11 @@ var capAnimation = (function(){
 
             //Set Click Event for the Cap
             the_cap.on('click', function () {
-                var the_laugh = all_laughs[Math.floor(Math.random() * all_laughs.length)];
+                var new_laugh = findNewLaugh();
+                all_laughs[new_laugh].play();
 
-                the_laugh.play();
+                //Set last laugh to current laugh
+                last_laugh = new_laugh
             })
         }
     }
