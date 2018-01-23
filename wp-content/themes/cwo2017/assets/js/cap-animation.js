@@ -38,6 +38,7 @@ var capAnimation = (function(){
 
             //Set Click Event for the Cap
             the_cap.on('click', function () {
+                //Find new laugh and play it
                 var new_laugh = findNewLaugh();
                 all_laughs[new_laugh].play();
 
