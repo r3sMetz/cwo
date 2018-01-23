@@ -15,6 +15,9 @@ var main = (function(){
 
         //Reframe Iframe (Page Horst)
         if($('.page-memorial_content').length) $('iframe').reframe();
+
+        //CapAnimation
+        if($('#the_cap').length) capAnimation.setup();
     }
 
     return {

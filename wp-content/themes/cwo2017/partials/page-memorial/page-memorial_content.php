@@ -1,7 +1,8 @@
 <div class="page-memorial_content fullPageElement flexed_center puffer-both-xl margin-top-mobile bg-std bg-clouds">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-4 text-center gap-mobile-bottom-md">
+			<div class="col-md-4 text-center gap-mobile-bottom-md pos-rel">
+                <img id="the_cap" src="<?php echo CWO_SVG_URI;?>/cap.svg" alt="Heavy Metal - Watt eh Scheiß!!!" class="hidden-xs hidden-sm">
 				<img src="<?php echo CWO_PNG_URI;?>/horst.png" alt="RIP Horst!" class="maxImage">
 			</div>
 			<div class="col-md-8 iframe_wrapper">

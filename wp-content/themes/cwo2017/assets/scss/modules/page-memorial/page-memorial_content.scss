@@ -1,7 +1,37 @@
 .page-memorial_content{
+  #the_cap{
+    position: absolute;
+    top: -50px;
+    right: -30px;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    transform: rotate(45deg);
+    transition: height $transition-short, width $transition-short, top $transition-short, right $transition-short;
+
+    &.moving {
+      animation-name: cap-animation;
+      animation-duration: $transition-short;
+      animation-iteration-count: 3;
+    }
+
+    @include noTouchHover{
+      height: 120px;
+      width: 120px;
+      top: -60px;
+      right: -40px;
+    }
+  }
+
   @include breakpoint{
     .iframe_wrapper {
       padding-top: 57px;
     }
   }
+}
+
+@keyframes cap-animation {
+  0%, 50%, 100% {transform: rotate(45deg);}
+  25%           {transform: rotate(40deg);}
+  75%           {transform: rotate(50deg);}
 }
