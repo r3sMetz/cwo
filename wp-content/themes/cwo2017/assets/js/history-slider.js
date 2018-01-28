@@ -6,11 +6,10 @@ var historySlider = (function(){
         history_slider.slick({
             arrows: false,
             fade: true,
-            adaptiveHeight: true
         });
 
         //Set Click Event for Navigation Dots
-        var all_dots = $('.the_history_navigation li')
+        var all_dots = $('.the_history_navigation li');
         all_dots.on('click',function(){
             var current_dot = $(this);
             if(!current_dot.hasClass('active')){
