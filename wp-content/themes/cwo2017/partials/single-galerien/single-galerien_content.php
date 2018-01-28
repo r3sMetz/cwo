@@ -2,7 +2,7 @@
 	<div class="container">
 		<!-- Big Slider (Top) -->
 		<div class="row gap-bottom-md">
-			<div class="col-md-10 col-md-offset-1">
+			<div class="col-md-12">
 				<div class="the_big_slider galery_slider">
 				<?php foreach(get_field('galerie_verwalten') as $image):?>
 					<img class="pull-left maxImage" src="<?php echo $image['url'];?>" alt="<?php the_title();?>">
@@ -13,7 +13,7 @@
 
 		<!-- Small Slider (Bottom) -->
 		<div class="row pos-rel">
-			<div class="col-md-10 col-md-offset-1 the_small_slider galery_slider">
+			<div class="col-md-12 the_small_slider galery_slider">
 				<?php foreach(get_field('galerie_verwalten') as $image):?>
 					<img class="pull-left maxImage" src="<?php echo $image['url'];?>" alt="<?php the_title();?>">
 				<?php endforeach;?>
