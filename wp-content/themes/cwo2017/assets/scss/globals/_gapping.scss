@@ -81,6 +81,10 @@
      padding-top: $gap-xl;
      padding-bottom: $gap-xl;
     }
+    &-xxl{
+      padding-top: $gap-xl*1.5;
+      padding-bottom: $gap-xl*1.5;
+    }
   }
   //Top
   &-top{
