@@ -1,10 +1,10 @@
 .page-memorial_content{
   #the_cap{
     position: absolute;
-    top: -50px;
-    right: -30px;
-    width: 100px;
-    height: 100px;
+    top: -60px;
+    right: -40px;
+    width: 120px;
+    height: 120px;
     transform: rotate(45deg);
 
     &.moving {
@@ -17,10 +17,10 @@
       transition: height $transition-short, width $transition-short, top $transition-short, right $transition-short;
       cursor: pointer;
       @include noTouchHover {
-        height: 120px;
-        width: 120px;
-        top: -60px;
-        right: -40px;
+        height: 140px;
+        width: 140px;
+        top: -70px;
+        right: -50px;
       }
     }
   }
