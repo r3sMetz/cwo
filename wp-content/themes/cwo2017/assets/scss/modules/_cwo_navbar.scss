@@ -32,9 +32,9 @@
   }
 
   img {
-    max-width: 120px;
+    max-width: 100px;
     @include breakpoint() {
-      max-width: 200px;
+      max-width: 120px;
     }
     height: auto;
   }

@@ -5,10 +5,10 @@
 				<div class="col-sm-6 text-center-xs text-left-sm">
 				    <?php if(!is_front_page()):?>
                         <a class="fadeLink" href="<?php echo home_url();?>">
-                            <img src="<?php echo CWO_PNG_URI;?>/logo_w_font.png" alt="Celtic Warriors Otzenhausen">
+                            <img src="<?php echo CWO_PNG_URI;?>/logo.png" alt="Celtic Warriors Otzenhausen">
                         </a>
 				    <?php else:?>
-                        <img src="<?php echo CWO_PNG_URI;?>/logo_w_font.png" alt="Celtic Warriors Otzenhausen">
+                        <img src="<?php echo CWO_PNG_URI;?>/logo.png" alt="Celtic Warriors Otzenhausen">
 					<?php endif;?>
 				</div>
 				<div class="col-sm-6 text-center-xs text-right-sm">
