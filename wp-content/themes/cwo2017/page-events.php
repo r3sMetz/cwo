@@ -12,6 +12,8 @@ get_template_part( 'modules/navbar' );
 /*** Eventheader ***/
 get_template_part('modules/cwo_eventheader');
 
+get_template_part('partials/page-events/page-events_content');
+
 /*** Footer ***/
 get_template_part('modules/cwo_footer');
 

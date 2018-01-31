@@ -1,0 +1,17 @@
+.page-events_content {
+  .single_event {
+    img,span {
+      width: 150px;
+      height: 20px;
+      margin-right: $gap-std;
+    }
+
+    h2{
+      margin-right: $gap-std
+    }
+
+    hr {
+      margin: $gap-std 0 $gap-md 0;
+    }
+  }
+}

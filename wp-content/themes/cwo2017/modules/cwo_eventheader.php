@@ -1,4 +1,4 @@
-<header class="bg-std cwo_eventheader bg-dude mobile-bg">
+<header class="bg-std cwo_eventheader bg-events mobile-bg">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
