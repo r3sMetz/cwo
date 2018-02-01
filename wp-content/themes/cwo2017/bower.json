@@ -1,0 +1,26 @@
+{
+  "name": "cwo2017",
+  "description": "Celtic Warriors Otzenhausen WordPress-Theme",
+  "main": "index.js",
+  "authors": [
+    "wp-includes"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "wp-content"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap-sass": "boostrap-sass#^3.3.7",
+    "grade": "*",
+    "reframe.js": "^2.1.14",
+    "slick-carousel": "^1.8.1"
+  }
+}
