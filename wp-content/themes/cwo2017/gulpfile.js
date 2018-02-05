@@ -31,7 +31,8 @@ var paths = {
     plugins: [
         'bower_components/jquery/dist/jquery.js',
         'bower_components/slick-carousel/slick/slick.min.js',
-        'bower_components/reframe.js/dist/jquery.reframe.min.js'
+        'bower_components/reframe.js/dist/jquery.reframe.min.js',
+        'bower_components/vibrant/dist/Vibrant.min.js'
     ],
     css : []
 };

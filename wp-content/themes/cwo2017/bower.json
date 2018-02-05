@@ -19,8 +19,8 @@
   ],
   "devDependencies": {
     "bootstrap-sass": "boostrap-sass#^3.3.7",
-    "grade": "*",
     "reframe.js": "^2.1.14",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "vibrant": "*"
   }
 }

@@ -1,4 +1,4 @@
-<div class="single-galerien_content fullPageElement flexed_center bg-std bg-fired puffer-both-xl margin-top-mobile">
+<div class="single-galerien_content fullPageElement flexed_center puffer-both-xl margin-top-mobile" id="the_gallery_wrapper">
 	<div class="container">
 		<!-- Big Slider (Top) -->
 		<div class="row gap-bottom-md">

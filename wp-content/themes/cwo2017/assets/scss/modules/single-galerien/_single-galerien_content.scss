@@ -1,4 +1,5 @@
 .single-galerien_content{
+  transition: all $transition-default !important;
   .galery_slider{
     overflow: hidden;
   }
