@@ -14,11 +14,28 @@
     }
 
     &.prev_slide{
-      left: -30px;
+      left: 0;
     }
 
     &.next_slide{
-      right: -30px;
+      right: 0;
+    }
+  }
+
+  @include breakpoint($screen-lg + 200px){
+    .col-md-8{
+      margin-left: 0 !important;
+      width: 100% !important;
+    }
+
+    .slider_nav {
+      &.prev_slide {
+        left: -30px;
+      }
+
+      &.next_slide {
+        right: -30px;
+      }
     }
   }
 }

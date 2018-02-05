@@ -13,5 +13,12 @@
     hr {
       margin: $gap-std 0 $gap-md 0;
     }
+
+    &:not(:last-child){
+      margin-bottom: $gap-md;
+      @include breakpoint() {
+        margin-bottom: $gap-xl;
+      }
+    }
   }
 }

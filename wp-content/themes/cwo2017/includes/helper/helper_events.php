@@ -1,6 +1,16 @@
 <?php
 function cwo_getAllEvents(){
-	return r3_query_meta('veranstaltungen','datum');
+	$today = date('d.m.Y');
+	$all_events = r3_query_meta('veranstaltungen','datum');
+	$return_events = array();
+
+	foreach ($all_events as $event){
+
+		if(strtotime(get_field('datum',$event->ID)) >= strtotime($today))
+			$return_events[] = $event;
+	}
+
+	return $return_events;
 }
 
 function cwo_nextEvent(){
