@@ -27,6 +27,9 @@
 			<div class="col-md-4 gap-mobile-bottom-lg">
 				<h3 class="font-demon fontsize-headline gap-bottom-lg"><?php the_field('datum',$nextEvent);?></h3>
 				<h3 class="font-demon fontsize-headline-big"><?php echo get_the_title($nextEvent);?></h3>
+				<?php if(get_field('vereinsintern',$nextEvent)):?>
+				<h4 class="puffer-both-md">Vereinsintern</h4>
+				<?php endif;?>
 			</div>
 			<div class="col-md-4 gap-mobile-bottom-lg">
 				<ul class="list-unstyled font-demon text-uppercase feature_list">

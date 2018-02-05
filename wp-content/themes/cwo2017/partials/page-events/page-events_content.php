@@ -4,7 +4,7 @@
             <div class="single_event">
                 <div class="row">
                     <div class="col-md-12">
-						<?php if ( get_field( 'vereinsintern', $event->ID) || 1 === 1 ):?>
+						<?php if ( get_field( 'vereinsintern', $event->ID)):?>
                             <!-- <img src="<?=CWO_SVG_URI;?>/vereinsintern.svg" alt="CWO - Vereinsintern"> -->
                             <span style="background:red">Vereinsintern</span>
 						<?php endif; ?>
