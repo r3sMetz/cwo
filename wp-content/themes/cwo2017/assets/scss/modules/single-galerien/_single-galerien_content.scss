@@ -1,41 +1,14 @@
 .single-galerien_content{
-  transition: all $transition-default !important;
-  .galery_slider{
-    overflow: hidden;
-  }
-  .slider_nav{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    transition: color $transition-short;
-    @include noTouchHover{
-      color: $color-darkRed;
-    }
+  .gallery_wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
-    &.prev_slide{
-      left: 0;
-    }
-
-    &.next_slide{
-      right: 0;
-    }
-  }
-
-  @include breakpoint($screen-lg + 200px){
-    .col-md-8{
-      margin-left: 0 !important;
-      width: 100% !important;
-    }
-
-    .slider_nav {
-      &.prev_slide {
-        left: -30px;
-      }
-
-      &.next_slide {
-        right: -30px;
-      }
+    img{
+      height: 14.5vw;
+      margin: 15px 0;
+      width: auto;
+      max-height: 190px;
     }
   }
 }

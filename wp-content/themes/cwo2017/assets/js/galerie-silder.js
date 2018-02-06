@@ -37,8 +37,8 @@ var galerieSlider = (function(){
     /** Public **/
     function setup(){
         //Selbsterklärend ;)
-        build_the_big_slider();
-        build_the_small_slider()
+        //build_the_big_slider();
+        //build_the_small_slider()
     }
 
     return {
