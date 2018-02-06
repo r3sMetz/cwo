@@ -11,7 +11,7 @@ var main = (function(){
         if($('.the_history').length) historySlider.setup();
 
         //Single Galerie: Slider(both)
-        if($('.single-galerien_content').length) galerieSlider.setup();
+        if($('#the_galery_slider').length) galerieSlider.setup();
 
         //Reframe Iframe (Page Horst)
         if($('.page-memorial_content').length) $('iframe').reframe();

@@ -9,6 +9,9 @@ get_template_part( 'modules/html_begin' );
 /*** Navbar ***/
 get_template_part( 'modules/navbar' );
 
+/*** Overlay ***/
+get_template_part('partials/single-galerien/single-galerien_overlay');
+
 /** Content **/
 get_template_part('partials/single-galerien/single-galerien_content');
 
