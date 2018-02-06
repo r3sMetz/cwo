@@ -1,5 +1,5 @@
 <div class="fullPageWrapper">
-	<div class="front-page_hq bg-std puffer-both-xl">
+	<div class="front-page_hq bg-std puffer-both-xxl">
 		<div class="container">
 			<div class="row gap-bottom-sm">
 				<div class="col-md-12">

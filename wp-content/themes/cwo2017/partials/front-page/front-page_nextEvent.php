@@ -1,5 +1,5 @@
 <?php $nextEvent = cwo_nextEvent(); if($nextEvent):?>
-<div class="front-page_nextEvent bg-std puffer-both-xl">
+<div class="front-page_nextEvent bg-std puffer-both-xxl">
 	<div class="container">
 		<div class="row gap-bottom-sm">
 			<div class="col-md-12">

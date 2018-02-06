@@ -1,4 +1,4 @@
-<div class="fullPageWrapper puffer-both-lg">
+<div class="fullPageWrapper puffer-both-xl">
 	<div class="cwo_footer">
 		<div class="container">
 			<div class="row cwo_footer_content">
