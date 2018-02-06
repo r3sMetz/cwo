@@ -2,10 +2,17 @@
   .gallery_wrapper{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    @include breakpoint($screen-sm) {
+      justify-content: space-between;
+    }
 
     img{
-      height: 14.5vw;
+      height: 100vw;
+
+      @include breakpoint($screen-sm) {
+        height: 14.5vw;
+      }
       margin: 15px 0;
       width: auto;
       max-height: 190px;
