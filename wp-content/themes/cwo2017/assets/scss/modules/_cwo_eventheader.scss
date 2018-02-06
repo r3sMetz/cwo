@@ -10,7 +10,8 @@
   }
 
   @include breakpoint{
-    padding-top: 38vh;
-    height: 50vh;
+    padding-top: 48vh;
+    height: 60vh;
+    background-position: bottom;
   }
 }
