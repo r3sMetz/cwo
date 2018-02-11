@@ -38,7 +38,6 @@ function cwo_buildList($listname,$id){
 }
 
 function cwo_buildEventDate($id){
-	setlocale(LC_ALL,'de_DE');
 	$data_time    = strtotime(get_field('datum',$id));
-	return array(strftime(date('d',$data_time)),strftime(date('M',$data_time)));
+	return array(date('d',$data_time),date('M',$data_time));
 }
