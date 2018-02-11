@@ -41,3 +41,9 @@ function cwo_buildEventDate($id){
 	$data_time    = strtotime(get_field('datum',$id));
 	return array(date('d',$data_time),date('M',$data_time));
 }
+
+function cwo_knaupTitle($id){
+	$search  = array('um Otz','15 Jahre');
+	$replace = array('um &ensp;Otz','<br/>15 Jahre');
+	return str_replace($search,$replace,get_the_title($id));
+}
