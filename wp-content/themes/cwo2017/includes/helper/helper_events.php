@@ -6,8 +6,10 @@ function cwo_getAllEvents(){
 
 	foreach ($all_events as $event){
 
-		if(strtotime(get_field('datum',$event->ID)) >= strtotime($today))
+		if(strtotime(get_field('datum',$event->ID)) >= strtotime($today)) {
+			$event->data_array = cwo_buildEventDate($event->ID);
 			$return_events[] = $event;
+		}
 	}
 
 	return $return_events;
@@ -35,3 +37,8 @@ function cwo_buildList($listname,$id){
 	return explode("\n",$list_string);
 }
 
+function cwo_buildEventDate($id){
+	setlocale('LC_ALL','de_DE');
+	$data_time    = strtotime(get_field('datum',$id));
+	return array(date('d',$data_time),date('M',$data_time));
+}

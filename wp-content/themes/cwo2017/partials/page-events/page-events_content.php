@@ -1,25 +1,16 @@
-<div class="page-events_content puffer-both-lg">
-    <div class="container">
-		<? foreach ( cwo_getAllEvents() as $event ): ?>
-            <div class="single_event">
-                <div class="row">
-                    <div class="col-md-12">
-						<?php if ( get_field( 'vereinsintern', $event->ID)):?>
-                            <!-- <img src="<?=CWO_SVG_URI;?>/vereinsintern.svg" alt="CWO - Vereinsintern"> -->
-                            <span style="background:red">Vereinsintern</span>
-						<?php endif; ?>
-                        <h2 class="dp-inline-block"><?= get_the_title( $event->ID ); ?></h2>
-                        <h3 class="dp-inline-block"><? the_field( 'datum', $event->ID ); ?></h3>
-                        <hr>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        Spicy jalapeno bacon ipsum dolor amet corned beef hamburger tongue, shank swine tail sirloin ground round ham hock beef.
-                        <a class="pull-right cwo-btn cwo-btn-red" href="<?the_permalink($event->ID);?>">Mehr erfahren</a>
-                    </div>
-                </div>
-            </div>
-		<? endforeach; ?>
-    </div>
+<div class="page-events_content gap-top-md">
+	<div class="container">
+		<?php foreach(cwo_getAllEvents() as $event):?>
+			<div class="row gap-bottom-xl">
+				<div class="col-sm-1">
+					<span><?php echo $event->data_array[0];?></span><br/>
+					<span><?php echo $event->data_array[1];?></span>
+				</div>
+				<div class="col-sm-3">Titel</div>
+				<div class="col-sm-4">Paragraph</div>
+				<div class="col-sm-2">Uhrzeit</div>
+				<div class="col-sm-2 text-right-sm">Button</div>
+			</div>
+		<?php endforeach;?>
+	</div>
 </div>
