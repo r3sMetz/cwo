@@ -2,14 +2,20 @@
   hr{
     margin: 0;
   }
-  .title-col{
-    padding-left: 60px;
+  .single_event_content{
+    padding-bottom: 10px;
+    @include breakpoint($screen-sm) {
+      display: flex;
+      align-items: flex-end;
+    }
+
+    @include breakpoint($screen-sm-max,'max-width'){
+      div:not(:last-child) {
+        padding-bottom: 10px;
+      }
+    }
   }
-  .the_date{
-    position: absolute;
-    left: 15px;
-    bottom: 0;
-  }
+
   h2{
     line-height: 2;
   }

@@ -2,17 +2,23 @@
 	<div class="container">
 		<?php foreach(cwo_getAllEvents() as $event):?>
 			<div class="single_event gap-bottom-lg">
-                <div class="row">
-                    <div class="col-sm-4 pos-rel title-col">
-                        <div class="the_date">
+                <div class="row single_event_content">
+                    <div class="col-sm-1">
                         <span class="fontsize-headline-big"><?php echo $event->data_array[0];?></span><br/>
                         <span class="text-uppercase"><?php echo $event->data_array[1];?></span>
-                        </div>
+                    </div>
+                    <div class="col-sm-3 pos-rel title-col">
                         <h2 class="font-demon"><?php echo cwo_knaupTitle($event->ID);?></h2>
                     </div>
-                    <div class="col-sm-5"><?php the_field('infoblock_2',$event->ID);?></div>
-                    <div class="col-sm-1"><?php the_field('einlass',$event->ID);?>Uhr</div>
-                    <div class="col-sm-2 text-right-sm">
+                    <div class="col-sm-4 col-md-5">
+                        <?php $the_info = cwo_buildList('infoblock_2',$event->ID);?>
+                        <?php echo $the_info[0] ? $the_info[0] : null;?> <br class="hidden-xs"/>
+                        <?php echo $the_info[1] ? $the_info[1] : null;?> <?php echo $the_info[2] ? $the_info[2] : null;?>
+                    </div>
+                    <div class="col-sm-1">
+                        <?php the_field('einlass',$event->ID);?>Uhr
+                    </div>
+                    <div class="col-sm-3 col-md-2 text-right-sm">
                         <a href="<?php echo get_permalink($event->ID);?>" class="cwo-btn cwo-btn-red">mehr erfahren</a>
                     </div>
                 </div>
