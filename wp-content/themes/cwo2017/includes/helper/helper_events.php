@@ -47,3 +47,15 @@ function cwo_knaupTitle($id){
 	$replace = array('um &ensp;Otz','<br class="hidden-xs"/>15 Jahre');
 	return str_replace($search,$replace,get_the_title($id));
 }
+
+function cwo_knaupWYSIWYG($text){
+	$search = array('<h1>','<h2>','<h3>','<h4>');
+	$replace = array(
+		'<h1 class="font-demon fontsize-headline gap-top-md gap-bottom-sm">',
+		'<h2 class="font-demon fontsize-headline gap-top-md gap-bottom-sm">',
+		'<h3 class="font-demon fontsize-headline gap-top-md gap-bottom-sm">',
+		'<h4 class="font-demon fontsize-headline gap-top-md gap-bottom-sm">'
+		);
+
+	return str_replace($search,$replace,$text);
+}

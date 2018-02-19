@@ -1,30 +1,35 @@
 <div class="single-veranstaltungen_content puffer-both-xl">
 	<div class="container">
 		<!-- Bandlogos-->
-		<?php if(get_field('alle_bandlogos')):?>
-		<div class="row">
-            <div class="col-md-4">Logo 1</div>
-            <div class="col-md-4">Logo 2</div>
-            <div class="col-md-4">Logo 3</div>
+		<?if(get_field('alle_bandlogos')):?>
+		<div class="row hidden-xs">
+            <?foreach(get_field('alle_bandlogos') as $logo):?>
+                <div class="col-sm-4 gap-bottom-md text-center">
+                    <img class="maxImage" src="<?=$logo['url'];?>" alt="<?=$logo['title'];?>">
+                </div>
+            <?endforeach;?>
         </div
-        <?php endif;?>
+        <?endif;?>
 		<!-- Texting Top -->
 		<div class="row">
-            <div class="col-sm-6">
-                <h2 class="font-demon fontsize-headline gap-bottom-sm">Info</h2>
+		    <?if(get_field('infoblock_1')):?>
+            <div class="col-sm-4 gap-mobile-bottom-md">
+                <h2 class="font-demon fontsize-headline gap-bottom-sm"><?php the_field('uberschrift_infoblock_1');?></h2>
                 <p>
-                Bacon ipsum dolor amet venison sausage short loin turducken,
-                tongue sirloin pork belly meatloaf tri-tip. Beef ribs porchetta ball tip,
+                    <?foreach(cwo_buildList('infoblock_1',get_the_ID()) as $listpoint):?>
+                        <?=$listpoint;?><br/>
+                    <?endforeach;?>
                 </p>
             </div>
-            <div class="col-sm-6">
-                <h2 class="font-demon fontsize-headline gap-bottom-sm">Wo?</h2>
-                <p>
-                Hunnenringhalle<br/>
-                Ringwalstraße 1<br/>
-                66620 Otzenhausen<br/>
-                </p>
+            <?endif;?>
+            <?if(get_field('infoblock_2')):?>
+            <div class="col-sm-4">
+                <h2 class="font-demon fontsize-headline gap-bottom-sm"><?php the_field('uberschrift_infoblock2');?></h2>
+               <?foreach(cwo_buildList('infoblock_2',get_the_ID()) as $listpoint):?>
+                    <?=$listpoint;?><br/>
+                <?endforeach;?>
             </div>
+            <?endif;?>
         </div>
 
 
@@ -36,36 +41,13 @@
         </div>
 
         <!-- Texting WYSIWYG -->
+        <?if(get_field('groser_textblock')):?>
         <div class="row">
-            <div class="col-md-9">
-                <h2 class="font-demon fontsize-headline gap-bottom-sm gap-top-md">Band 1</h2>
-                <p>
-                Bacon ipsum dolor amet venison sausage short loin turducken, tongue sirloin pork belly meatloaf tri-tip. Beef ribs porchetta ball tip, strip
-                steak picanha frankfurter sirloin jowl. Rump boudin fatback, shank ground round sausage swine cupim leberkas brisket alcatra ball tip turkey
-                hamburger prosciutto. Short loin pork kevin, brisket leberkas ball tip ground round jerky frankfurter doner salami corned beef kielbasa
-                burgdoggen pork belly. Ham hock alcatra pork loin, shoulder spare ribs t-bone capicola bresaola prosciutto ham strip steak rump cow shankle
-                porchetta.
-                </p>
-
-                <h2 class="font-demon fontsize-headline gap-bottom-sm gap-top-md">Band 2</h2>
-                <p>
-                Bacon ipsum dolor amet venison sausage short loin turducken, tongue sirloin pork belly meatloaf tri-tip. Beef ribs porchetta ball tip, strip
-                steak picanha frankfurter sirloin jowl. Rump boudin fatback, shank ground round sausage swine cupim leberkas brisket alcatra ball tip turkey
-                hamburger prosciutto. Short loin pork kevin, brisket leberkas ball tip ground round jerky frankfurter doner salami corned beef kielbasa
-                burgdoggen pork belly. Ham hock alcatra pork loin, shoulder spare ribs t-bone capicola bresaola prosciutto ham strip steak rump cow shankle
-                porchetta.
-                </p>
-
-                <h2 class="font-demon fontsize-headline gap-bottom-sm gap-top-md">Band 2</h2>
-                <p>
-                Bacon ipsum dolor amet venison sausage short loin turducken, tongue sirloin pork belly meatloaf tri-tip. Beef ribs porchetta ball tip, strip
-                steak picanha frankfurter sirloin jowl. Rump boudin fatback, shank ground round sausage swine cupim leberkas brisket alcatra ball tip turkey
-                hamburger prosciutto. Short loin pork kevin, brisket leberkas ball tip ground round jerky frankfurter doner salami corned beef kielbasa
-                burgdoggen pork belly. Ham hock alcatra pork loin, shoulder spare ribs t-bone capicola bresaola prosciutto ham strip steak rump cow shankle
-                porchetta.
-                </p>
+            <div class="col-md-9 gap-bottom-sm">
+                <?=cwo_knaupWYSIWYG(get_field('groser_textblock'));?>
             </div>
         </div>
+        <?endif;?>
 
 
 
