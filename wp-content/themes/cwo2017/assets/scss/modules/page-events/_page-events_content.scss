@@ -14,6 +14,17 @@
         padding-bottom: 10px;
       }
     }
+
+    .vereinsintern_image{
+      width: 140px;
+      height: 25px;
+      margin: 15px 0;
+      @include breakpoint($screen-sm) {
+        margin: 0;
+        width: 116px;
+        height: 21px;
+      }
+    }
   }
 
   h2{

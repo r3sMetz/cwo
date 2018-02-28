@@ -4,10 +4,13 @@
 			<div class="single_event gap-bottom-lg">
                 <div class="row single_event_content">
                     <div class="col-sm-1">
-                        <span class="fontsize-headline-big"><?php echo $event->data_array[0];?></span><br/>
-                        <span class="text-uppercase"><?php echo $event->data_array[1];?></span>
+                        <span class="fontsize-headline-big"><?= $event->data_array[0];?></span><br/>
+                        <span class="text-uppercase"><?= $event->data_array[1];?></span>
                     </div>
                     <div class="col-sm-3 pos-rel title-col">
+                        <? if(get_field('vereinsintern',$event->ID)):?>
+                            <img src="<?=CWO_SVG_URI;?>/vereinsintern.svg" class="vereinsintern_image" alt="CWO - Vereinsintern">
+                        <?php endif;?>
                         <h2 class="font-demon"><?php echo cwo_knaupTitle($event->ID);?></h2>
                     </div>
                     <div class="col-sm-4 col-md-5">
