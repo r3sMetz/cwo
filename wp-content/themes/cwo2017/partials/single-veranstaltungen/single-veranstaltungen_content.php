@@ -32,30 +32,27 @@
             <?endif;?>
         </div>
 
-
-		<!-- Top Line -->
-        <div class="row top-line">
-            <div class="col-md-12">
-                <hr>
-            </div>
-        </div>
-
-        <!-- Texting WYSIWYG -->
         <?if(get_field('groser_textblock')):?>
-        <div class="row">
-            <div class="col-md-9 gap-bottom-sm">
-                <?=cwo_knaupWYSIWYG(get_field('groser_textblock'));?>
+            <!-- Top Line -->
+            <div class="row top-line">
+                <div class="col-md-12">
+                    <hr>
+                </div>
             </div>
-        </div>
+
+            <!-- Texting WYSIWYG -->
+            <div class="row">
+                <div class="col-md-9 gap-bottom-sm">
+                    <?=cwo_knaupWYSIWYG(get_field('groser_textblock'));?>
+                </div>
+            </div>
+
+            <!-- Bottom Line -->
+            <div class="row">
+                <div class="col-md-12">
+                    <hr>
+                </div>
+            </div>
         <?endif;?>
-
-
-
-		<!-- Bottom Line -->
-        <div class="row">
-            <div class="col-md-12">
-                <hr>
-            </div>
-        </div>
 	</div>
 </div>
