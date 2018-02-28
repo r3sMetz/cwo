@@ -1,8 +1,11 @@
 .cwo_eventheader{
-  background-color: red;
-
   height: 250px;
   padding-top: 210px;
+
+  .header_vereinsintern{
+    width: 150px;
+    height: 27px;
+  }
 
   @include breakpoint($screen-sm){
     height: 350px;
