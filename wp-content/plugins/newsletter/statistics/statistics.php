@@ -138,6 +138,8 @@ class NewsletterStatistics extends NewsletterModule {
             } else {
                 $this->logger->info('Email with no token hence not signature to check');
             }
+            
+            $ip = preg_replace('/[^0-9a-fA-F:., ]/', '', $_SERVER['REMOTE_ADDR']);
 
             $row = $wpdb->get_row($wpdb->prepare("select * from " . NEWSLETTER_STATS_TABLE . " where email_id=%d and user_id=%d and url='' limit 1", $email->id, $user->id));
             if ($row) {

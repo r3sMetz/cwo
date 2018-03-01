@@ -1034,18 +1034,20 @@ class NewsletterModule {
 
             $home_url = home_url('/');
             
+            $nek = false;
             if ($email) {
                 $text = str_replace('{email_id}', $email->id, $text);
                 $text = str_replace('{email_subject}', $email->subject, $text);
                 $text = $this->replace_url($text, 'EMAIL_URL', $home_url . '?na=v&id=' . $email->id . '&amp;nk=' . $nk);
+                $nek = $email->id . '-' . $email->token;
             }
 
 
             $text = $this->replace_url($text, 'SUBSCRIPTION_CONFIRM_URL', $home_url . '?na=c&nk=' . $nk);
             $text = $this->replace_url($text, 'ACTIVATION_URL', $home_url . '?na=c&nk=' . $nk);
 
-            $text = $this->replace_url($text, 'UNSUBSCRIPTION_CONFIRM_URL', $home_url . '?na=uc&nk=' . $nk . ($email ? '&nek=' . $email->id : ''));
-            $text = $this->replace_url($text, 'UNSUBSCRIPTION_URL', $home_url . '?na=u&nk=' . $nk . ($email ? '&nek=' . $email->id : ''));
+            $text = $this->replace_url($text, 'UNSUBSCRIPTION_CONFIRM_URL', $home_url . '?na=uc&nk=' . $nk . ($nek ? '&nek=' . $nek : ''));
+            $text = $this->replace_url($text, 'UNSUBSCRIPTION_URL', $home_url . '?na=u&nk=' . $nk . ($nek ? '&nek=' . $nek : ''));
 
             // Obsolete.
             $text = $this->replace_url($text, 'FOLLOWUP_SUBSCRIPTION_URL', self::add_qs($base, 'nm=fs' . $id_token));
@@ -1059,9 +1061,7 @@ class NewsletterModule {
                 $text = $this->replace_url($text, 'PROFILE_URL', self::add_qs($options_profile['profile_url'], 'ni=' . $user->id . '&amp;nt=' . $user->token));
 
             $text = $this->replace_url($text, 'UNLOCK_URL', $home_url . '?na=ul&nk=' . $nk);
-            if ($email) {
-                
-            }
+            
         } else {
             $text = $this->replace_url($text, 'SUBSCRIPTION_CONFIRM_URL', '#');
             $text = $this->replace_url($text, 'ACTIVATION_URL', '#');

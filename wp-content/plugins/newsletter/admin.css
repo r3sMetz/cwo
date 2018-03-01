@@ -13,6 +13,13 @@
     box-sizing: border-box;
 }
 
+/* Color picker patch */
+#tnp-wrap .iris-picker, #tnp-wrap .iris-picker * {
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
 #tnp-wrap *:before,
 #tnp-wrap *:after {
     -webkit-box-sizing: border-box;
@@ -1014,7 +1021,7 @@ p.description {
     background-color: #ECF0F1;
 }
 
-.wp-core-ui .button-secondary, .wp-core-ui .button, .wp-core-ui .button-primary {
+.wp-core-ui .button-secondary, .wp-core-ui .button-primary {
     background-color: #3498db;
     border: none;
     box-shadow: none;

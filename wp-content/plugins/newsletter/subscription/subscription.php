@@ -780,7 +780,7 @@ class NewsletterSubscription extends NewsletterModule {
         }
 
         if ($email) {
-            $params .= '&nek=' . $email->id;
+            $params .= '&nek=' . $email->id . '-' . $email->token;
         }
 
         // Add exceptions for "profile" key.
@@ -1128,7 +1128,7 @@ class NewsletterSubscription extends NewsletterModule {
             $buffer .= '<input type="checkbox" name="ny" required class="tnp-privacy" id="tnp-privacy"> ';
             $buffer .= '<label for="tnp-privacy">';
             if (!empty($attrs['url'])) {
-                $buffer .= '<a target="_blank" href="' . esc_attr($options_profile['privacy_url']) . '">';
+                $buffer .= '<a target="_blank" href="' . esc_attr($attrs['url']) . '">';
             }
             $buffer .= $attrs['label'];
             if (!empty($attrs['url'])) {

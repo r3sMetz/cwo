@@ -2,7 +2,7 @@
 Tags: newsletter,email,subscription,mass mail,list build,email marketing,direct mailing,automation,automated
 Requires at least: 3.4.0
 Tested up to: 4.9.4
-Stable tag: 5.2.4
+Stable tag: 5.2.5
 Contributors: satollo,webagile,michael-travan
 
 Add a real newsletter system to your blog. For free. With unlimited newsletters and subscribers.
@@ -21,6 +21,7 @@ send and track e-mails, headache-free. It just works out of box!
 * Wordpress User Registration **seamless integration**
 * **Single** And **Double Opt-In** plus privacy checkbox for EU laws compliance
 * **Subscribers lists** to fine-target your campaigns
+* PHP API and REST API for coders and integrations
 * SMTP-Ready 
 * Customizable Themes
 * Newsletter with Html and Text message versions 
@@ -38,19 +39,21 @@ send and track e-mails, headache-free. It just works out of box!
 
 Find and install them from the Extensions panel in your blog.
 
-* WP Registration Integration: connects the WordPress standard registration with Newsletter subscription. Optionally imports all registered users as subscribers.
-* Locked Content: exchange the access to your premium contents with a subscription
-* Archive: creates a simple blog page which lists all your sent newsletters
+* [WP Registration Integration](https://www.thenewsletterplugin.com/documentation/wpusers-extension) - connects the WordPress standard and custom registration with Newsletter subscription. Optionally imports all registered users as subscribers.
+* [Archive Extension](https://www.thenewsletterplugin.com/documentation/archive-extension) - creates a simple blog page which lists all your sent newsletters
+* [Locked Content Extension](https://www.thenewsletterplugin.com/documentation/locked-content-extension) - open up your premium content only after subscription
 
 = Professional Extensions =
 
 Need *more power*? Feel *something's missing*? The Newsletter Plugin features can be easily extended through 
 our **premium, professional Extensions**! Let us introduce just two of them : )
 
-* [Reports Extension](https://www.thenewsletterplugin.com/reports) is a regular WordPress plugin which improves the internal statistics collection system and provides better reports of data collected for each sent email. Neat.
-* [Automated Extension](https://www.thenewsletterplugin.com/automated) generates and sends your newsletters using your blog last posts, even custom ones like events or products. Just sit and watch!
-* [WooCommerce Extension](https://www.thenewsletterplugin.com/woocommerce) subscribe customers to a mailing list and generate product newletters.
-* [Amazon SES and other providers integration](https://www.thenewsletterplugin.com/integrations) seamlessly integrate Amazon SES and other email service providers with The Newsletter Plugin. Hassle-free.
+* [Reports Extension](https://www.thenewsletterplugin.com/reports) - improves the internal statistics collection system and provides better reports of data collected for each sent email. Neat.
+* [Automated Extension](https://www.thenewsletterplugin.com/automated) - generates and sends your newsletters using your blog last posts, even custom ones like events or products. Just sit and watch!
+* [WooCommerce Extension](https://www.thenewsletterplugin.com/woocommerce) - subscribe customers to a mailing list and generate product newletters.
+* [Amazon SES and other providers integration](https://www.thenewsletterplugin.com/integrations) - seamlessly integrate Amazon SES and other email service providers with The Newsletter Plugin. Hassle-free.
+* [Contact Form 7 Extension](https://www.thenewsletterplugin.com/documentation/contact-form-7-extension) - integrate the subscription on Contact Form 7 forms
+* [Google Analytics Extension](https://www.thenewsletterplugin.com/google-analytics) - track newsletter links with Google UTM tracking paramaters
 
 = Support =
 
@@ -84,6 +87,12 @@ Thank you, The Newsletter Team
 3. The Reports extension
 
 == Changelog ==
+
+= 5.2.6 =
+
+* Fixed url attributes on privacy field shortcode
+* Fixed few debug notices
+* (NEW) PHP API for coders (and companion REST API with the free Newsletter API extension)
 
 = 5.2.4 =
 
