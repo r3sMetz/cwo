@@ -10,8 +10,7 @@
 					</ul>
 				</div>
 				<div class="col-md-3">
-				    Newsletter:<br/>
-					<input class="form-control" placeholder="Email" type="text">
+					<a href="<?php echo get_permalink(282);?>" class="cwo-btn cwo-btn-red fadeLink">Newsletter abonnieren</a>
 				</div>
 				<div class="col-md-3">
                     <img class="maxImage" src="<?php echo CWO_PNG_URI;?>/against_racism.png" alt="CWO - Against Racism">

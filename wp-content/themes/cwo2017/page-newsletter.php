@@ -12,8 +12,8 @@ get_template_part( 'modules/navbar' );
 /*** Eventheader ***/
 get_template_part('modules/cwo_eventheader');
 
-/*** Content ***/
-get_template_part('partials/page-events/page-events_content');
+/*** The Form **/
+get_template_part('partials/page-newsletter/page-newsletter_content');
 
 /*** Footer ***/
 get_template_part('modules/cwo_footer');
