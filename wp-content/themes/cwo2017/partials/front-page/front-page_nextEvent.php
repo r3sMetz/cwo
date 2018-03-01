@@ -27,7 +27,7 @@
 			<div class="col-md-4 gap-mobile-bottom-lg">
 				<h3 class="font-demon fontsize-headline gap-bottom-lg"><?php the_field('datum',$nextEvent);?></h3>
 				<h3 class="font-demon fontsize-headline-big gap-bottom-md"><?php echo get_the_title($nextEvent);?></h3>
-				<a href="<?php echo get_permalink($nextEvent);?>" class="cwo-btn cwo-btn-red">mehr erfahren</a>
+				<a href="<?php echo get_permalink($nextEvent);?>" class="cwo-btn cwo-btn-red fadeLink">mehr erfahren</a>
 				<?php if(get_field('vereinsintern',$nextEvent)):?>
 				<h4 class="puffer-both-md">Vereinsintern</h4>
 				<?php endif;?>

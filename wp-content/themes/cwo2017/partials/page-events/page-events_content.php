@@ -22,7 +22,7 @@
                         <?php the_field('einlass',$event->ID);?>Uhr
                     </div>
                     <div class="col-sm-3 col-md-2 text-right-sm">
-                        <a href="<?php echo get_permalink($event->ID);?>" class="cwo-btn cwo-btn-red">mehr erfahren</a>
+                        <a href="<?php echo get_permalink($event->ID);?>" class="cwo-btn cwo-btn-red fadeLink">mehr erfahren</a>
                     </div>
                 </div>
                 <div class="row">
