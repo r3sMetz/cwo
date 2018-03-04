@@ -6,4 +6,9 @@
   .feature_list li:not(:last-child){
     margin-bottom: $gap-std;
   }
+
+  &_intern{
+    width: 150px;
+    height: 27px;
+  }
 }

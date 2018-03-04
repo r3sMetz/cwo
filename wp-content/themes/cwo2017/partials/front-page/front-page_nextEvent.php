@@ -1,4 +1,4 @@
-<?php $nextEvent = cwo_nextEvent(); if($nextEvent):?>
+<?$nextEvent = cwo_nextEvent(); if($nextEvent):?>
 <div class="front-page_nextEvent bg-std puffer-both-xxl">
 	<div class="container">
 		<div class="row gap-bottom-sm">
@@ -25,33 +25,33 @@
 		<!-- Next Event Data -->
 		<div class="row">
 			<div class="col-md-4 gap-mobile-bottom-lg">
-				<h3 class="font-demon fontsize-headline gap-bottom-lg"><?php the_field('datum',$nextEvent);?></h3>
-				<h3 class="font-demon fontsize-headline-big gap-bottom-md"><?php echo get_the_title($nextEvent);?></h3>
-				<a href="<?php echo get_permalink($nextEvent);?>" class="cwo-btn cwo-btn-red fadeLink">mehr erfahren</a>
-				<?php if(get_field('vereinsintern',$nextEvent)):?>
-				<h4 class="puffer-both-md">Vereinsintern</h4>
-				<?php endif;?>
+			    <?if(get_field('vereinsintern',$nextEvent)):?>
+				    <img class="front-page_nextEvent_intern gap-bottom-md" src="<?=CWO_SVG_URI;?>/vereinsintern.svg" alt="CWO - Vereinsintern"/>
+                <?endif;?>
+				<h3 class="font-demon fontsize-headline gap-bottom-lg"><?the_field('datum',$nextEvent);?></h3>
+				<h3 class="font-demon fontsize-headline-big"><?=get_the_title($nextEvent);?></h3>
 			</div>
 			<div class="col-md-4 gap-mobile-bottom-lg">
 				<ul class="list-unstyled font-demon text-uppercase feature_list">
-					<?php foreach(cwo_buildList('features',$nextEvent) as $feature):?>
-					    <li><?php echo $feature;?></li>
-					<?php endforeach;?>
+					<?foreach(cwo_buildList('features',$nextEvent) as $feature):?>
+					    <li><?=$feature;?></li>
+					<?endforeach;?>
 				</ul>
 			</div>
 			<div class="col-md-4">
 				<ul class="list-unstyled">
-					<?php foreach(cwo_buildList('infoblock_1',$nextEvent) as $info):?>
-					    <li><?php echo $info;?></li>
-					<?php endforeach;?>
+					<?foreach(cwo_buildList('infoblock_1',$nextEvent) as $info):?>
+					    <li><?=$info;?></li>
+					<?endforeach;?>
 				</ul>
-				<ul class="list-unstyled">
-					<?php foreach(cwo_buildList('infoblock_2',$nextEvent) as $info):?>
-					    <li><?php echo $info;?></li>
-					<?php endforeach;?>
+				<ul class="list-unstyled gap-bottom-md">
+					<?foreach(cwo_buildList('infoblock_2',$nextEvent) as $info):?>
+					    <li><?=$info;?></li>
+					<?endforeach;?>
 				</ul>
+				<a href="<?=get_permalink($nextEvent);?>" class="cwo-btn cwo-btn-red fadeLink">mehr erfahren</a>
 			</div>
 		</div>
 	</div>
 </div>
-<?php endif;?>
+<?endif;?>
