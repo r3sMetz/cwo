@@ -21,7 +21,8 @@
         wp_register_script('scripts', get_template_directory_uri() . '/assets/js/build/scripts.min.js');
         wp_localize_script('scripts','defaults',array(
             'template_directory_uri' => get_template_directory_uri(),
-            'template_directory' => get_template_directory()
+            'template_directory'     => get_template_directory(),
+            'home_url'               => home_url()
         ));
         wp_enqueue_script('scripts');
     }

@@ -10,6 +10,16 @@ var events = (function(){
     function setEventHandlerForClick(){
         //Fade Overlay
         fadeOverlay.setClickEvents();
+
+        //CWO Location Back
+        $('.cwo_loc_back').on('click',function(){
+            fadeOverlay.show(true,function(){
+                if(document.referrer.includes('cwo'))
+                    window.history.back();
+                else
+                    window.location.href = defaults.home_url;
+            });
+        });
     }
 
     function setEventHandlerForScroll(){
