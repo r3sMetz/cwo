@@ -1,0 +1,17 @@
+.page-bilder_header{
+  padding-top: 50vw;
+  padding-bottom: 10vw;
+  @include breakpoint {
+    padding-top: 30vw;
+    padding-bottom: 5vw;
+  }
+
+  @include breakpoint($screen-lg + 300px){
+    padding-top: 25vw;
+    padding-bottom: 2vw;
+  }
+
+  h1{
+    padding-left: 15px;
+  }
+}

@@ -1,0 +1,30 @@
+Array
+(
+    [0] => Array
+        (
+            [title] => Steel Crusade 33
+            [thumb] => http://cwo/wp-content/uploads/2017/12/CWO1011269-150x150.jpg
+            [year] => 2017
+            [month] => 09
+            [url] => http://cwo/galerien/steel-crusade-33/
+        )
+
+    [1] => Array
+        (
+            [title] => Nervosa
+            [thumb] => http://cwo/wp-content/uploads/2017/12/CWO1011253-150x150.jpg
+            [year] => 2017
+            [month] => 08
+            [url] => http://cwo/galerien/nervosa/
+        )
+
+    [2] => Array
+        (
+            [title] => Steel Crusade 32
+            [thumb] => http://cwo/wp-content/uploads/2017/12/CWO1011236-150x150.jpg
+            [year] => 2017
+            [month] => 03
+            [url] => http://cwo/galerien/steel-crusade-32/
+        )
+
+)

@@ -20,6 +20,13 @@ var events = (function(){
                     window.location.href = defaults.home_url;
             });
         });
+
+        // Single Gallery Linking
+        $('.single_gallery').on('click',function(){
+            var url = $(this).data('url');
+
+            fadeOverlay.show(url);
+        });
     }
 
     function setEventHandlerForScroll(){
