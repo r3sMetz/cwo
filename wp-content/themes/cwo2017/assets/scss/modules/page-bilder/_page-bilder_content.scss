@@ -7,13 +7,13 @@
   .single_gallery{
 
     text-align: center;
-    @include linear-gradient($color-darkRed,darken($color-darkRed,25%));
 
     width: 50%;
     height: 40vw;
     @include breakpoint($screen-sm){
       width: 33.33%;
       height: 30vw;
+      @include linear-gradient($color-darkRed,darken($color-darkRed,25%));
     }
 
     @include breakpoint($screen-lg + 300px){
@@ -24,9 +24,14 @@
       background: black;
       height: 100%;
       padding: 2px;
-      background-size: cover;
       width: 100%;
-      &:hover{
+      background-size: cover;
+      background-clip: content-box;
+      @include breakpoint($screen-sm){
+        background-clip: border-box;
+      }
+
+      @include noTouchHover{
         background-clip: content-box;
         cursor: pointer;
         .single_gallery_text{
@@ -42,16 +47,23 @@
             }
         }
       }
+
+      // Mobile Background
+      @include breakpoint($screen-sm-max, 'max-width') {
+        background-image: none;
+        background-color: $color-darkRed;
+      }
     }
     &_text{
       height: 100%;
       width: 100.1%;
       transition: background $transition-short ease-out;
       h3{
-        padding-top: 13vw;
+        padding-top: 16vw;
         transition: background $transition-short, color $transition-short ease-out;
         @include breakpoint($screen-sm){
           font-size: $font-size-large;
+          padding-top: 13vw;
         }
 
         @include breakpoint($screen-lg + 300px) {

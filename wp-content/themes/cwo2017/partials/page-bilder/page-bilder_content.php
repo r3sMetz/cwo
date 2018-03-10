@@ -1,14 +1,15 @@
 <div class="fullPageWrapper">
 	<div class="page-bilder_content bg-std flexed_center">
         <div class="container">
-            <div class="col-md-10 col-md-offset-1 the_galleries">
-                <?for($i=0;$i<3;$i++):?>
-                <?foreach(cwo_getGaleries() as $galery):?>
+            <div class="col-md-12 the_galleries">
+                <?//TODO: METZ: Remove Index before Launch?>
+                <?for($index=0;$index<3;$index++):?>
+                <?foreach(cwo_getGaleries() as $key => $galery):?>
                     <div class="single_gallery" data-url="<?=$galery['url'];?>">
-                        <div class="single_gallery_inner" style="background-image:url(<?=$galery['thumb'];?>)">
+                        <div class="single_gallery_inner">
                             <div class="single_gallery_text">
                                 <h3 class="font-demon"><?=$galery['title'];?></h3>
-                                <img src="<?=CWO_PNG_URI;?>/eye_icon.png" alt="CWO Show Gallery">
+                                <img class="hidden-xs" src="<?=CWO_PNG_URI;?>/eye_icon.png" alt="CWO Show Gallery">
                             </div>
                         </div>
                     </div>

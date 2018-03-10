@@ -74,4 +74,12 @@
       background-image: url('../img/png/veranstaltungen_bg.png');
     }
   }
+  &-galery{
+    &.mobile-bg{
+      background-image: url('../img/png/galery_bg.png');
+    }
+    @include breakpoint{
+      background-image: url('../img/png/galery_bg.png');
+    }
+  }
 }

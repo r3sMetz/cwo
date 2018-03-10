@@ -7,7 +7,7 @@ function cwo_getGaleries(){
 		$datum_array = explode('/',get_field('datum',$galery->ID));
 		$return_array[] = array(
 			'title' => get_the_title($galery->ID),
-			'thumb' => get_field('titelbild',$galery->ID)['sizes']['thumbnail'],
+			'thumb' => get_field('titelbild',$galery->ID)['sizes']['medium_large'],
 			'year'  => $datum_array[0],
 			'month' => $datum_array[1],
 			'url'   => get_permalink($galery->ID)
