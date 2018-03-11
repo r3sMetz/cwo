@@ -15,7 +15,7 @@ get_template_part('partials/front-page/front-page_nextEvent');
 get_template_part( 'partials/front-page/front-page_history' );
 
 /** HeadQuarter **/
-get_template_part( 'partials/front-page/front-page_hq' );
+//get_template_part( 'partials/front-page/front-page_hq' );
 
 /** Footer  **/
 get_template_part( 'modules/cwo_footer' );
