@@ -13,7 +13,7 @@
 		<!-- Prelines -->
 		<div class="row gap-bottom-md">
 			<div class="col-md-4">
-				Die Celtic Warriors Otzenhausen präsenieren:
+				Die Celtic Warriors Otzenhausen präsentieren:
 			</div>
 			<div class="col-md-4 hidden-xs hidden-sm">
 				Mit:
