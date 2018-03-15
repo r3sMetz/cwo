@@ -10,6 +10,9 @@
     require('includes/helper/helper_events.php');
     require('includes/helper/helper-page-bilder.php');
 
+    //Ajax
+    require('includes/ajax/ajax_contact.php');
+
     //AdminPanel
     require('includes/admin_hides.php');
     //require('includes/admin_hooks.php');

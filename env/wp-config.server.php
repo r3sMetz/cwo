@@ -23,3 +23,8 @@ define('DB_PASSWORD', 'mightymetal');
  * Ersetze localhost mit der MySQL-Serveradresse.
  */
 define('DB_HOST', 'cwo-ev.de.mysql');
+
+/**
+ * Mailing
+ */
+define('CWO_MAILING_ADRESS','metz@raum3.de');

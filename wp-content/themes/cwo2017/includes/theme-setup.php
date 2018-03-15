@@ -38,7 +38,9 @@
         wp_localize_script('scripts','defaults',array(
             'template_directory_uri' => get_template_directory_uri(),
             'template_directory'     => get_template_directory(),
-            'home_url'               => home_url()
+            'home_url'               => home_url(),
+            "ajax_url"                   => admin_url( 'admin-ajax.php' ),
+
         ));
         wp_enqueue_script('scripts');
     }

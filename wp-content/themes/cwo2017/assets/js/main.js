@@ -18,6 +18,9 @@ var main = (function(){
 
         //CapAnimation
         if($('#the_cap').length) capAnimation.setup();
+
+        //Contact
+        if($('#cwo_contact').length) cwoContact.setup();
     }
 
     return {

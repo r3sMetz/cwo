@@ -22,6 +22,9 @@ a {
   text-align: center;
   padding: $gap-std $gap-std $gap-std/2 $gap-std;
   font-family: $font-demon;
+  cursor: pointer;
+  outline: 0 !important;
+  border: none !important;
   &-red{
     background-color: $color-lightRed;
     color: $color-white;
