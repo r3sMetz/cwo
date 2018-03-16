@@ -17,7 +17,7 @@
                             <li><a class="fadeLink whiteLink" href="<?=home_url();?>">Home</a></li>
                         <?endif;?>
                         <?foreach(r3_getMenue('HauptmenuDE') as $item):?>
-                            <li><a class="<?=$item->classes[0]? $item->classes[0] : 'fadeLinke';?> whiteLink" href="<?=$item->url;?>"><?=$item->title;?></a></li>
+                            <li><a class="<?=$item->classes[0]? $item->classes[0] : 'fadeLink';?> whiteLink" href="<?=$item->url;?>"><?=$item->title;?></a></li>
                         <?endforeach;?>
                     </ul>
 				</div>
