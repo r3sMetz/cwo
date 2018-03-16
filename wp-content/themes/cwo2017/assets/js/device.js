@@ -96,7 +96,7 @@ var device = (function () {
 
 
     /**
-     * @Desc: Object for Bootstrap(Version) Screen-Sizes
+     * @Desc: Object for Bootstrap(3) Screen-Sizes
      */
     var screen = {
         sm: 768,
@@ -105,10 +105,19 @@ var device = (function () {
         xl: 1450
     };
 
+	/**
+     * @Desc: Object for Transitions
+     */
+	var transitions ={
+		short: 300,
+		std: 500,
+		long: 800
+	};
 
 
 
     return {
+    	transitions			: transitions,
         screen              : screen,
         isMobile            : isMobile(),
         isPhone             : isPhone(),

@@ -3,22 +3,22 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-6 text-center-xs text-left-sm">
-				    <?php if(!is_front_page()):?>
-                        <a class="fadeLink" href="<?php echo home_url();?>">
-                            <img src="<?php echo CWO_PNG_URI;?>/logo.png" alt="Celtic Warriors Otzenhausen">
+				    <?if(!is_front_page()):?>
+                        <a class="fadeLink" href="<?=home_url();?>">
+                            <img src="<?=CWO_PNG_URI;?>/logo.png" alt="Celtic Warriors Otzenhausen">
                         </a>
-				    <?php else:?>
-                        <img src="<?php echo CWO_PNG_URI;?>/logo.png" alt="Celtic Warriors Otzenhausen">
-					<?php endif;?>
+				    <?else:?>
+                        <img src="<?=CWO_PNG_URI;?>/logo.png" alt="Celtic Warriors Otzenhausen">
+					<?endif;?>
 				</div>
 				<div class="col-sm-6 text-center-xs text-right-sm">
 					<ul class="list-inline">
-                        <?php if(!is_front_page()):?>
-                            <li><a class="fadeLink whiteLink" href="<?php echo home_url();?>">Home</a></li>
-                        <?php endif;?>
-                        <?php foreach(r3_getMenue('HauptmenuDE') as $item):?>
-                            <li><a class="fadeLink whiteLink" href="<?php echo $item->url;?>"><?php echo $item->title;?></a></li>
-                        <?php endforeach;?>
+                        <?if(!is_front_page()):?>
+                            <li><a class="fadeLink whiteLink" href="<?=home_url();?>">Home</a></li>
+                        <?endif;?>
+                        <?foreach(r3_getMenue('HauptmenuDE') as $item):?>
+                            <li><a class="<?=$item->classes[0]? $item->classes[0] : 'fadeLinke';?> whiteLink" href="<?=$item->url;?>"><?=$item->title;?></a></li>
+                        <?endforeach;?>
                     </ul>
 				</div>
 			</div>

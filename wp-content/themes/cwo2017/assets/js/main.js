@@ -7,6 +7,9 @@ var main = (function(){
         events.scroll();
         events.click();
 
+        // ForwadLinking
+        page_forwarding.setup();
+
         //Frontpage: History Slider
         if($('.the_history').length) historySlider.setup();
 
