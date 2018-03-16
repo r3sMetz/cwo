@@ -12,6 +12,12 @@ input, textarea{
   }
 }
 
+.input-group-addon {
+  background-color: $color-lightRed;
+  color: $color-white;
+  border-color:  $color-white;
+}
+
 @include placeholder{
   color: darken($color-white,25%)!important;
 }

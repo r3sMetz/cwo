@@ -15,10 +15,16 @@
                 <form action="#" id="cwo_contact">
                     <div class="row">
                         <div class="col-md-6 form-group">
-                            <input class="form-control" type="text" name="name" id="name" placeholder="Name*" required>
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="glyphicon glyphicon-user"></i></div>
+                                <input class="form-control" type="text" name="name" id="name" placeholder="Name*" required>
+                            </div>
                         </div>
                         <div class="col-md-6 form-group">
-                            <input class="form-control" type="email" name="email" id="email" placeholder="Email*" required>
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></div>
+                                <input class="form-control" type="email" name="email" id="email" placeholder="Email*" required>
+                            </div>
                         </div>
                     </div>
                     <div class="row">
