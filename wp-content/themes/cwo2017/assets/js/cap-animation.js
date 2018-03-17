@@ -18,7 +18,7 @@ var capAnimation = (function(){
 
     /** Public **/
     function setup(){
-        if(!device.isMobile && device.width() >= device.screen.md) {
+        //if(!device.isMobile && device.width() >= device.screen.md) {
             //Set Cap Jquery Object
             var the_cap = $('#the_cap');
 
@@ -45,7 +45,7 @@ var capAnimation = (function(){
                 //Set last laugh to current laugh
                 last_laugh = new_laugh
             })
-        }
+        //}
     }
 
     return {

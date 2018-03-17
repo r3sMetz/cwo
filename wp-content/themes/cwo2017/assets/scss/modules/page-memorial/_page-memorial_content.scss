@@ -1,14 +1,26 @@
 .page-memorial_content{
   #the_cap{
     position: absolute;
-    top: -60px;
-    right: -40px;
     width: 120px;
     height: 120px;
-    transform: rotate(45deg);
+    top: -130px;
+    right: 50%;
+    margin-right: -60px;
+    @include breakpoint($screen-sm){
+      right: 25%;
+      transform: rotate(45deg);
+      top: -60px;
+    }
+    @include breakpoint($screen-md) {
+      right: 0;
+    }
 
     &.moving {
-      animation-name: cap-animation;
+
+      animation-name: cap-animation-mobile;
+      @include breakpoint($screen-sm){
+        animation-name: cap-animation;
+      }
       animation-duration: $transition-short;
       animation-iteration-count: 3;
     }
@@ -20,8 +32,14 @@
         height: 140px;
         width: 140px;
         top: -70px;
-        right: -50px;
+        right: -10px;
       }
+    }
+  }
+
+  h1{
+    @include breakpoint($screen-md-max,'max-width') {
+      margin-bottom: $gap-lg;
     }
   }
 
@@ -32,8 +50,26 @@
   }
 }
 
+@keyframes cap-animation-mobile {
+  0%, 50%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+}
+
 @keyframes cap-animation {
-  0%, 50%, 100% {transform: rotate(45deg);}
-  25%           {transform: rotate(40deg);}
-  75%           {transform: rotate(50deg);}
+  0%, 50%, 100% {
+    transform: rotate(45deg);
+  }
+  25% {
+    transform: rotate(40deg);
+  }
+  75% {
+    transform: rotate(50deg);
+  }
 }
