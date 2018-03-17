@@ -30,4 +30,47 @@
   h2{
     line-height: 2;
   }
+
+  // Fragment Slider
+  .fragment_link{
+    cursor: pointer;
+    transition: color $transition-short;
+    &:first-child{
+      margin-right: $gap-lg;
+    }
+
+    &.active{
+      color: $color-lightRed;
+    }
+
+    @include noTouchHover{
+      color: $color-lightRed;
+    }
+  }
+
+  #fragment_slider{
+    display: inline-block;
+    padding-left: 15px;
+  }
+  #fragment_bar{
+    display: inline-block;
+    height: 3px;
+    background-color: $color-lightRed;
+    position: absolute;
+    bottom: -2px;
+    transition: all $transition-short ease-in;
+
+    &.coming{
+      left: 15px;
+      margin-left: 0;
+      width: 110px;
+    }
+
+    &.past {
+      left: 100%;
+      margin-left: -115px;
+      width: 115px;
+    }
+  }
+
 }

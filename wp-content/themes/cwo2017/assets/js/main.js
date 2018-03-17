@@ -24,6 +24,9 @@ var main = (function(){
 
         //Contact
         if($('#cwo_contact').length) cwoContact.setup();
+
+        //EventTime Switcher
+        if($('#fragment_slider').length) eventsTimeSwitcher.setup();
     }
 
     return {

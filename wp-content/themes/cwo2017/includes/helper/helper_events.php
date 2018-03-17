@@ -6,17 +6,18 @@ function cwo_getAllEvents(){
 
 	foreach ($all_events as $event){
 
-		if(strtotime(get_field('datum',$event->ID)) >= strtotime($today)) {
-			$event->data_array = cwo_buildEventDate($event->ID);
-			$return_events[] = $event;
-		}
+		$event->date_array = cwo_buildEventDate($event->ID);
+		if(strtotime(get_field('datum',$event->ID)) >= strtotime($today))
+			$return_events["coming"][] = $event;
+		else
+			$return_events["past"][] = $event;
 	}
 
 	return $return_events;
 }
 
 function cwo_nextEvent(){
-	$all_events = cwo_getAllEvents();
+	$all_events = cwo_getAllEvents()["coming"];
 	if($all_events)
 		return $all_events[0]->ID;
 	else
@@ -39,7 +40,7 @@ function cwo_buildList($listname,$id){
 
 function cwo_buildEventDate($id){
 	$data_time    = strtotime(get_field('datum',$id));
-	return array(date('d',$data_time),date('M',$data_time));
+	return array(date('d',$data_time),date('M',$data_time),date('Y',$data_time));
 }
 
 function cwo_knaupTitle($id){
