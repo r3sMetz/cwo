@@ -1,4 +1,4 @@
-<div class="single-galerien_content fullPageElement flexed_center margin-top-mobile" id="the_gallery_wrapper">
+<div class="single-galerien_content fullPageElement flexed_center" id="the_gallery_wrapper">
 	<div class="container">
 		<!-- Gallery Overview -->
 		<div class="row gap-bottom-md">
