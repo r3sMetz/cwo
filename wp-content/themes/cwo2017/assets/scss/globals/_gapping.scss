@@ -82,8 +82,12 @@
      padding-bottom: $gap-xl;
     }
     &-xxl{
-      padding-top: $gap-front-page;
-      padding-bottom: $gap-front-page;
+      padding-top: $gap-front-page*.25;
+      padding-bottom: $gap-front-page*.25;
+      @include breakpoint() {
+        padding-top: $gap-front-page;
+        padding-bottom: $gap-front-page;
+      }
     }
   }
   //Top
