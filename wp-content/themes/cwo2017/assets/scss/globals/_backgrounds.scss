@@ -31,7 +31,7 @@
       background-image: url('../img/jpg/header_top_mobile.jpg');
     }
     @include breakpoint($screen-sm) {
-      background-image: url('../img/jpg/header_top.jpg');
+      background-image: url('../img/jpg/header_top.jpg')!important;
     }
   }
   &-crowd {
@@ -39,7 +39,7 @@
      background-image: url('../img/png/bg_history_mobile.png');
    }
    @include breakpoint($screen-sm) {
-    background-image: url('../img/png/bg_history.png');
+    background-image: url('../img/png/bg_history.png')!important;
    }
   }
   &-fired{
@@ -47,7 +47,7 @@
       background-image: url('../img/png/bg_vorstand_mobile.png');
     }
     @include breakpoint($screen-sm) {
-      background-image: url('../img/png/bg_vorstand.png');
+      background-image: url('../img/png/bg_vorstand.png')!important;
     }
   }
   &-cleancrowd{
@@ -55,7 +55,7 @@
       background-image: url('../img/png/bg_crowd_mobile.png');
     }
     @include breakpoint($screen-sm) {
-      background-image: url('../img/png/bg_crowd.png');
+      background-image: url('../img/png/bg_crowd.png')!important;
     }
   }
   &-clouds{
@@ -63,7 +63,7 @@
       background-image: url('../img/png/memorial_BG_mobile.png');
     }
     @include breakpoint($screen-sm) {
-      background-image: url('../img/png/memorial_BG.png');
+      background-image: url('../img/png/memorial_BG.png')!important;
     }
   }
   &-events{
@@ -71,7 +71,7 @@
       background-image: url('../img/png/veranstaltungen_bg_mobile.png');
     }
     @include breakpoint($screen-sm) {
-      background-image: url('../img/png/veranstaltungen_bg.png');
+      background-image: url('../img/png/veranstaltungen_bg.png')!important;
     }
   }
   &-galery{
@@ -79,7 +79,7 @@
       background-image: url('../img/png/galery_bg_mobile.png');
     }
     @include breakpoint($screen-sm) {
-      background-image: url('../img/png/galery_bg.png');
+      background-image: url('../img/png/galery_bg.png')!important;
     }
   }
 }
