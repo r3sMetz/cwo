@@ -1,9 +1,10 @@
 input, textarea{
   &:not(.cwo-btn) {
     background: rgba($color-black,.85) !important;
-    //border-radius: 0 !important;
+    border-radius: 0 !important;
     font-family: $font-regular !important;
     border-color: $color-white !important;
+    border-width: 2px;
     color: $color-white!important;
     &:focus{
       border-color: $color-white !important;
