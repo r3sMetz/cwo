@@ -52,10 +52,10 @@ function cwo_knaupTitle($id){
 function cwo_knaupWYSIWYG($text){
 	$search = array('<h1>','<h2>','<h3>','<h4>');
 	$replace = array(
-		'<h1 class="font-demon fontsize-headline gap-top-md gap-bottom-sm">',
-		'<h2 class="font-demon fontsize-headline gap-top-md gap-bottom-sm">',
-		'<h3 class="font-demon fontsize-headline gap-top-md gap-bottom-sm">',
-		'<h4 class="font-demon fontsize-headline gap-top-md gap-bottom-sm">'
+		'<h1 class="font-heat fontsize-headline gap-top-md gap-bottom-sm">',
+		'<h2 class="font-heat fontsize-headline gap-top-md gap-bottom-sm">',
+		'<h3 class="font-heat fontsize-headline gap-top-md gap-bottom-sm">',
+		'<h4 class="font-heat fontsize-headline gap-top-md gap-bottom-sm">'
 		);
 
 	return str_replace($search,$replace,$text);
