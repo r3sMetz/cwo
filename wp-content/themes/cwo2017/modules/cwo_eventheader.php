@@ -8,7 +8,7 @@
                 <?php endif; ?>
 
                 <!-- Title -->
-                <h1 class="font-demon fontsize-headline-big">
+                <h1 class="font-heat fontsize-headline-big">
                     <?php the_title(); ?>
                 </h1>
 				<?php if ( is_single() ): ?>

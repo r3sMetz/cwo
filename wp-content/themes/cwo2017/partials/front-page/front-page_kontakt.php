@@ -3,7 +3,7 @@
         <!-- Headline -->
         <div class="row gap-bottom-sm">
             <div class="col-md-12">
-                <h2 class="font-demon fontsize-headline dashed-headline gap-bottom-lg text-center">
+                <h2 class="font-heat fontsize-headline dashed-headline gap-bottom-lg text-center">
                     <span class="dashed_line"></span><span class="dashed_text">Kontakt</span><span class="dashed_line"></span>
                 </h2>
             </div>

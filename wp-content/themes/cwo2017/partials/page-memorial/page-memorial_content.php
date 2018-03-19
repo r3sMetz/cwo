@@ -2,10 +2,10 @@
 	<div class="container">
 		<div class="row gap-bottom-md">
             <div class="col-md-12 text-center">
-                <!-- <h1 class="font-demon fontsize-headline-big dashed-headline">
+                <!-- <h1 class="font-heat fontsize-headline-big dashed-headline">
                     <span class="dashed_line"></span><span class="dashed_text"><?php the_title();?></span><span class="dashed_line"></span>
                 </h1> -->
-                <h1 class="font-demon fontsize-headline-big"><?php the_title();?></h1>
+                <h1 class="font-heat fontsize-headline-big"><?php the_title();?></h1>
             </div>
         </div>
 		<div class="row">

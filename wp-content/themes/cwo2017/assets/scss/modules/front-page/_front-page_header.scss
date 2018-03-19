@@ -18,14 +18,13 @@
   &_headline {;
     h1 {
       opacity: .25;
-      font-size: 3vw;
+      font-size: 5vw;
+
+      @include breakpoint($screen-sm){
+        font-size: 3.5vw;
+      }
       span.da_head {
-        margin-bottom: 10px;
         font-size: 300%;
-        @include breakpoint {
-          left: -5px;
-          margin-bottom: 15px
-        }
       }
 
       span:last-child {

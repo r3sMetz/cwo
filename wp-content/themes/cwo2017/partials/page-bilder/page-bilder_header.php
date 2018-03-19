@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-12">
                 <!-- Title -->
-                <h1 class="font-demon fontsize-headline-big">
+                <h1 class="font-heat fontsize-headline-big">
                     <?php the_title(); ?>
                 </h1>
             </div>

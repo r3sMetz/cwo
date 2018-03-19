@@ -62,7 +62,6 @@
         padding-top: 16vw;
         transition: background $transition-short, color $transition-short ease-out;
         @include breakpoint($screen-sm){
-          font-size: $font-size-large;
           padding-top: 13vw;
         }
 

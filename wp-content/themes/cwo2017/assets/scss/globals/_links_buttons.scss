@@ -21,7 +21,9 @@ a {
   display: inline-block;
   text-align: center;
   padding: $gap-std $gap-std $gap-std/2 $gap-std;
-  font-family: $font-demon;
+  font-family: $font-heat;
+  font-size: $font-size-bigger;
+  letter-spacing: 1px;
   cursor: pointer;
   outline: 0 !important;
   border: none !important;

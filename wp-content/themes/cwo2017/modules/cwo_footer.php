@@ -3,10 +3,8 @@
 		<div class="container">
 			<div class="row cwo_footer_content">
 				<div class="col-md-3">
-					<ul class="list-inline dashed-top-left half-width">
-                        <?php foreach(r3_getMenue('HauptmenuDE') as $item):?>
-						    <li><a class="fadeLink whiteLink" href="<?php echo $item->url;?>"><?php echo $item->title;?></a></li>
-						<?php endforeach;?>
+					<ul class="list-inline dashed-top-left half-width font-heat fontsize-bigger">
+                        <li><a class="fadeLink whiteLink" href="#">Impressum</a></li>
 					</ul>
 				</div>
 				<div class="col-md-3">

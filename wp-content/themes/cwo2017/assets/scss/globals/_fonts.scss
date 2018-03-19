@@ -9,6 +9,16 @@
 }
 
 @font-face {
+  font-family: 'Heatwerk';
+  src:
+       url('fonts/heatwerk/heatwerk.eot'), /* IE9 Compat Modes */
+       url('fonts/heatwerk/heatwerk.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/heatwerk/heatwerk.woff') format('woff'), /* Pretty Modern Browsers */
+       url('fonts/heatwerk/heatwerk.ttf')  format('truetype'); /* Safari, Android, iOS */
+   font-style: normal;
+}
+
+@font-face {
   font-family: 'Heavy';
   src:
        url('fonts/heavy/heavy_metal.eot'), /* IE9 Compat Modes */

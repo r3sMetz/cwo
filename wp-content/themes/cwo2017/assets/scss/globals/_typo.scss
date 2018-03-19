@@ -30,6 +30,11 @@ h1,h2,h3,h4,h5 {
     font-family: $font-demon !important;
     position: relative; top: 6px;
   }
+  &-heat{
+    font-family: $font-heat !important;
+    line-height: 1;
+    letter-spacing: 1px;
+  }
   &-lord {
     font-family: $font-lord !important;
   }
@@ -48,11 +53,15 @@ h1,h2,h3,h4,h5 {
   &-bold {
     font-size: $font-size-bold;
   }
+
+  &-bigger{
+    font-size: $font-size-bigger;
+  }
   &-headline {
     font-size: $font-size-headline;
   }
   &-headline-big {
-    font-size: $font-size-headline*1.5;
+    font-size: $font-size-headline*1.25;
   }
 }
 

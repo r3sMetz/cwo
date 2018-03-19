@@ -2,16 +2,16 @@
 	<div class="fullPageWrapper">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-6 text-center-xs text-left-sm">
+				<div class="col-sm-4 text-center-xs text-left-sm font-heat" style="font-size:350%;">
 				    <?if(!is_front_page()):?>
                         <a class="fadeLink" href="<?=home_url();?>">
-                            <img src="<?=CWO_PNG_URI;?>/logo.png" alt="Celtic Warriors Otzenhausen">
+                            CWO
                         </a>
 				    <?else:?>
-                        <img src="<?=CWO_PNG_URI;?>/logo.png" alt="Celtic Warriors Otzenhausen">
+                        CWO
 					<?endif;?>
 				</div>
-				<div class="col-sm-6 text-center-xs text-right-sm">
+				<div class="col-sm-8 text-center-xs text-right-sm font-heat fontsize-bigger">
 					<ul class="list-inline">
                         <?if(!is_front_page()):?>
                             <li><a class="fadeLink whiteLink" href="<?=home_url();?>">Home</a></li>

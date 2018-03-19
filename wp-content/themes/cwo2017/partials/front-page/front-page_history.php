@@ -5,7 +5,7 @@
 				<!-- Images -->
 				<div class="col-md-2 hidden-xs hidden-sm">
 					<img class="maxImage gap-bottom-md" src="<?php cwo_theACFImage(get_the_ID(),'bild_links-langlich');?>" alt="CWO - Bildergallerie">
-					<a class="cwo-btn cwo-btn-red fullWidth fadeLink" href="<?php echo get_permalink(15);?>">Zur Bildergalerie</a>
+					<a class="cwo-btn cwo-btn-red fullWidth fadeLink" href="<?php echo get_permalink(15);?>">Bildergalerie</a>
 				</div>
 				<div class="col-md-3 hidden-xs hidden-sm">
 					<img class="maxImage gap-bottom-md" src="<?php cwo_theACFImage(get_the_ID(),'bild_rechts-oben');?>" alt="CWO - Bildergalerie">
@@ -14,7 +14,7 @@
 				<!-- Middle -->
 				<div class="col-md-2s front-page_history_middle gap-mobile-bottom-lg">
                     <span class="v-line visible-md visible-lg"></span>
-					<h2 class="text-center fontsize-headline font-demon padded">
+					<h2 class="text-center fontsize-headline font-heat padded">
 					    <span class="dashed_line"></span><span class="dashed_text">History</span><span class="dashed_line"></span>
                     </h2>
 					<span class="v-line visible-md visible-lg"></span>

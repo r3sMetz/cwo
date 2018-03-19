@@ -3,7 +3,7 @@
 	<div class="container">
 		<div class="row gap-bottom-sm">
 			<div class="col-md-12">
-				<h2 class="font-demon fontsize-headline dashed-headline gap-bottom-lg text-center">
+				<h2 class="font-heat fontsize-headline dashed-headline gap-bottom-lg text-center">
 					<span class="dashed_line"></span>
 					<span class="dashed_text">Next Event</span>
 					<span class="dashed_line"></span>
@@ -28,11 +28,11 @@
 			    <?if(get_field('vereinsintern',$nextEvent)):?>
 				    <img class="front-page_nextEvent_intern gap-bottom-md" src="<?=CWO_SVG_URI;?>/vereinsintern.svg" alt="CWO - Vereinsintern"/>
                 <?endif;?>
-				<h3 class="font-demon fontsize-headline gap-bottom-lg"><?the_field('datum',$nextEvent);?></h3>
-				<h3 class="font-demon fontsize-headline-big"><?=get_the_title($nextEvent);?></h3>
+				<h3 class="font-heat fontsize-headline gap-bottom-lg"><?the_field('datum',$nextEvent);?></h3>
+				<h3 class="font-heat fontsize-headline-big"><?=get_the_title($nextEvent);?></h3>
 			</div>
 			<div class="col-md-4 gap-mobile-bottom-lg">
-				<ul class="list-unstyled font-demon text-uppercase feature_list">
+				<ul class="list-unstyled font-heat text-uppercase feature_list fontsize-bigger">
 					<?foreach(cwo_buildList('features',$nextEvent) as $feature):?>
 					    <li><?=$feature;?></li>
 					<?endforeach;?>

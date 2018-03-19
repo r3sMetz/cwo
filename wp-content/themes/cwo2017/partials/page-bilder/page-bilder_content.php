@@ -8,7 +8,7 @@
                     <div class="single_gallery" data-url="<?=$galery['url'];?>">
                         <div class="single_gallery_inner">
                             <div class="single_gallery_text">
-                                <h3 class="font-demon"><?=$galery['title'];?></h3>
+                                <h3 class="font-heat fontsize-bigger"><?=$galery['title'];?></h3>
                                 <img class="hidden-xs" src="<?=CWO_PNG_URI;?>/eye_icon.png" alt="CWO Show Gallery">
                             </div>
                         </div>
