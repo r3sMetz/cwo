@@ -6,6 +6,7 @@ var historySlider = (function(){
         history_slider.slick({
             arrows: false,
             fade: true,
+            swipe: false
         });
 
         //Set Click Event for Navigation Dots
