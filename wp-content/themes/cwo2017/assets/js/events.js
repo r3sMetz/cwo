@@ -32,12 +32,12 @@ var events = (function(){
     function setEventHandlerForScroll(){
         $(window).on('scroll',function(){
             var pos    = $(window).scrollTop(),
-                navbar = $('.cwo_navbar');
+                navbar = $('.cwo-navbar');
 
             if(pos > 0)
-                navbar.addClass('scrolled');
+                navbar.addClass('blackened');
             else
-                navbar.removeClass('scrolled');
+                navbar.removeClass('blackened');
         })
     }
 
