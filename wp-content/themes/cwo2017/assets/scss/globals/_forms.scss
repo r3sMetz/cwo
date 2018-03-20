@@ -15,6 +15,8 @@ input, textarea{
 
 .input-group-addon {
   background-color: $color-lightRed;
+  border-radius: 0;
+  border-width: 2px;
   color: $color-white;
   border-color:  $color-white;
 }
