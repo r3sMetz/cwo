@@ -35,6 +35,7 @@
   .fragment_link{
     cursor: pointer;
     transition: color $transition-short;
+    font-size: 160%;
     &:first-child{
       margin-right: $gap-lg;
     }
@@ -63,13 +64,13 @@
     &.coming{
       left: 15px;
       margin-left: 0;
-      width: 127px;
+      width: 110px;
     }
 
     &.past {
       left: 100%;
-      margin-left: -134px;
-      width: 134px;
+      margin-left: -116px;
+      width: 116px;
     }
   }
 

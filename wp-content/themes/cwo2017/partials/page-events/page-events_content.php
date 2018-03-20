@@ -1,7 +1,7 @@
 <div class="page-events_content gap-top-md">
 	<div class="container">
 	    <div class="row gap-bottom-md">
-            <div class="fontsize-bigger pos-rel" id="fragment_slider">
+            <div class="font-heat pos-rel" id="fragment_slider">
                 <span class="fragment_link active" data-fragment-class="coming">Bevorstehend</span><span class="fragment_link" data-fragment-class="past">Zurückliegend</span>
                 <span id="fragment_bar" class="coming"></span>
             </div>
