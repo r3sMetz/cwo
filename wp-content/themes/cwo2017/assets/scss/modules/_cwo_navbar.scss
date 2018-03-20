@@ -14,6 +14,7 @@
   }
   .navbar-brand {
     font-size: 250%;
+    @include noPseudoClasses($color-white);
   }
   @include breakpoint($screen-sm) {
     ul {
@@ -28,8 +29,14 @@
     }
   }
 
-  .nav>li>a:hover{
-    background-color: transparent;
+  .nav>li>a{
+    &:hover {
+      background-color: transparent;
+    }
+    &:focus,:visited,:active{
+      background-color: transparent;
+      outline: none;
+    }
   }
 
   &.blackened{
