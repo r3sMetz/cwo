@@ -51,8 +51,9 @@
 
   #close_galery{
     position: absolute;
-    top: 15px;
-    right: 15px;
+    bottom: 45px;
+    left: 50%;
+    transform: translateX(-50%);
     cursor: pointer;
     transition: color $transition-short;
     @include noTouchHover{

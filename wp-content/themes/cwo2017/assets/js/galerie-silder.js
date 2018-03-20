@@ -4,6 +4,7 @@ var galerieSlider = (function(){
 
     /*** Private ***/
     function showGallery(image_to_show){
+        device.toggleScrollability(0);
         the_galery_slider.slick('slickGoTo',image_to_show,true);
         device.toggleScrollability();
         the_overlay.addClass('active');
@@ -12,6 +13,7 @@ var galerieSlider = (function(){
     function hideGallery(){
         device.toggleScrollability();
         the_overlay.removeClass('active');
+        device.toggleScrollability(1);
     }
 
 

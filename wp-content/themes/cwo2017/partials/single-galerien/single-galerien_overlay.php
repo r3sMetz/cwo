@@ -1,5 +1,5 @@
 <div id="the_gallery_overlay" class="single-galerien_overlay">
-    <span id="close_galery" class="fontsize-headline">Schließen</span>
+    <span id="close_galery" class="fontsize-bigger font-heat">Schließen</span>
     <div class="container">
         <div class="row">
             <div class="col-md-10 col-md-offset-1 pos-rel">
