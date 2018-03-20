@@ -26,23 +26,10 @@ h1,h2,h3,h4,h5 {
   &-bold {
     font-family: $font-bold !important;
   }
-  &-demon {
-    font-family: $font-demon !important;
-    position: relative; top: 6px;
-  }
-  &-heat{
+  &-heat {
     font-family: $font-heat !important;
     line-height: 1;
     letter-spacing: 1px;
-  }
-  &-lord {
-    font-family: $font-lord !important;
-  }
-  &-heavy {
-    font-family: $font-heavy !important;
-  }
-  &-barbarian {
-    font-family: $font-barbarian !important;
   }
 }
 
