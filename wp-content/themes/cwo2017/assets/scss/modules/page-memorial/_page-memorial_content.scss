@@ -1,4 +1,10 @@
 .page-memorial_content{
+  @include breakpoint($screen-xs-max,'max-width'){
+    padding-top: 15px;
+  }
+  @media screen and (max-width:$screen-sm-max) and (min-width:$screen-sm){
+    padding-top: 105px;
+  }
   #the_cap{
     position: absolute;
     width: 120px;
