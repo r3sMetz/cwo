@@ -20,7 +20,7 @@
                             </div>
 
                             <!-- Title -->
-                            <div class="col-sm-3 col-md-4 col-lg-5-false pos-rel title-col">
+                            <div class="col-sm-3 col-md-4 pos-rel title-col">
                                 <?if(get_field('vereinsintern',$event->ID)):?>
                                     <img src="<?=CWO_SVG_URI;?>/vereinsintern.svg" class="vereinsintern_image" alt="CWO - Vereinsintern">
                                 <?endif;?>
@@ -28,7 +28,7 @@
                             </div>
 
                             <!-- Infoblock -->
-                            <div class="col-sm-4 col-lg-3-false">
+                            <div class="col-sm-4 col-md-3 col-lg-4">
                                 <?$the_info = cwo_buildList('infoblock_2',$event->ID);?>
                                 <?=$the_info[0] ? $the_info[0] : null;?> <br class="hidden-xs"/>
                                 <?=$the_info[1] ? $the_info[1] : null;?> <?=$the_info[2] ? $the_info[2] : null;?>
@@ -40,7 +40,7 @@
                             </div>
 
                             <!-- Button -->
-                            <div class="col-sm-3 col-md-2 text-right-sm">
+                            <div class="col-sm-3 col-lg-2 text-right-sm">
                                 <a href="<?=get_permalink($event->ID);?>" class="cwo-btn cwo-btn-red fadeLink">mehr erfahren</a>
                             </div>
                         </div>
