@@ -17,7 +17,7 @@
   /** Headline **/
   &_headline {;
     h1 {
-      opacity: .25;
+      opacity: .7;
       font-size: 5vw;
 
       @include breakpoint($screen-sm){
