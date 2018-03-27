@@ -32,7 +32,7 @@
             <?endif;?>
         </div>
 
-        <?if(get_field('groser_textblock')):?>
+        <?if(get_field('groser_textblock') || get_field('flyer')):?>
             <!-- Top Line -->
             <div class="row top-line">
                 <div class="col-md-12">
@@ -40,12 +40,24 @@
                 </div>
             </div>
 
+            <?php if(get_field('groser_textblock')):?>
             <!-- Texting WYSIWYG -->
             <div class="row">
-                <div class="col-md-9 gap-bottom-sm">
+                <div class="col-md-9 gap-both-sm">
                     <?=cwo_knaupWYSIWYG(get_field('groser_textblock'));?>
                 </div>
             </div>
+            <?php endif;?>
+
+
+            <?php if(get_field('flyer')):?>
+            <!-- Texting WYSIWYG -->
+            <div class="row">
+                <div class="col-md-8 gap-top-md">
+                    <img class="maxImage" src="<?php echo get_field('flyer')['sizes']['medium_large'];?>" alt="Die Celtic Warriors Otzenhausen präsentieren: <?php the_title();?>">
+                </div>
+            </div>
+            <?php endif;?>
 
             <!-- Bottom Line -->
             <div class="row">
