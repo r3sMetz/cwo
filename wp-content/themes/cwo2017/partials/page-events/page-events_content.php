@@ -36,7 +36,7 @@
 
                             <!-- Uhrzeit -->
                             <div class="col-sm-1">
-                                <?php the_field('einlass',$event->ID);?>Uhr
+                                <?php the_field('einlass',$event->ID);?>
                             </div>
 
                             <!-- Button -->
