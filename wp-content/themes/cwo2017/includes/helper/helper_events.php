@@ -13,6 +13,10 @@ function cwo_getAllEvents(){
 			$return_events["past"][] = $event;
 	}
 
+	// Reverse Past Events
+	$return_events["past"] = array_reverse($return_events["past"]);
+
+
 	return $return_events;
 }
 
