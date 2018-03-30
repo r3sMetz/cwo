@@ -82,4 +82,13 @@
       background-image: url('../img/png/galery_bg.png')!important;
     }
   }
+  &-imprint{
+    &.mobile-bg{
+      background-image: url('../img/png/imprint_bg_mobile.png');
+    }
+    @include breakpoint($screen-sm) {
+      background-image: url('../img/png/imprint_bg.png')!important;
+      background-position: center 0!important;
+    }
+  }
 }

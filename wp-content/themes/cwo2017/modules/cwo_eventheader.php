@@ -1,4 +1,4 @@
-<header class="bg-std cwo_eventheader bg-events mobile-bg">
+<header class="bg-std cwo_eventheader <?=get_the_ID()!=342?'bg-events':'bg-imprint';?> mobile-bg">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
