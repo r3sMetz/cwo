@@ -4,7 +4,7 @@
 			<div class="col-md-4">
                 <?the_knauped_imprint(get_field('linke_seite'));?>
 			</div>
-			<div class="col-md-8">
+			<div class="col-md-8 margin-top-mobile">
                 <?the_knauped_imprint(get_field('rechte_seite'));?>
             </div>
 		</div>
