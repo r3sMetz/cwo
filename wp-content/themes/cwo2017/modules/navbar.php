@@ -15,7 +15,13 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right font-heat fontsize-bigger">
         <?foreach(r3_getMenue('HauptmenuDE') as $item):?>
-        <li><a class="<?=$item->classes[0]? $item->classes[0] : 'fadeLink';?> whiteLink" href="<?=$item->url;?>""><?=$item->title;?></a></li>
+        <li>
+            <a
+                class="<?=$item->classes[0]? $item->classes[0] : 'fadeLink';?> whiteLink <?menueActive($item->object_id,get_the_ID());?>"
+                href="<?=$item->url;?>">
+                <?=$item->title;?>
+            </a>
+        </li>
         <?endforeach;?>
       </ul>
     </div>

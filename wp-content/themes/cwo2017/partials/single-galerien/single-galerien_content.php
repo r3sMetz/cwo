@@ -10,5 +10,11 @@
 				</div>
 			</div>
 		</div>
+		<!-- Go Back -->
+		<div class="row gap-bottom-md">
+            <div class="col-md-12">
+                <a href="<?=get_permalink(15);?>" class="fadeLink cwo-btn cwo-btn-red"><i class="glyphicon glyphicon-circle-arrow-left"></i> Alle Galerien</a>
+            </div>
+        </div>
 	</div>
 </div>
