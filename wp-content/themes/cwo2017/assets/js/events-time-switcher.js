@@ -11,8 +11,14 @@ var eventsTimeSwitcher = (function(){
 		fragementLinks.on('click',function(){
 			var currentLink = $(this);
 			if(!currentLink.hasClass('active')){
-				//Click Options
+				// Click Options
 				var classToAdd = currentLink.data('fragment-class');
+
+				// Set Session Storage (or not)
+				if(classToAdd === 'past')
+					window.sessionStorage.setItem('si_events_past',true);
+				else if(window.sessionStorage.getItem('si_events_past'))
+					window.sessionStorage.removeItem('si_events_past');
 
 				// Class Management for Links
 				fragementLinks.removeClass('active');
@@ -29,7 +35,11 @@ var eventsTimeSwitcher = (function(){
 					events.animate({opacity:1},device.transitions.short);
 				});
 			}
-		})
+		});
+
+		// Check for Session Storage
+		if(window.sessionStorage.getItem('si_events_past'))
+			$('.fragment_link[data-fragment-class="past"]').trigger('click');
 	}
 
 	return {
