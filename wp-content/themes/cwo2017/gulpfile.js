@@ -34,7 +34,8 @@ var paths = {
         'bower_components/reframe.js/dist/jquery.reframe.min.js',
         'bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js',
         'bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js',
-        'bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js'
+        'bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js',
+        'bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js'
     ],
     css : []
 };

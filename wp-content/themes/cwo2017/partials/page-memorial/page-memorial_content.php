@@ -12,6 +12,12 @@
 			<div class="col-md-4 text-center gap-mobile-bottom-md pos-rel margin-top-mobile">
                 <img id="the_cap" src="<?php echo CWO_SVG_URI;?>/cap.svg" alt="Heavy Metal - Watt eh Scheiß!!!">
 				<img src="<?php echo CWO_PNG_URI;?>/horst.png" alt="RIP Horst!" class="maxImage">
+				<i
+				    class="glyphicon glyphicon-info-sign hoschd_info"
+				    data-toggle="tooltip"
+				    data-placement="bottom"
+				    title="Wenn du Songs für Horst hinzufügen möchtest: Die Liste auf Spotify kann bearbeitet werden. Oder melde dich einfach bei uns (vorstand@cwo-ev.de).">
+                </i>
 			</div>
 			<div class="col-md-8 iframe_wrapper">
 				<iframe src="https://open.spotify.com/embed?uri=spotify:user:metz1988:playlist:4nyT7f1FNpO3kOuNlMUwZr" frameborder="0" allowtransparency="true"></iframe>

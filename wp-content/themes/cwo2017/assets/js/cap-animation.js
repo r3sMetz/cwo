@@ -19,6 +19,9 @@ var capAnimation = (function(){
     /** Public **/
     function setup(){
         //if(!device.isMobile && device.width() >= device.screen.md) {
+            //Activate Tooltips
+        	$('[data-toggle="tooltip"]').tooltip();
+
             //Set Cap Jquery Object
             var the_cap = $('#the_cap');
 

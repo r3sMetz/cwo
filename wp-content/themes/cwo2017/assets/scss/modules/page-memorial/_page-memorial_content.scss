@@ -43,6 +43,21 @@
     }
   }
 
+  .hoschd_info{
+    position: absolute;
+    top: 15px;
+    left: 15%;
+    color: $color-lightRed;
+    background: white;
+    border-radius: 50%;
+    @include breakpoint($screen-sm){
+      left: 30%;
+    }
+    @include breakpoint(){
+      left: 30px;
+    }
+  }
+
   h1{
     @include breakpoint($screen-md-max,'max-width') {
       margin-bottom: $gap-lg;
