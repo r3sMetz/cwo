@@ -50,6 +50,10 @@
     color: $color-lightRed;
     background: white;
     border-radius: 50%;
+    transition: color $transition-short;
+    &:hover{
+      color: $color-darkRed;
+    }
     @include breakpoint($screen-sm){
       left: 30%;
     }
