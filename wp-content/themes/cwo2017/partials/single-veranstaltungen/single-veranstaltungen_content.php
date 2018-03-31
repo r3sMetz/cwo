@@ -66,5 +66,12 @@
                 </div>
             </div>
         <?endif;?>
+
+        <!-- Go Back -->
+        <div class="row gap-top-sm">
+            <div class="col-md-12">
+                <a href="<?=get_permalink(13);?>" class="fadeLink cwo-btn cwo-btn-red"><i class="glyphicon glyphicon-circle-arrow-left"></i> Alle Veranstaltungen</a>
+            </div>
+        </div>
 	</div>
 </div>
