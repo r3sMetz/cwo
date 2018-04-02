@@ -4,7 +4,7 @@
 			<div class="row">
 				<!-- Images -->
 				<div class="col-md-2 hidden-xs hidden-sm">
-					<img class="maxImage gap-bottom-md" src="<?php cwo_theACFImage(get_the_ID(),'bild_links-langlich','medium_large');?>" alt="CWO - Bildergallerie">
+					<img class="maxImage gap-bottom-md" src="<?php cwo_theACFImage(get_the_ID(),'bild_links-langlich');?>" alt="CWO - Bildergallerie">
 					<!-- <a class="cwo-btn cwo-btn-red fullWidth fadeLink" href="<?php echo get_permalink(15);?>">Bildergalerie</a> -->
 				</div>
 				<div class="col-md-3 hidden-xs hidden-sm">
