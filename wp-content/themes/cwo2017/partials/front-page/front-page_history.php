@@ -8,8 +8,8 @@
 					<!-- <a class="cwo-btn cwo-btn-red fullWidth fadeLink" href="<?php echo get_permalink(15);?>">Bildergalerie</a> -->
 				</div>
 				<div class="col-md-3 hidden-xs hidden-sm">
-					<img class="maxImage gap-bottom-md" src="<?php cwo_theACFImage(get_the_ID(),'bild_rechts-oben','medium_large');?>" alt="CWO - Bildergalerie">
-					<img class="maxImage" src="<?php cwo_theACFImage(get_the_ID(),'bild_rechts-unten','medium_large');?>" alt="CWO - Bildergalerie">
+					<img class="maxImage gap-bottom-md" src="<?php cwo_theACFImage(get_the_ID(),'bild_rechts-oben','medium');?>" alt="CWO - Bildergalerie">
+					<img class="maxImage" src="<?php cwo_theACFImage(get_the_ID(),'bild_rechts-unten','medium');?>" alt="CWO - Bildergalerie">
 				</div>
 				<!-- Middle -->
 				<div class="col-md-2s front-page_history_middle gap-mobile-bottom-lg">
