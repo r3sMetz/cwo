@@ -16,6 +16,7 @@
 
     //AdminPanel
     require('includes/admin_hides.php');
+    require('includes/hides.php');
     //require('includes/admin_hooks.php');
 
     //Menues
