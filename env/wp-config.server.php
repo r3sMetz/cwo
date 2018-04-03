@@ -27,4 +27,4 @@ define('DB_HOST', 'cwo-ev.de.mysql');
 /**
  * Mailing
  */
-define('CWO_MAILING_ADRESS','metz@raum3.de');
+define('CWO_MAILING_ADRESS','webmaster@cwo-ev.de');
