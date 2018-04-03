@@ -5,6 +5,7 @@ function contact_ajax() {
 		$subject = "Cwo Website - Neue Kontaktanfrage";
 		$headers = 'From: '.$_REQUEST["name"].' <'.$_REQUEST["email"].'>';
 		$message = $_REQUEST['message'];
+		$message.= nl2br('\n\nGesendet von: <a href="mailto:'.$_REQUEST["email"].'">'.$_REQUEST["name"].'</a>');
 
 		if(wp_mail($to,$subject,$message,$headers) === true){
 			http_response_code(200);
