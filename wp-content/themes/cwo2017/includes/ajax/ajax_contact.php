@@ -6,7 +6,7 @@ function contact_ajax() {
 		$headers = [];
 		$message = $_REQUEST['message'];
 		$message.= "\n\nGesendet von: ".$_REQUEST["name"];
-		$message.= "\n\nEmail: ".$_REQUEST["email"];
+		$message.= "\nEmail: ".$_REQUEST["email"];
 
 		if(wp_mail($to,$subject,$message,$headers) === true){
 			http_response_code(200);
