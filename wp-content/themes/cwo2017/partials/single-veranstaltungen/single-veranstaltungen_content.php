@@ -8,7 +8,7 @@
                     <img class="maxImage" src="<?=$logo['url'];?>" alt="<?=$logo['title'];?>">
                 </div>
             <?endforeach;?>
-        </div
+        </div>
         <?endif;?>
 		<!-- Texting Top -->
 		<div class="row">
