@@ -54,6 +54,7 @@ a {
 
 .se_bandlink{
   img{
+    transition: transform $transition-short;
     @include noTouchHover {
       transform: scale(1.1);
     }
