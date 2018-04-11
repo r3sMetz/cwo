@@ -51,3 +51,11 @@ a {
 .cwo_loc_back{
   cursor: pointer;
 }
+
+.se_bandlink{
+  img{
+    @include noTouchHover {
+      transform: scale(1.1);
+    }
+  }
+}

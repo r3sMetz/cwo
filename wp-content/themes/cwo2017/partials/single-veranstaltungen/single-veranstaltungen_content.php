@@ -6,7 +6,7 @@
             <?foreach(get_field('alle_bandlogos') as $key => $logo):?>
                 <div class="col-sm-4 gap-bottom-md text-center">
                     <?if(get_field('bandlink'.($key+1))):?>
-                        <a href="<?the_field('bandlink'.($key+1));?>" target="_blank">
+                        <a href="<?the_field('bandlink'.($key+1));?>" target="_blank" class="se_bandlink">
                             <img class="maxImage" src="<?=$logo['url'];?>" alt="<?=$logo['title'];?>" data-link="<?the_field('bandlink'.($key+1));?>">
                         </a>
                     <?else:?>
