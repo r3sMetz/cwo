@@ -2,7 +2,7 @@
 	<div class="container">
 		<!-- Bandlogos-->
 		<?if(get_field('alle_bandlogos')):?>
-		<div class="row hidden-xs">
+		<div class="row hidden-xs bandrow">
             <?foreach(get_field('alle_bandlogos') as $key => $logo):?>
                 <div class="col-sm-4 gap-bottom-md text-center">
                     <?if(get_field('bandlink'.($key+1))):?>
