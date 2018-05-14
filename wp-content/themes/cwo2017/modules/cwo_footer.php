@@ -11,7 +11,7 @@
 				    <?if(get_the_ID() === 282):?>
 				        <span class="cwo-btn cwo-btn-red cwo_loc_back">Abbrechen</span>
 				    <?else:?>
-					    <a href="<?=get_permalink(282);?>" class="cwo-btn cwo-btn-red fadeLink">Newsletter abonnieren</a>
+					    <!-- <a href="<?=get_permalink(282);?>" class="cwo-btn cwo-btn-red fadeLink">Newsletter abonnieren</a> -->
 					<?php endif;?>
 				</div>
 				<div class="col-md-3">

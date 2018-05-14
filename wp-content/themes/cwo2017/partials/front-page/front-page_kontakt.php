@@ -32,7 +32,17 @@
                             <textarea class="form-control" name="message" id="message" rows="8" placeholder="Nachricht*" required></textarea>
                         </div>
                     </div>
-                    <input  type="submit" class="cwo-btn cwo-btn-red btn-block" value="Senden" id="sendbtn">
+                    <div class="row form-group front-page_contact_send">
+                        <div class="col-sm-9 checkbox">
+                            <label>
+                                <input type="checkbox" name="si_datenschutz" id="datasec">
+                                Ich habe die <a target="_blank" href="<?=get_permalink(342);?>">Datenschutzerklärung</a> gelesen bin einverstanden.
+                            </label>
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="submit" class="cwo-btn cwo-btn-red" value="Senden" id="sendbtn">
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>

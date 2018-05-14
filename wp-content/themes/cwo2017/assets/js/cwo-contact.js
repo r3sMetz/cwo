@@ -7,7 +7,7 @@ var cwoContact = (function(){
 		messageField : false,
 		errors: [],
 		modal: false,
-		sendBtn: false,
+		sendBtn: false
 	};
 
 	function buildOptions(){
@@ -17,6 +17,7 @@ var cwoContact = (function(){
 		contact.messageField = $('#message');
 		contact.response = $('#cwo_modal');
 		contact.sendBtn = $('#sendbtn');
+		contact.datasec = $('#datasec');
 	}
 
 	function buttonResponse(disabled,btnText){
@@ -34,6 +35,7 @@ var cwoContact = (function(){
 		contact.nameField.val(null);
 		contact.emailField.val(null);
 		contact.messageField.val(null);
+		contact.datasec[0].checked = false;
 	}
 
 	function formIsValid(){
@@ -54,6 +56,10 @@ var cwoContact = (function(){
 		var messageRegEx = /^\w{3,}/;
 		if(!messageRegEx.test(contact.messageField.val()))
 			contact.errors.push('Bitte gib eine Nachricht ein.');
+
+		// Datenschutz
+		if(!contact.datasec[0].checked)
+			contact.errors.push('Bitte akzeptiere die Datenschutzbestimmungen');
 
 		// Return if is valid or not
 		return contact.errors.length === 0;

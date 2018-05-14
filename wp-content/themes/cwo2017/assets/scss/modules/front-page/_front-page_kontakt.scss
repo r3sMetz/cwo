@@ -1,0 +1,19 @@
+.front-page_contact_send {
+  div:first-of-type{
+    a{
+      text-decoration: underline !important;
+    }
+    input{
+      margin-right: 10px;
+      position: relative;
+      cursor: pointer;
+      top: -1px;
+    }
+  }
+
+  div:last-of-type {
+    @include breakpoint($screen-sm) {
+      text-align: right;
+    }
+  }
+}
