@@ -1,24 +1,43 @@
 <?php
-if (!defined('ABSPATH')) exit;
+defined('ABSPATH') || exit;
 
 @include_once NEWSLETTER_INCLUDES_DIR . '/controls.php';
 $controls = new NewsletterControls();
 $module = NewsletterSubscription::instance();
 
 if (!$controls->is_action()) {
-    $controls->data = $module->get_options('profile');
+    $controls->data = $module->get_options('lists');
 } else {
     if ($controls->is_action('save')) {
-        $module->merge_options($controls->data, 'profile');
-        // In the near future
         $module->save_options($controls->data, 'lists');
         $controls->add_message_saved();
     }
+    if ($controls->is_action('dissociate')) {
+        $wpdb->query("update " . NEWSLETTER_USERS_TABLE . " set list_" . ((int)$controls->button_data) . "=0");
+        $controls->add_message_done();
+    }
 }
+
+for ($i = 1; $i <= NEWSLETTER_LIST_MAX; $i++) {
+    if (!isset($controls->data['list_' . $i . '_forced'])) {
+        $controls->data['list_' . $i . '_forced'] = empty($module->options['preferences_' . $i]) ? 0 : 1;
+    }
+}
+
+
 $status = array(0 => 'Disabled/Private use', 1 => 'Only on profile page', 2 => 'Even on subscription forms', '3' => 'Hidden');
 ?>
-
-<div class="wrap" id="tnp-wrap">
+<script>
+    jQuery(function () {
+        jQuery(".tnp-notes").tooltip({
+            content: function () {
+                // That activates the HTML in the tooltip
+                return this.title;
+            }
+        });
+    });
+</script>
+<div class="wrap tnp-lists" id="tnp-wrap">
 
     <?php include NEWSLETTER_DIR . '/tnp-header.php'; ?>
 
@@ -32,22 +51,44 @@ $status = array(0 => 'Disabled/Private use', 1 => 'Only on profile page', 2 => '
 
         <form method="post" action="">
             <?php $controls->init(); ?>
-
+            <p>
+                <?php $controls->button_save(); ?>
+            </p>
             <table class="widefat">
                 <thead>
                     <tr>
-                        <th>Field</th>
-                        <th>Name/Label</th>
-                        <th>On subscription</th>
-                        <th>Initially...</th>
+                        <th>#</th>
+                        <th><?php _e('Name', 'newsletter')?></th>
+                        <th><?php _e('Visibility', 'newsletter')?></th>
+                        <th><?php _e('Pre-checked', 'newsletter')?></th>
+                        <th><?php _e('Pre-assigned', 'newsletter')?></th>
+                        <th><?php _e('Subscribers', 'newsletter')?></th>
+                        <th>&nbsp;</th>
+                        <th><?php _e('Notes', 'newsletter') ?></th>
                     </tr>
                 </thead>
                 <?php for ($i = 1; $i <= NEWSLETTER_LIST_MAX; $i++) { ?>
                     <tr>
-                        <td>List <?php echo $i; ?></td>
-                        <td><?php $controls->text('list_' . $i); ?></td>
+                        <td><?php echo $i; ?></td>
+                        <td><?php $controls->text('list_' . $i, 50); ?></td>
                         <td><?php $controls->select('list_' . $i . '_status', $status); ?></td>
-                        <td><?php $controls->select('list_' . $i . '_checked', array(0 => 'Unchecked', 1 => 'Checked')); ?></td>
+                        <td><?php $controls->select('list_' . $i . '_checked', array(0 => 'No', 1 => 'Yes')); ?></td>
+                        <td><?php $controls->select('list_' . $i . '_forced', array(0 => 'No', 1 => 'Yes')); ?></td>
+                        <td><?php echo $wpdb->get_var("select count(*) from " . NEWSLETTER_USERS_TABLE . " where list_" . $i . "=1 and status='C'"); ?></td>
+                        <td><?php $controls->button_confirm('dissociate', __('Dissociate everyone', 'newsletter'), '', $i); ?></td>
+                        <td>
+                            <?php $notes = apply_filters('newsletter_lists_notes', array(), $i); ?>
+                            <?php
+                            $text = '';
+                            foreach ($notes as $note) {
+                                $text .= $note . '<br>';
+                            }
+                            if (!empty($text)) {
+                            echo '<i class="fa fa-info-circle tnp-notes" title="', esc_attr($text), '"></i>';
+                            }
+                            ?> 
+
+                        </td>
                     </tr>
                 <?php } ?>
             </table>

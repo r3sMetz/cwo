@@ -1,8 +1,8 @@
 === Newsletter ===
 Tags: newsletter,email,subscription,mass mail,list build,email marketing,direct mailing,automation,automated
 Requires at least: 3.4.0
-Tested up to: 4.9.4
-Stable tag: 5.2.5
+Tested up to: 4.9.6
+Stable tag: 5.4.5
 Contributors: satollo,webagile,michael-travan
 
 Add a real newsletter system to your blog. For free. With unlimited newsletters and subscribers.
@@ -12,11 +12,25 @@ Add a real newsletter system to your blog. For free. With unlimited newsletters 
 Newsletter is a **real newsletter system** for your WordPress blog: perfect for list building, you can easily create,
 send and track e-mails, headache-free. It just works out of box!
 
+= GDPR =
+
+The Newsletter Plugin provides all the technical tools needed to achieve GDPR compliancy and 
+we're continuously working to improve them and to give support even for specific 
+use cases.
+
+The plugin does not collect users’ own subscribers data, nor it has any access to those data: 
+hence, we are not a data processor, so a data processing agreement is not needed.
+
+Anyway if you configure the plugin to use external services (usually an external mail
+delivery service) you should check with that service if some sort of agreement is required.
+
 = Main Features =
 
-* **Responsive email Drag & Drop composer**
 * **Unlimited subscribers** with statistics 
 * **Unlimited newsletter** with tracking
+* Subscription spam check with domain/ip black lists, Akismet, captcha
+* [GDPR ready](https://www.thenewsletterplugin.com/documentation/gdpr-compliancy) 
+* **Responsive email Drag & Drop composer**
 * Customizable **subscription widget**, **page** or **custom form**
 * Wordpress User Registration **seamless integration**
 * **Single** And **Double Opt-In** plus privacy checkbox for EU laws compliance
@@ -87,6 +101,136 @@ Thank you, The Newsletter Team
 3. The Reports extension
 
 == Changelog ==
+
+= 5.4.5 =
+
+* Fixed tested up version value in readme.txt
+* Added support for the WP privacy url
+* Added initialization values for company info on first installation
+* Fixed few debug notices
+* Added button in lists panel to dissociate the list from every subscriber (list clean up)
+* Fix of messages on profile editing panel
+
+= 5.4.4 =
+
+* Fixed warning on default option init 
+
+= 5.4.3 =
+
+* Improved the profile editing page and the email change check with activation id in double opt-in mode
+* New profile editing panel configuration
+* Privacy notice optionally even on profile panel
+* New list change logging with source
+* Removed old tabled-layout on profile editing page
+* Clean up procedure for statistics and logs tables
+* Removed old widget layout
+* New options on list management panel
+* Forced lists option removed from the subscription panel
+* Dedicated page moved to main settings panel
+* Tracking default value on main settings panel
+* Removed old translations
+* Added default option files
+* Service message template no more on PHP file, the configurable template must be used
+* Reactivation after cancellation feature
+* Revised and simplified all texts for easy translation by the community
+* The messages alternative page (/extensions/newsletter/subscription/page.php) is now deprecated and will be removed
+* New [cancellation documentation page published](/extensions/newsletter/subscription/page.php)
+* Integrated SMTP is now deprecated (soon will be replaced with a **free extension**) 
+* {home_url} tag is now deprecated, use {blog_url} instead
+* Introduced tags {company_name} and {company_address} replaced by info in the company info configuration
+* Default template for messages has been improved with company contacts
+* Repeated subscriptions management
+* Generally improved the performances with caching and code clean up
+* General CSS moved to the main settings panel
+* Option to disable the default CSS
+* Profile export fix
+
+= 5.4.2 =
+
+* SVN Deleted files fix
+
+= 5.4.1 =
+
+* Fixed debug notice in the standard widget
+* Gender label fix
+* Fixed the global variable conflict on widget (rare case)
+* CSS fix on widget list field
+
+= 5.4.0 =
+
+* Fix lists as dropdown in the widget
+
+= 5.3.9 =
+
+* Version number fix
+
+= 5.3.8 =
+
+* Fixed failed insert on ip null
+
+= 5.3.7 =
+
+* Fixed the newsletter deletion with clean up of log tables
+
+= 5.3.6 =
+
+* Fixed composer block background editing
+* Fixed API functions
+* Minor fixes
+
+= 5.3.5 =
+
+* Fixed error notice on profile.php
+
+= 5.3.4 =
+
+* GDPR ready
+* Maintenance option to add all subscriber without a list to a specified list
+* Dismissed the tabled subscription form
+* Fixed privacy checkbox label for field shortcode
+* Logs of lists change
+* Last activity tracking
+* Retargeting/deletion of inactive subscribers
+* Privacy checkbox without the checkbox (option)
+* Personal data export
+* Improved subscriber deletion with cleanup of log tables
+
+= 5.3.3 =
+
+* Added GIPHY composer block
+* Added raw HTML composer block
+* API: Newsletters and subscribers lists
+
+= 5.3.2 =
+
+* Security panel reorganized
+* Added Akismet spam check 
+
+= 5.3.1 = 
+
+* Name and last name check for spam
+* 404 responses on error condition
+* jQuery fix
+* Email cleanup on admin edit panel
+* Name check for spam on subscription
+
+= 5.3.0 =
+
+* CAPTCHA system
+* IP black list
+* Email address black list
+
+= 5.2.8 =
+
+* Redirect fix
+
+= 5.2.7 =
+
+* Improved block layout
+* Added filter on profile url
+* Removed old obsolete query
+* Improved the antibot
+* Antiflood configurable to 30 minutes
 
 = 5.2.6 =
 

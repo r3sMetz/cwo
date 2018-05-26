@@ -14,16 +14,13 @@ if (!$controls->is_action()) {
     }
 
     if ($controls->is_action('reset')) {
-        // TODO: Move this inside the module
-        @include NEWSLETTER_DIR . '/subscription/languages/profile-en_US.php';
-        @include NEWSLETTER_DIR . '/subscription/languages/profile-' . WPLANG . '.php';
-        update_option('newsletter_profile', array_merge(get_option('newsletter_profile', array()), $options));
-        $controls->data = $module->get_options('profile');
+        $controls->data = $module->reset_options('profile');
+        $controls->add_message_done();
     }
 }
 
-$status = array(0 => 'Disabled/Private use', 1 => 'Only on profile page', 2 => 'Even on subscription forms');
-$rules = array(0 => 'Optional', 1 => 'Required');
+$status = array(0 => __('Private', 'newsletter'), 1 => __('Show on profile page', 'newsletter'), 2 => __('Show on subscription form', 'newsletter'));
+$rules = array(0 => __('Optional', 'newsletter'), 1 => __('Required', 'newsletter'));
 ?>
 
 <div class="wrap" id="tnp-wrap">
@@ -71,7 +68,7 @@ $rules = array(0 => 'Optional', 1 => 'Required');
                             </td>
                         </tr>
                         <tr>
-                            <th>Name or first name</th>
+                            <th><?php _e('First name', 'newsletter')?></th>
                             <td>
                                 <table class="newsletter-option-grid">
                                     <tr><th>Field label</th><td><?php $controls->text('name', 50); ?></td></tr>
@@ -86,7 +83,7 @@ $rules = array(0 => 'Optional', 1 => 'Required');
                             </td>
                         </tr>
                         <tr>
-                            <th>Last name</th>
+                            <th><?php _e('Last name', 'newsletter')?></th>
                             <td>
                                 <table class="newsletter-option-grid">
                                     <tr><th>Field label</th><td><?php $controls->text('surname', 50); ?></td></tr>
@@ -97,7 +94,7 @@ $rules = array(0 => 'Optional', 1 => 'Required');
                             </td>
                         </tr>
                         <tr>
-                            <th>Sex/Gender</th>
+                            <th><?php _e('Gender', 'newsletter')?></th>
                             <td>
                                 <table class="newsletter-option-grid">
                                     <tr><th>Field label</th><td><?php $controls->text('sex', 50); ?></td></tr>
@@ -124,30 +121,32 @@ $rules = array(0 => 'Optional', 1 => 'Required');
                         </tr>
 
                         <tr>
-                            <th>Button labels</th>
+                            <th><?php _e('"Subscribe" label', 'newsletter')?></th>
                             <td>
-                                <table class="newsletter-option-grid">
-                                    <tr><th>Subscribe button</th><td><?php $controls->text('subscribe'); ?></td></tr>
-                                    <tr><th>Save button</th><td><?php $controls->text('save'); ?> (on profile page)</td></tr>
-                                </table>
+                                <?php $controls->text('subscribe', 40); ?>
+                                
                                 <p class="description">
-                                    For "subscribe" insert an URL to an image (http://...) to use it as a graphical button.
+                                    You can use an image URL (http://...).
                                 </p>
                             </td>
                         </tr>
 
                         <tr>
-                            <th>Privacy check box</th>
+                            <th>Privacy checkbox/notice</th>
                             <td>
                                 <table class="newsletter-option-grid">
-                                    <tr><th>Enabled?</th><td><?php $controls->yesno('privacy_status'); ?></td></tr>
+                                    <tr><th>Enabled?</th><td><?php $controls->select('privacy_status', array(0=>'No', 1=>'Yes', 2=>'Only the notice')); ?></td></tr>
                                     <tr><th>Label</th><td><?php $controls->text('privacy', 50); ?></td></tr>
-                                    <tr><th>Privacy URL</th><td><?php $controls->text('privacy_url', 50); ?></td></tr>
+                                    <tr><th>Privacy URL</th><td>
+                                        <?php $controls->checkbox('privacy_use_wp_url', __('User WordPress privacy URL', 'newsletter')); ?>
+                                            <br>
+                                        <?php $controls->text('privacy_url', 50); ?>
+                                        </td></tr>
                                     <tr><th>Error message</th><td><?php $controls->text('privacy_error', 50); ?></td></tr>
                                 </table>
                                 <p class="description">
                                     The privacy acceptance checkbox (required in many Europen countries) force the subscriber to
-                                    check it to procees. If an URL is specified the label is linket to that page.
+                                    check it before proceeding. If an URL is specified the label become a link.
                                 </p>
                             </td>
                         </tr>
@@ -203,7 +202,7 @@ $rules = array(0 => 'Optional', 1 => 'Required');
                     <p>This panel shows the form HTML code generated by Newsletter if you want to copy it as starting point for a custom form.</p>
 
                     <h3>Standard form code</h3>
-                    <textarea readonly style="width: 100%; height: 500px; font-family: monospace"><?php echo esc_html(NewsletterSubscription::instance()->get_subscription_form_html5()); ?></textarea>
+                    <textarea readonly style="width: 100%; height: 500px; font-family: monospace"><?php echo esc_html(NewsletterSubscription::instance()->get_subscription_form()); ?></textarea>
 
                     <h3>Widget form code</h3>
                     <textarea readonly style="width: 100%; height: 500px; font-family: monospace"><?php echo htmlspecialchars(NewsletterSubscription::instance()->get_subscription_form()); ?></textarea>
@@ -214,7 +213,7 @@ $rules = array(0 => 'Optional', 1 => 'Required');
 
             <p>
                 <?php $controls->button_save(); ?>
-                <?php $controls->button_confirm('reset', 'Reset all', 'Are you sure you want to reset all?'); ?>
+                <?php $controls->button_reset(); ?>
             </p>
 
         </form>

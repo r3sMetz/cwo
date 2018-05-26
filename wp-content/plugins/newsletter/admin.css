@@ -278,7 +278,7 @@
     max-width: 200px;
     color: #000000;
     background-color: #ECF0F1;
-    vertical-align: top;
+    vertical-align: middle;
 }
 
 #tnp-body .form-table th small {
@@ -1029,6 +1029,14 @@ p.description {
     font-family: 'Montserrat',sans-serif;
     margin: 0px 2px;
     width: auto;
+}
+
+.wp-core-ui .button-secondary, .wp-core-ui .button, .wp-core-ui .button-primary {
+    background-color: #3498db;
+    box-shadow: none;
+    color: #fff;
+    font-family: 'Montserrat',sans-serif;
+    margin: 0px 2px;
 }
 
 .wp-core-ui .button-secondary:hover, .wp-core-ui .button:hover, .wp-core-ui .button-primary:hover {
@@ -2020,4 +2028,36 @@ input:checked + .slider:before {
 
 .tnp-list-conditions p {
     margin: 0px 10px;
+}
+
+/* Lists panel */
+.tnp-lists .tnp-notes {
+    margin: 0;
+    font-size: .9em;
+}
+
+/* Codemirror editor with preview */
+iframe.tnp-editor-preview-mobile {
+    box-sizing: border-box; 
+    background-color: #fff;
+    border: 1px solid #bbb; 
+    box-shadow: 1px 1px 10px #777;
+    border-radius: 10px; 
+    padding: 5px; 
+    width: 320px; 
+    height: 500px; 
+    float: left;
+}
+
+iframe.tnp-editor-preview-desktop {
+     box-sizing: border-box; 
+     background-color: #fff; 
+     border: 1px solid #bbb; 
+     border-radius: 10px; 
+     box-shadow: 1px 1px 10px #777; 
+     padding: 15px; 
+     width: 650px; 
+     margin-right: 20px; 
+     height: 500px; 
+     float: left;
 }
