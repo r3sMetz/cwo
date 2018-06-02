@@ -48,7 +48,7 @@ var page_forwarding = (function(){
             $('.catchUpButton').on('click',goToPage);
         }
 
-        //Show Headline and StartCountdown
+        // Show Headline and StartCountdown
         forwardingOptions.time = forwardingOptions.time_initial;
         forwardingOptions.headline.children('.forwarding_secs').text(forwardingOptions.time_initial);
         forwardingOptions.headline.animate({'opacity':1},device.transitions.short,startCountDown);
