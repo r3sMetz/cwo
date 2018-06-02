@@ -14,12 +14,20 @@ var page_forwarding = (function(){
             //Create Headline
             var headline = document.createElement('h3');
 
-            //Button Builing
+            //Button (Abortion) Building
             var interupt_button = document.createElement('span');
 
             interupt_button.className = "cwo-btn cwo-btn-red forwardInterupt";
             interupt_button.innerHTML = "Abbrechen";
             interupt_button.style.fontSize= '16px';
+
+            //Button (CatchUp) Building
+            var catchUp_button = document.createElement('span');
+
+            catchUp_button.className = "cwo-btn cwo-btn-red catchUpButton";
+            catchUp_button.innerHTML = "Hopp, mach!";
+            catchUp_button.style.fontSize = '16px';
+            catchUp_button.style.marginLeft = '15px';
 
 
             //Headline Building
@@ -31,9 +39,13 @@ var page_forwarding = (function(){
             $('#fadeOverlay').append(headline);
             forwardingOptions.headline = $('#forwardLine');
 
-            //Append Interuptt To Headline and Build Click Event
+            //Append Interuptt to Headline and build click event
             forwardingOptions.headline.append(interupt_button);
             $('.forwardInterupt').on('click',executeInterupt);
+
+            //Append Catchup-Button to Headline and build click event
+            forwardingOptions.headline.append(catchUp_button);
+            $('.catchUpButton').on('click',goToPage);
         }
 
         //Show Headline and StartCountdown
@@ -50,13 +62,17 @@ var page_forwarding = (function(){
                 seconds.text(forwardingOptions.time);
             }
             else {
-                clearInterval(forwardingOptions.the_countdown);
-                forwardingOptions.headline.animate({'opacity':0},device.transitions.short,function () {
-                   window.location.href = forwardingOptions.href;
-                });
+                goToPage();
             }
         },1000)
     }
+
+	function goToPage() {
+		clearInterval(forwardingOptions.the_countdown);
+		forwardingOptions.headline.animate({'opacity': 0}, device.transitions.short, function () {
+			window.location.href = forwardingOptions.href;
+		});
+	}
 
     function executeInterupt(){
         if(forwardingOptions.the_countdown){
