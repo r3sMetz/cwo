@@ -11,7 +11,7 @@ function add_post_type_mitglieder(){
 							'edit_item'=>( 'Mitglied Bearbeiten' ),
 							'all_items'=>'Alle Mitglieder',
 					),
-					'public' => flase,  // it's public, it should have it's own permalink, and so on
+					'public' => false,  // it's public, it should have it's own permalink, and so on
 					'publicly_queriable' => true,  // you should be able to query it
 					'show_ui' => true,  // you should be able to edit it in wp-admin
 					//'exclude_from_search' => true,  // you should exclude it from search results
