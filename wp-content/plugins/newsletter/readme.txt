@@ -2,7 +2,7 @@
 Tags: newsletter,email,subscription,mass mail,list build,email marketing,direct mailing,automation,automated
 Requires at least: 3.4.0
 Tested up to: 4.9.6
-Stable tag: 5.4.5
+Stable tag: 5.5.0
 Contributors: satollo,webagile,michael-travan
 
 Add a real newsletter system to your blog. For free. With unlimited newsletters and subscribers.
@@ -101,6 +101,37 @@ Thank you, The Newsletter Team
 3. The Reports extension
 
 == Changelog ==
+
+= 5.5.0 =
+
+* Added IP storage control
+* Fixed a warning and a debug notice
+* Aggregated warnings on admin side
+
+= 5.4.9 =
+
+* Lists management in APIs
+* Code cleanup
+* New subscribers data export controls
+* New global check and notice if the dedicated page is misconfigured
+* Fix privacy note display on profile page even without a privacy url set
+
+= 5.4.8 =
+
+* Fixed the (duplicated) style.css reference
+
+= 5.4.7 =
+
+* Fixed pre-assigned lists
+
+= 5.4.6 =
+
+* Fixed few debug notices
+* Added more translatable texts
+* Improved performances
+* Profile saving used as confirmation
+* Fixed the captcha layout and style
+* Fix initialization default messages template on first install
 
 = 5.4.5 =
 
