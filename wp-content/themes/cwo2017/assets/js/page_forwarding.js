@@ -1,7 +1,7 @@
 var page_forwarding = (function(){
     /*** Private ***/
     var forwardingOptions = {
-        time_initial: 5,
+        time_initial: 10,
         time: null,
         href: null,
         headline: null,
