@@ -2,6 +2,8 @@
 /*
  * Template Name: Galerie
  */
+// Redirect temporarly
+header('Location: ' . home_url(), true, 302);
 
 /** HTML Begin **/
 get_template_part( 'modules/html_begin' );
