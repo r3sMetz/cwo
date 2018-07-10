@@ -5,6 +5,7 @@
 				<div class="col-md-3">
 					<ul class="list-inline dashed-top-left half-width font-heat fontsize-bigger">
                         <li><a class="fadeLink whiteLink <?=get_the_ID()==342?'navactive':'';?>" href="<?=get_permalink(342);?>">Impressum</a></li>
+                        <li><a class="fadeLink whiteLink <?=get_the_ID()==473?'navactive':'';?>" href="<?=get_permalink(473);?>">Datenschutz</a></li>
 					</ul>
 				</div>
 				<div class="col-md-3">
