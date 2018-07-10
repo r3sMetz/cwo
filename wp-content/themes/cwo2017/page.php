@@ -14,7 +14,7 @@ get_template_part('modules/cwo_eventheader');
 
 /*** Content ***/
 ;?>
-<div class="container">
+<div class="container" style="padding-top:30px;">
 	<div class="row">
 		<div class="col-md-12">
 			<?php while(have_posts()):the_post();?>
