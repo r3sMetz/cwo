@@ -1,4 +1,4 @@
-<div class="page_newsletter_content">
+<main class="page_newsletter_content">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
@@ -9,4 +9,4 @@
 			</div>
 		</div>
 	</div>
-</div>
+</main>

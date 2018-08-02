@@ -1,4 +1,4 @@
-<div class="page-memorial_content fullPageElement flexed_center puffer-both-xl margin-top-mobile bg-std bg-clouds">
+<main class="page-memorial_content fullPageElement flexed_center puffer-both-xl margin-top-mobile bg-std bg-clouds">
 	<div class="container">
 		<div class="row gap-bottom-md">
             <div class="col-md-12 text-center">
@@ -24,4 +24,4 @@
 			</div>
 		</div>
 	</div>
-</div>
+</main>

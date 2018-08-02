@@ -1,4 +1,4 @@
-<div class="single-veranstaltungen_content puffer-both-xl">
+<main class="single-veranstaltungen_content puffer-both-xl">
 	<div class="container">
 		<!-- Bandlogos-->
 		<?if(get_field('alle_bandlogos')):?>
@@ -19,22 +19,22 @@
 		<!-- Texting Top -->
 		<div class="row">
 		    <?if(get_field('infoblock_1')):?>
-            <div class="col-sm-4 gap-mobile-bottom-md">
+            <article class="col-sm-4 gap-mobile-bottom-md">
                 <h2 class="font-heat fontsize-headline gap-bottom-sm"><?php the_field('uberschrift_infoblock_1');?></h2>
                 <p>
                     <?foreach(cwo_buildList('infoblock_1',get_the_ID()) as $listpoint):?>
                         <?=$listpoint;?><br/>
                     <?endforeach;?>
                 </p>
-            </div>
+            </article>
             <?endif;?>
             <?if(get_field('infoblock_2')):?>
-            <div class="col-sm-4">
+            <article class="col-sm-4">
                 <h2 class="font-heat fontsize-headline gap-bottom-sm"><?php the_field('uberschrift_infoblock2');?></h2>
                <?foreach(cwo_buildList('infoblock_2',get_the_ID()) as $listpoint):?>
                     <?=$listpoint;?><br/>
                 <?endforeach;?>
-            </div>
+            </article>
             <?endif;?>
         </div>
 
@@ -74,10 +74,10 @@
         <?endif;?>
 
         <!-- Go Back -->
-        <div class="row gap-top-sm">
+        <aside class="row gap-top-sm">
             <div class="col-md-12">
                 <a href="<?=get_permalink(13);?>" class="fadeLink cwo-btn cwo-btn-red"><i class="glyphicon glyphicon-circle-arrow-left"></i> Alle Veranstaltungen</a>
             </div>
-        </div>
+        </aside>
 	</div>
-</div>
+</main>
