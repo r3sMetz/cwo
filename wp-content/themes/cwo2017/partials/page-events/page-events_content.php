@@ -1,4 +1,4 @@
-<div class="page-events_content gap-top-md">
+<main class="page-events_content gap-top-md">
 	<div class="container">
 	    <div class="row gap-bottom-md">
             <div class="font-heat pos-rel" id="fragment_slider">
@@ -55,4 +55,4 @@
             <?endforeach;?>
         </div>
 	</div>
-</div>
+</main>
