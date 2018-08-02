@@ -1,4 +1,4 @@
-<div class="fullPageWrapper">
+<main class="fullPageWrapper">
 	<div class="page-bilder_content bg-std flexed_center">
         <div class="container">
             <div class="row">
@@ -20,4 +20,4 @@
             </div>
         </div>
 	</div>
-</div>
+</main>
