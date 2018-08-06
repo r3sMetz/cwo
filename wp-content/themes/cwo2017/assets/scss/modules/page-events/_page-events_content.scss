@@ -68,7 +68,7 @@
     background-color: $color-lightRed;
     position: absolute;
     bottom: -2px;
-    transition: all $transition-short cubic-bezier(.3, -0.52, .67, 1.48), width $transition-short;
+    transition: all $transition-short cubic-bezier(.3, -0.7, .67, 1.8), width $transition-short;
 
     &.coming {
       left: 15px;
