@@ -5,7 +5,7 @@
      */
     function theme_styles(){
         // Costum Styles
-        wp_enqueue_style('styles', get_template_directory_uri() . '/assets/css/styles.css');
+        wp_enqueue_style('styles', get_template_directory_uri() . '/assets/css/styles.css',null,'1.0.0');
 
 		//TODO: METZ: Remove Index before Launch
         // Add Backgrounds to Page-Bilder
@@ -34,7 +34,7 @@
         wp_enqueue_script('plugins', get_template_directory_uri() . '/assets/js/build/plugins.min.js',null,null,true);
 
         //Costum Script
-        wp_register_script('scripts', get_template_directory_uri() . '/assets/js/build/scripts.min.js',null,null,true);
+        wp_register_script('scripts', get_template_directory_uri() . '/assets/js/build/scripts.min.js',null,'1.0.0',true);
         wp_localize_script('scripts','defaults',array(
             'template_directory_uri' => get_template_directory_uri(),
             'template_directory'     => get_template_directory(),

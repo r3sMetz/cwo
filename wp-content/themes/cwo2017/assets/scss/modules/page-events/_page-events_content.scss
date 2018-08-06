@@ -1,21 +1,30 @@
-.page-events_content{
-  hr{
+#page-events_animation_container {
+  transform: scale(1);
+  transition: transform $transition-short ease;
+  &.biggie {
+    transform: scale(1.02,1.02);
+  }
+}
+
+.page-events_content {
+  hr {
     margin: 0;
   }
-  .single_event_content{
+  .single_event_content {
     padding-bottom: 10px;
+
     @include breakpoint($screen-sm) {
       display: flex;
       align-items: flex-end;
     }
 
-    @include breakpoint($screen-sm-max,'max-width'){
+    @include breakpoint($screen-sm-max, 'max-width') {
       div:not(:last-child) {
         padding-bottom: 10px;
       }
     }
 
-    .vereinsintern_image{
+    .vereinsintern_image {
       width: 140px;
       height: 25px;
       margin: 15px 0;
@@ -27,41 +36,41 @@
     }
   }
 
-  h2{
+  h2 {
     line-height: 2;
   }
 
   // Fragment Slider
-  .fragment_link{
+  .fragment_link {
     cursor: pointer;
     transition: color $transition-short;
     font-size: 160%;
-    &:first-child{
+    &:first-child {
       margin-right: $gap-lg;
     }
 
-    &.active{
+    &.active {
       color: $color-lightRed;
     }
 
-    @include noTouchHover{
+    @include noTouchHover {
       color: $color-lightRed;
     }
   }
 
-  #fragment_slider{
+  #fragment_slider {
     display: inline-block;
     padding-left: 15px;
   }
-  #fragment_bar{
+  #fragment_bar {
     display: inline-block;
     height: 3px;
     background-color: $color-lightRed;
     position: absolute;
     bottom: -2px;
-    transition: all $transition-short ease-in;
+    transition: all $transition-short cubic-bezier(.3, -0.52, .67, 1.48), width $transition-short;
 
-    &.coming{
+    &.coming {
       left: 15px;
       margin-left: 0;
       width: 110px;

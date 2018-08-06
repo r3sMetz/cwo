@@ -28,10 +28,14 @@ var eventsTimeSwitcher = (function(){
 				fragmentBar.removeAttr('class');
 				fragmentBar.addClass(classToAdd);
 
+				// Manage Events
+				events.addClass('biggie');
+
 				// Manage Event Filter
 				events.animate({opacity:0},device.transitions.short,function(){
 					filters.addClass('hidden');
 					$('.page-events-filter[data-filter="'+classToAdd+'"]').removeClass('hidden');
+					events.removeClass('biggie');
 					events.animate({opacity:1},device.transitions.short);
 				});
 			}
