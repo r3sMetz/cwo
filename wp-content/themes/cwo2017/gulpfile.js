@@ -15,6 +15,7 @@ var cleanCss      = require('gulp-clean-css');
 var livereload    = require('gulp-livereload');
 var uglify        = require('gulp-uglify');
 var browserSync   = require('browser-sync').create();
+var imagemin      = require('gulp-imagemin');
 
 
 var processors = [
@@ -71,6 +72,12 @@ gulp.task('compress', function () {
         .pipe(gulp.dest('assets/js/build'))
 });
 
+gulp.task('images',function(){
+	gulp.src('assets/img/**/*')
+		.pipe(imagemin())
+		.pipe(gulp.dest('assets/img/'));
+});
+
 
 gulp.task('plugins', function(){
     gulp.src(paths.plugins)
@@ -96,4 +103,4 @@ gulp.task('watch', function () {
     gulp.src('assets/css/*.css').pipe(watch('assets/css/*.css')).pipe(livereload());
 });
 
-gulp.task('default', ['sass', 'compress', 'plugins']);
+gulp.task('default', ['sass', 'compress', 'plugins','images']);
