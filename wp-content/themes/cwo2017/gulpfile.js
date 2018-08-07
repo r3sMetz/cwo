@@ -103,4 +103,4 @@ gulp.task('watch', function () {
     gulp.src('assets/css/*.css').pipe(watch('assets/css/*.css')).pipe(livereload());
 });
 
-gulp.task('default', ['sass', 'compress', 'plugins','images']);
+gulp.task('default', ['sass', 'compress', 'plugins']);

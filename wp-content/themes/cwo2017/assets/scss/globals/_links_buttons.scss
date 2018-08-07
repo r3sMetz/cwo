@@ -54,9 +54,9 @@ a {
 
 .se_bandlink{
   img{
-    transition: transform $transition-short;
+    transition: transform $transition-short cubic-bezier(.37,-0.46,.47,1.75);;
     @include noTouchHover {
-      transform: scale(1.1);
+      transform: scale(1.15);
     }
   }
 }

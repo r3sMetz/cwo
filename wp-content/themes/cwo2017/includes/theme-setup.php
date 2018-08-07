@@ -5,7 +5,7 @@
      */
     function theme_styles(){
         // Costum Styles
-        wp_enqueue_style('styles', get_template_directory_uri() . '/assets/css/styles.css',null,'1.0.2');
+        wp_enqueue_style('styles', get_template_directory_uri() . '/assets/css/styles.css',null,'1.0.3');
 
 		//TODO: METZ: Remove Index before Launch
         // Add Backgrounds to Page-Bilder
