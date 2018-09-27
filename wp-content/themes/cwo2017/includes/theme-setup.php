@@ -1,7 +1,7 @@
 <?php
 
     /**
-     * Add stylesheet to theme
+     * Add stylesheet to cwo-theme
      */
     function theme_styles(){
         // Costum Styles
