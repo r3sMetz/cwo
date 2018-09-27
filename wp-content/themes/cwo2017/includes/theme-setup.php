@@ -27,7 +27,7 @@
 
 
     /**
-     * Add all minified scripts
+     * Add all minified scripts + register global vars
      */
     function theme_scripts(){
         // Plugins
