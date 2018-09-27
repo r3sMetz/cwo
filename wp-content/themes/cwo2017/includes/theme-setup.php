@@ -7,7 +7,6 @@
         // Costum Styles
         wp_enqueue_style('styles', get_template_directory_uri() . '/assets/css/styles.css',null,'1.0.3');
 
-		//TODO: METZ: Remove Index before Launch
         // Add Backgrounds to Page-Bilder
         if(get_the_ID() === 15){
             $inlineStyle  = "@media screen and (min-width:768px){";
