@@ -11,7 +11,21 @@ if(count($all_plans) === 1 && $is_active){
 // If plans are active AND there are more then one plans
 else if(count($all_plans) > 1 && $is_active){
 	// Render Page
-	// TODO: Render Page if there are more then one plans
+	/** HTML Begin **/
+	get_template_part( 'modules/html_begin' );
+
+	/*** Navbar ***/
+	get_template_part( 'modules/navbar' );
+
+	/*** Eventheader ***/
+	get_template_part('modules/cwo_eventheader');
+
+	/*** Footer ***/
+	get_template_part('modules/cwo_footer');
+
+	/** HTML End **/
+	get_template_part( 'modules/html_end' );
+
 }
 
 else {
