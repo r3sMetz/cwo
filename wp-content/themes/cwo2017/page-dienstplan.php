@@ -20,6 +20,8 @@ else if(count($all_plans) > 1 && $is_active){
 	/*** Eventheader ***/
 	get_template_part('modules/cwo_eventheader');
 
+	get_template_part('partials/page-dienstplan/page-dienstplan_content');
+
 	/*** Footer ***/
 	get_template_part('modules/cwo_footer');
 
