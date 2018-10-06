@@ -2,8 +2,6 @@
 /*
  * Template Name: Galerien Übersicht
  */
-// Redirect temporarly
-header('Location: ' . home_url(), true, 302);
 
 /** HTML Begin **/
 get_template_part( 'modules/html_begin' );
@@ -15,7 +13,7 @@ get_template_part( 'modules/navbar' );
 get_template_part('partials/page-bilder/page-bilder_header');
 
 /** Content ***/
-get_template_part( 'partials/page-bilder/page-bilder_content' );
+get_template_part( 'partials/page-galerie/page-galerie_content' );
 
 /** Footer **/
 get_template_part('modules/cwo_footer');

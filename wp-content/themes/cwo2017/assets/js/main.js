@@ -10,22 +10,22 @@ var main = (function(){
         // ForwadLinking
         page_forwarding.setup();
 
-        //Frontpage: History Slider
+        // Frontpage: History Slider
         if($('.the_history').length) historySlider.setup();
 
-        //Single Galerie: Slider(both)
-        if($('#the_galery_slider').length) galerieSlider.setup();
-
-        //Reframe Iframe (Page Horst)
+        // Reframe Iframe (Page Horst)
         if($('.page-memorial_content').length) $('iframe').reframe();
 
-        //CapAnimation
+        // CapAnimation
         if($('#the_cap').length) capAnimation.setup();
 
-        //Contact
+        // Page Gallery
+		if($('.page-galerie_content')) pageGalerie.setup();
+
+        // Contact
         if($('#cwo_contact').length) cwoContact.setup();
 
-        //EventTime Switcher
+        // EventTime Switcher
         if($('#fragment_slider').length) eventsTimeSwitcher.setup();
     }
 
