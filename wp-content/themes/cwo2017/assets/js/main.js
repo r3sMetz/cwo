@@ -13,9 +13,6 @@ var main = (function(){
         //Frontpage: History Slider
         if($('.the_history').length) historySlider.setup();
 
-        //Single Galerie: Slider(both)
-        if($('#the_galery_slider').length) galerieSlider.setup();
-
         //Reframe Iframe (Page Horst)
         if($('.page-memorial_content').length) $('iframe').reframe();
 
