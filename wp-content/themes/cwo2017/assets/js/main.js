@@ -20,7 +20,7 @@ var main = (function(){
         if($('#the_cap').length) capAnimation.setup();
 
         // Page Gallery
-		if($('.page-galerie_content')) pageGalerie.setup();
+		if($('.page-bilder_content')) pageBilder.setup();
 
         // Contact
         if($('#cwo_contact').length) cwoContact.setup();

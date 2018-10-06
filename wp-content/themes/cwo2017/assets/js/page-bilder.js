@@ -1,4 +1,4 @@
-var pageGalerie = (function(){
+var pageBilder = (function(){
 	/** Private **/
 	var imageWrapper, imageContainer, loadingImage;
 
@@ -38,12 +38,12 @@ var pageGalerie = (function(){
 	/** Public **/
 	function setup(){
 		// Setup Initial Vars
-		imageWrapper = $('.page-galerie_content_detail');
-		imageContainer = $('.page-galerie_content_detail .showImage');
-		loadingImage   = $('.page-galerie_content_detail .loading');
+		imageWrapper = $('.page-bilder_content_detail');
+		imageContainer = $('.page-bilder_content_detail .showImage');
+		loadingImage   = $('.page-bilder_content_detail .loading');
 
-		$('.page-galerie_content img').on('click',openImage);
-		$('.page-galerie_content_detail .close').on('click',closeImage);
+		$('.page-bilder_content img').on('click',openImage);
+		$('.page-bilder_content_detail .close').on('click',closeImage);
 	}
 
 	return {

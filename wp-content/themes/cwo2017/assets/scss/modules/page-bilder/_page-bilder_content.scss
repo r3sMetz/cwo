@@ -1,82 +1,74 @@
-.page-bilder_content{
-  .the_galleries{
-    display: flex;
-    flex-wrap: wrap;
+.page-bilder_content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  img {
+    width: 100%;
+    height: auto;
+    margin: $grid-gutter-width/2 0;
+    @include breakpoint($screen-sm) {
+      width: 45%;
+      margin: $grid-gutter-width/2;
+    }
+    @include breakpoint($screen-lg) {
+      width: 25%;
+      transition: transform 300ms cubic-bezier(.89, .1, .49, 1.5);
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.15);
+      }
+    }
   }
 
-  .single_gallery{
-
-    text-align: center;
-
-    width: 50%;
-    height: 40vw;
-    @include breakpoint($screen-sm){
-      width: 33.33%;
-      height: 30vw;
-      @include linear-gradient($color-darkRed,darken($color-darkRed,25%));
+  &_detail {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5000;
+    background: black;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+    &.active {
+      opacity: 1;
     }
-
-    @include breakpoint($screen-lg + 300px){
-      height: 20vw;
-      width: 25%;
+    .close{
+      position: absolute;
+      top: $grid-gutter-width;
+      right: $grid-gutter-width;
+      z-index: 6000;
+      opacity: 1;
     }
-    &_inner{
-      background: black;
-      height: 100%;
-      padding: 2px;
-      width: 100%;
-      background-size: cover;
-      background-clip: content-box;
-      @include breakpoint($screen-sm){
-        background-clip: border-box;
-      }
-
-      @include noTouchHover{
-        background-clip: content-box;
-        cursor: pointer;
-        .single_gallery_text{
-          background: rgba(black,.9);
-            h3 {
-              color: $color-darkRed;
-              //background: -webkit-linear-gradient(white, black);
-              //-webkit-background-clip: text;
-              //-webkit-text-fill-color: transparent;
-            }
-            img {
-              opacity: 1;
-            }
-        }
-      }
-
-      // Mobile Background
-      @include breakpoint($screen-sm-max, 'max-width') {
-        background-image: none;
-        background-color: $color-darkRed;
-      }
-    }
-    &_text{
-      height: 100%;
-      width: 100.1%;
-      transition: background $transition-short ease-out;
-      h3{
-        padding-top: 16vw;
-        transition: background $transition-short, color $transition-short ease-out;
-        @include breakpoint($screen-sm){
-          padding-top: 13vw;
-        }
-
-        @include breakpoint($screen-lg + 300px) {
-          padding-top: 8vw;
-        }
-      }
-
+    .loading {
       img {
-        opacity: 0;
-        transition: opacity $transition-short ease-out;
-        width: 50px;
-        margin-top: $gap-md
+        width: 100px;
+        height: 100px;
+        animation-name: spin;
+        animation-duration: 700ms;
+        animation-iteration-count: infinite;
       }
     }
-
+    .showImage {
+      max-width: 1280px + $grid-gutter-width;
+      padding: 0 $grid-gutter-width/2;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
   }
 }
+
