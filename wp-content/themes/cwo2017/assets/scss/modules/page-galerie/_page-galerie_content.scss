@@ -1,0 +1,23 @@
+.page-galerie_content{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  img{
+    width: 100%;
+    height: auto;
+    margin: $grid-gutter-width/2 0;
+    @include breakpoint($screen-sm) {
+      width: 45%;
+      margin: $grid-gutter-width/2;
+    }
+    @include breakpoint($screen-lg){
+      width: 25%;
+      transition: transform 300ms cubic-bezier(.89,.1,.49,1.5);
+      cursor: pointer;
+      &:hover{
+        transform: scale(1.15);
+      }
+    }
+  }
+}
