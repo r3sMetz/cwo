@@ -5,7 +5,7 @@
      */
     function theme_styles(){
         // Costum Styles
-        wp_enqueue_style('styles', get_template_directory_uri() . '/assets/css/styles.css',null,'1.1.1');
+        wp_enqueue_style('styles', get_template_directory_uri() . '/assets/css/styles.css',null,'1.1.2');
 
         // Add Backgrounds to Page-Bilder
         if(get_the_ID() === 15){
