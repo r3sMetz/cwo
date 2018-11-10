@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-12">
                 <!-- Vereinsintern -->
-                <? if (is_single() && get_field( 'vereinsintern') ): ?>
+                <?php if (is_single() && get_field( 'vereinsintern') ): ?>
                     <img src="<?= CWO_SVG_URI; ?>/vereinsintern.svg" class="header_vereinsintern gap-bottom-md" alt="CWO - Vereinsintern">
                 <?php endif; ?>
 
