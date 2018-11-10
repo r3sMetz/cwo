@@ -1,4 +1,4 @@
-<?
+<?php
 // ** MySQL-Einstellungen ** //
 /**   Diese Zugangsdaten bekommst du von deinem Webhoster. **/
 
