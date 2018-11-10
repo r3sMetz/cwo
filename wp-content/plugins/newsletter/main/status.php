@@ -105,7 +105,7 @@ if ($controls->is_action('test')) {
                 $controls->messages .= '- Try to remove the return path on main settings.<br>';
             }
 
-            $controls->messages .= '<a href="https://www.thenewsletterplugin.com/documentation/email-sending-issues" target="_blank">Read more</a>.';
+            $controls->messages .= '<a href="https://www.thenewsletterplugin.com/documentation/email-sending-issues" target="_blank"><strong>' . __('Read more', 'newsletter') . '</strong></a>.';
 
             $parts = explode('@', $module->options['sender_email']);
             $sitename = strtolower($_SERVER['SERVER_NAME']);
@@ -567,6 +567,21 @@ $options = $module->get_options('status');
                             <?php if (defined('DISABLE_WP_CRON') && DISABLE_WP_CRON) { ?>
                                 The constant DISABLE_WP_CRON is set to true (probably in wp-config.php). That disables the scheduler auto triggering and it's
                                 good ONLY if you setup an external trigger.
+                            <?php } else { ?>
+
+                            <?php } ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Alternate cron
+                        </td>
+                        <td>
+                            &nbsp;
+                        </td>
+                        <td>
+                            <?php if (defined('ALTERNATE_WP_CRON') && ALTERNATE_WP_CRON) { ?>
+                                Using the alternate cron trigger.
                             <?php } else { ?>
 
                             <?php } ?>

@@ -4,7 +4,7 @@
   Plugin Name: Newsletter
   Plugin URI: https://www.thenewsletterplugin.com/plugins/newsletter
   Description: Newsletter is a cool plugin to create your own subscriber list, to send newsletters, to build your business. <strong>Before update give a look to <a href="https://www.thenewsletterplugin.com/category/release">this page</a> to know what's changed.</strong>
-  Version: 5.6.9
+  Version: 5.7.6
   Author: Stefano Lissa & The Newsletter Team
   Author URI: https://www.thenewsletterplugin.com
   Disclaimer: Use at your own risk. No warranty expressed or implied is provided.
@@ -14,7 +14,7 @@
  */
 
 // Used as dummy parameter on css and js links
-define('NEWSLETTER_VERSION', '5.6.9');
+define('NEWSLETTER_VERSION', '5.7.6');
 
 global $newsletter, $wpdb;
 
@@ -362,22 +362,23 @@ class Newsletter extends NewsletterModule {
             add_action('admin_notices', array($this, 'hook_admin_notices'));
 
             if ($this->is_admin_page()) {
+                $newsletter_url = plugins_url('newsletter');
                 wp_enqueue_script('jquery-ui-tabs');
                 wp_enqueue_script('jquery-ui-tooltip');
                 wp_enqueue_media();
-                wp_enqueue_style('tnp-admin', plugins_url('newsletter') . '/admin.css', array(), filemtime(NEWSLETTER_DIR . '/admin.css'));
-                wp_enqueue_script('tnp-admin', plugins_url('newsletter') . '/admin.js', array('jquery'), time());
+                wp_enqueue_style('tnp-admin', $newsletter_url . '/admin.css', array(), filemtime(NEWSLETTER_DIR . '/admin.css'));
+                wp_enqueue_script('tnp-admin', $newsletter_url . '/admin.js', array('jquery'), time());
 
                 wp_enqueue_style('wp-color-picker');
                 wp_enqueue_script('wp-color-picker');
 
-                wp_enqueue_style('tnp-select2', 'https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css');
-                wp_enqueue_script('tnp-select2', 'https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js');
-                wp_enqueue_script('tnp-jquery-vmap', 'https://cdnjs.cloudflare.com/ajax/libs/jqvmap/1.5.1/jquery.vmap.min.js', array('jquery'));
-                wp_enqueue_script('tnp-jquery-vmap-world', 'https://cdnjs.cloudflare.com/ajax/libs/jqvmap/1.5.1/maps/jquery.vmap.world.js', array('tnp-jquery-vmap'));
-                wp_enqueue_style('tnp-jquery-vmap', 'https://cdnjs.cloudflare.com/ajax/libs/jqvmap/1.5.1/jqvmap.min.css');
+                wp_enqueue_style('tnp-select2', $newsletter_url . '/vendor/select2/select2.min.css');
+                wp_enqueue_script('tnp-select2', $newsletter_url . '/vendor/select2/select2.min.js');
+                wp_enqueue_script('tnp-jquery-vmap', $newsletter_url . '/vendor/jqvmap/jquery.vmap.min.js', array('jquery'));
+                wp_enqueue_script('tnp-jquery-vmap-world', $newsletter_url . '/vendor/jqvmap/jquery.vmap.world.js', array('tnp-jquery-vmap'));
+                wp_enqueue_style('tnp-jquery-vmap', $newsletter_url . '/vendor/jqvmap/jqvmap.min.css');
 
-                wp_register_script('tnp-chart', 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js', array('jquery'));
+                wp_register_script('tnp-chart', $newsletter_url . '/vendor/chartjs/Chart.min.js', array('jquery'));
 
                 $dismissed = get_option('newsletter_dismissed', array());
 
@@ -418,30 +419,6 @@ class Newsletter extends NewsletterModule {
             die();
         }
     }
-    
-//    function hook_site_transient_update_plugins($value) {
-//        //return null;
-//        //var_dump($value);
-//        //die('xxx');
-//        if (!isset($value->response['newsletter/plugin.php'])) {
-//         $value->response['newsletter/plugin.php'] = $value->no_update['newsletter/plugin.php'];   
-//        }
-//        
-//        // Add caching
-//        $response = wp_remote_get('http://plugins.svn.wordpress.org/newsletter/');
-//        $body = wp_remote_retrieve_body($response);
-//        
-//        $x = strpos($body, 'Revision');
-//        $x += 9;
-//        $y = strpos($body, ':', $x);
-//        $version = substr($body, $x, $y-$x);
-//        $value->checked['newsletter/plugin.php'] = $version;
-//        $value->response['newsletter/plugin.php']->new_version = $version;
-//        $value->response['newsletter/plugin.php']->package = 'https://downloads.wordpress.org/plugin/newsletter.zip';
-//        
-//        return $value;
-//
-//    }
 
     function hook_admin_notices() {
         // Check of Newsletter dedicated page
@@ -649,9 +626,11 @@ class Newsletter extends NewsletterModule {
             if (!$test) {
                 $wpdb->query("update " . NEWSLETTER_EMAILS_TABLE . " set sent=sent+1, last_id=" . $user->id . " where id=" . $email->id . " limit 1");
             }
+            
+            $user = apply_filters('newsletter_send_user', $user);
 
-            $m = $this->replace($email->message, $user, $email->id);
-            $mt = $this->replace($email->message_text, $user, $email->id);
+            $m = $this->replace($email->message, $user, $email);
+            $mt = $this->replace($email->message_text, $user, $email);
 
             $m = apply_filters('newsletter_message_html', $m, $email, $user);
 
@@ -662,24 +641,14 @@ class Newsletter extends NewsletterModule {
             $s = $this->replace($email->subject, $user);
             $s = apply_filters('newsletter_message_subject', $s, $email, $user);
 
-            if (!empty($user->wp_user_id)) {
-                $this->logger->debug('send> Has wp_user_id: ' . $user->wp_user_id);
-                // TODO: possibly name extraction
-                $wp_user_email = $wpdb->get_var($wpdb->prepare("select user_email from $wpdb->users where id=%d limit 1", $user->wp_user_id));
-                if (!empty($wp_user_email)) {
-                    $user->email = $wp_user_email;
-                    $this->logger->debug('send> Email replaced with: ' . $user->email);
-                } else {
-                    $this->logger->debug('send> This WP user has not an email');
-                }
-            }
-
             $r = $this->mail($user->email, $s, array('html' => $m, 'text' => $mt), $headers, true);
 
             $status = $r ? 0 : 1;
 
-            $this->save_sent($user, $email);
-
+            if (!$test) {
+                $this->save_sent($user, $email);
+            }
+            
             $this->email_limit--;
             $count++;
         }

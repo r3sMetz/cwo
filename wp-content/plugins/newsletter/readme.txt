@@ -2,26 +2,33 @@
 Tags: newsletter,email,subscription,mass mail,list build,email marketing,direct mailing,automation,automated,mailing list
 Requires at least: 3.4.0
 Tested up to: 4.9.8
-Stable tag: 5.6.9
+Stable tag: 5.7.6
 Contributors: satollo,webagile,michael-travan
 
 Add a real newsletter system to your blog. For free. With unlimited newsletters and subscribers.
 
 == Description ==
 
-Newsletter is a **real newsletter system** for your WordPress blog: perfect for list building, you can easily create,
+Newsletter is a **real newsletter and email marketing system** for your WordPress blog: perfect for list building, you can easily create,
 send and track e-mails, headache-free. It just works out of box!
+
+= Find Us =
+
+Newsletter is a continuously evolving plugin. Stay tuned following us on
+[Facebook](https://www.facebook.com/thenewsletterplugin/) or [Twitter](https://twitter.com/newsletterwp).
 
 = Main Features =
 
 * **Unlimited subscribers** with statistics 
-* **Unlimited newsletter** with tracking
+* **Unlimited newsletters** with tracking
 * **Subscription spam check** with domain/ip black lists, Akismet, captcha
 * **Delivery speed** fine control (from 12 emails per hour to as much as your blog can manage)
+* **Drag and drop composer** with responsive email layout
 * [WPML ready](https://www.thenewsletterplugin.com/documentation/multilanguage)
+* [Polylang ready](https://www.thenewsletterplugin.com/documentation/multilanguage)
+* [Translatepress ready](https://www.thenewsletterplugin.com/documentation/multilanguage)
 * [GDPR ready](https://www.thenewsletterplugin.com/documentation/gdpr-compliancy) 
 * **Multi-list targeting** with list combinations like all in, at least one, not in and so on
-* **Drag and drop composer** with responsive email layout
 * Customizable **subscription widget**, **page** or **custom form**
 * Wordpress User Registration **seamless integration**
 * **Single** And **Double Opt-In** plus privacy checkbox for EU laws compliance
@@ -71,6 +78,8 @@ our **premium, professional Extensions**! Let us introduce just two of them : )
 * [WooCommerce Extension](https://www.thenewsletterplugin.com/woocommerce) - subscribe customers to a mailing list and generate product newletters.
 * [Amazon SES and other providers integration](https://www.thenewsletterplugin.com/integrations) - seamlessly integrate Amazon SES and other email service providers with The Newsletter Plugin. Hassle-free.
 * [Contact Form 7 Extension](https://www.thenewsletterplugin.com/documentation/contact-form-7-extension) - integrate the subscription on Contact Form 7 forms
+* [Ninja Forms Extension](https://www.thenewsletterplugin.com/documentation/ninjaforms-extension) - integrate the subscription on Ninja Forms
+* [WP Forms Extension](https://www.thenewsletterplugin.com/documentation/wpforms-extension) - integrate the subscription on WP Forms
 * [Google Analytics Extension](https://www.thenewsletterplugin.com/google-analytics) - track newsletter links with Google UTM tracking paramaters
 
 = Support =
@@ -107,6 +116,39 @@ Thank you, The Newsletter Team
 3. The Reports extension
 
 == Changelog ==
+
+= 5.7.6 =
+
+* Included third party's js libraries
+
+= 5.7.5 =
+
+* Init hook priority fix for who uses alternative wp cron
+
+= 5.7.4 =
+
+* Support for first and last name from wp users integration extension
+* CSS fix for few themes
+
+= 5.7.3 =
+
+* Fixed block padding warning
+* Fixed lists display on import panel
+* Fixed lists display on targeting panel when in multilanguage mode
+
+= 5.7.2 =
+
+* Improvements on posts block
+* New hero block layout
+* Transaltepress extension compatibility pack
+
+= 5.7.1 =
+
+* Improvements on posts block
+
+= 5.7.0 =
+
+* Cancellation error message fix
 
 = 5.6.9 =
 
