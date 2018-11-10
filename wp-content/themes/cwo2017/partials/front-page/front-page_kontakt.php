@@ -36,7 +36,7 @@
                         <div class="col-sm-9 checkbox">
                             <label>
                                 <input type="checkbox" name="si_datenschutz" id="datasec">
-                                Ich habe die <a target="_blank" href="<?=get_permalink(342);?>">Datenschutzerklärung</a> gelesen bin einverstanden.
+                                Ich habe die <a target="_blank" href="<?php echo get_permalink(342);?>">Datenschutzerklärung</a> gelesen bin einverstanden.
                             </label>
                         </div>
                         <div class="col-sm-3">

@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand font-heat fontsize-headline fadeLink"  href="<?=home_url();?>">CWO</a>
+      <a class="navbar-brand font-heat fontsize-headline fadeLink"  href="<?php echo home_url();?>">CWO</a>
     </div>
 
     <!-- Collapse -->
@@ -17,9 +17,9 @@
         <?foreach(r3_getMenue('HauptmenuDE') as $item):?>
         <li>
             <a
-                class="<?=$item->classes[0]? $item->classes[0] : 'fadeLink';?> whiteLink <?menueActive($item->object_id,get_the_ID());?>"
-                href="<?=$item->url;?>">
-                <?=$item->title;?>
+                class="<?php echo $item->classes[0]? $item->classes[0] : 'fadeLink';?> whiteLink <?menueActive($item->object_id,get_the_ID());?>"
+                href="<?php echo $item->url;?>">
+                <?php echo $item->title;?>
             </a>
         </li>
         <?endforeach;?>

@@ -48,7 +48,7 @@
 
 /*
 @media screen and (min-width: 768px){
-    .single_gallery:nth-of-type(<?=($key+1) + ($index*3);?>) .single_gallery_inner{
-        background-image: url(<?=$galery['thumb'];?>);
+    .single_gallery:nth-of-type(<?php echo ($key+1) + ($index*3);?>) .single_gallery_inner{
+        background-image: url(<?php echo $galery['thumb'];?>);
     }
 }*/

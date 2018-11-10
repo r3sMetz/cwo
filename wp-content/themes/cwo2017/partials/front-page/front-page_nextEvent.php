@@ -26,30 +26,30 @@
 		<div class="row">
 			<div class="col-md-4 gap-mobile-bottom-lg">
 			    <?if(get_field('vereinsintern',$nextEvent)):?>
-				    <img class="front-page_nextEvent_intern gap-bottom-md" src="<?=CWO_SVG_URI;?>/vereinsintern.svg" alt="CWO - Vereinsintern"/>
+				    <img class="front-page_nextEvent_intern gap-bottom-md" src="<?php echo CWO_SVG_URI;?>/vereinsintern.svg" alt="CWO - Vereinsintern"/>
                 <?endif;?>
 				<h3 class="font-heat fontsize-headline gap-bottom-lg"><?the_field('datum',$nextEvent);?></h3>
-				<h3 class="font-heat fontsize-headline-big"><?=get_the_title($nextEvent);?></h3>
+				<h3 class="font-heat fontsize-headline-big"><?php echo get_the_title($nextEvent);?></h3>
 			</div>
 			<div class="col-md-4 gap-mobile-bottom-lg">
 				<ul class="list-unstyled font-heat text-uppercase feature_list fontsize-bigger">
 					<?foreach(cwo_buildList('features',$nextEvent) as $feature):?>
-					    <li><?=$feature;?></li>
+					    <li><?php echo $feature;?></li>
 					<?endforeach;?>
 				</ul>
 			</div>
 			<div class="col-md-4">
 				<ul class="list-unstyled">
 					<?foreach(cwo_buildList('infoblock_1',$nextEvent) as $info):?>
-					    <li><?=$info;?></li>
+					    <li><?php echo $info;?></li>
 					<?endforeach;?>
 				</ul>
 				<ul class="list-unstyled gap-bottom-md">
 					<?foreach(cwo_buildList('infoblock_2',$nextEvent) as $info):?>
-					    <li><?=$info;?></li>
+					    <li><?php echo $info;?></li>
 					<?endforeach;?>
 				</ul>
-				<a href="<?=get_permalink($nextEvent);?>" class="cwo-btn cwo-btn-red fadeLink">mehr erfahren</a>
+				<a href="<?php echo get_permalink($nextEvent);?>" class="cwo-btn cwo-btn-red fadeLink">mehr erfahren</a>
 			</div>
 		</div>
 	</div>
