@@ -8,9 +8,9 @@
         </div>
         <div id="page-events_animation_container">
             <!-- Events Filtered by coming or Past -->
-            <?foreach(cwo_getAllEvents() as $key => $filtered):?>
+            <?php foreach(cwo_getAllEvents() as $key => $filtered):?>
                 <div class="page-events-filter<?php echo $key=="coming"?'':' hidden';?>" data-filter="<?php echo $key;?>">
-                    <?foreach($filtered as $event):?>
+                    <?php foreach($filtered as $event):?>
                     <div class="single_event gap-bottom-lg">
                         <div class="row single_event_content">
                             <!-- Datum -->
@@ -21,15 +21,15 @@
 
                             <!-- Title -->
                             <div class="col-sm-3 col-md-4 pos-rel title-col">
-                                <?if(get_field('vereinsintern',$event->ID)):?>
+                                <?php if(get_field('vereinsintern',$event->ID)):?>
                                     <img src="<?php echo CWO_SVG_URI;?>/vereinsintern.svg" class="vereinsintern_image" alt="CWO - Vereinsintern">
-                                <?endif;?>
+                                <?php endif;?>
                                 <h2 class="font-heat fontsize-bigger"><?php echo get_the_title($event->ID);?></h2>
                             </div>
 
                             <!-- Infoblock -->
                             <div class="col-sm-4 col-md-3 col-lg-4">
-                                <?$the_info = cwo_buildList('infoblock_2',$event->ID);?>
+                                <?php $the_info = cwo_buildList('infoblock_2',$event->ID);?>
                                 <?php echo $the_info[0] ? $the_info[0] : null;?> <br class="hidden-xs"/>
                                 <?php echo $the_info[1] ? $the_info[1] : null;?> <?php echo $the_info[2] ? $the_info[2] : null;?>
                             </div>
@@ -50,9 +50,9 @@
                             </div>
                         </div>
                     </div>
-                    <?endforeach;?>
+                    <?php endforeach;?>
                 </div>
-            <?endforeach;?>
+            <?php endforeach;?>
         </div>
 	</div>
 </main>

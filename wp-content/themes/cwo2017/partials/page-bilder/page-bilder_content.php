@@ -1,8 +1,8 @@
 <main class="container page-bilder_content">
-	<?$gallery = get_field('galerie_bearbeiten');?>
-	<?foreach($gallery as $image):?>
+	<?php $gallery = get_field('galerie_bearbeiten');?>
+	<?php foreach($gallery as $image):?>
 		<img data-source="<?php echo $image['url'];?>" src="<?php echo $image['sizes']['medium_large'];?>" alt="<?php echo $image['name'];?>">
-	<?endforeach;?>
+	<?php endforeach;?>
 </main>
 
 <aside class="page-bilder_content_detail">

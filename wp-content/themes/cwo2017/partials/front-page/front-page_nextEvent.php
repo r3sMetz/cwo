@@ -1,4 +1,4 @@
-<?$nextEvent = cwo_nextEvent(); if($nextEvent):?>
+<?php $nextEvent = cwo_nextEvent(); if($nextEvent):?>
 <div class="front-page_nextEvent bg-std puffer-both-xxl">
 	<div class="container">
 		<div class="row gap-bottom-sm">
@@ -25,33 +25,33 @@
 		<!-- Next Event Data -->
 		<div class="row">
 			<div class="col-md-4 gap-mobile-bottom-lg">
-			    <?if(get_field('vereinsintern',$nextEvent)):?>
+			    <?php if(get_field('vereinsintern',$nextEvent)):?>
 				    <img class="front-page_nextEvent_intern gap-bottom-md" src="<?php echo CWO_SVG_URI;?>/vereinsintern.svg" alt="CWO - Vereinsintern"/>
-                <?endif;?>
-				<h3 class="font-heat fontsize-headline gap-bottom-lg"><?the_field('datum',$nextEvent);?></h3>
+                <?php endif;?>
+				<h3 class="font-heat fontsize-headline gap-bottom-lg"><?php the_field('datum',$nextEvent);?></h3>
 				<h3 class="font-heat fontsize-headline-big"><?php echo get_the_title($nextEvent);?></h3>
 			</div>
 			<div class="col-md-4 gap-mobile-bottom-lg">
 				<ul class="list-unstyled font-heat text-uppercase feature_list fontsize-bigger">
-					<?foreach(cwo_buildList('features',$nextEvent) as $feature):?>
+					<?php foreach(cwo_buildList('features',$nextEvent) as $feature):?>
 					    <li><?php echo $feature;?></li>
-					<?endforeach;?>
+					<?php endforeach;?>
 				</ul>
 			</div>
 			<div class="col-md-4">
 				<ul class="list-unstyled">
-					<?foreach(cwo_buildList('infoblock_1',$nextEvent) as $info):?>
+					<?php foreach(cwo_buildList('infoblock_1',$nextEvent) as $info):?>
 					    <li><?php echo $info;?></li>
-					<?endforeach;?>
+					<?php endforeach;?>
 				</ul>
 				<ul class="list-unstyled gap-bottom-md">
-					<?foreach(cwo_buildList('infoblock_2',$nextEvent) as $info):?>
+					<?php foreach(cwo_buildList('infoblock_2',$nextEvent) as $info):?>
 					    <li><?php echo $info;?></li>
-					<?endforeach;?>
+					<?php endforeach;?>
 				</ul>
 				<a href="<?php echo get_permalink($nextEvent);?>" class="cwo-btn cwo-btn-red fadeLink">mehr erfahren</a>
 			</div>
 		</div>
 	</div>
 </div>
-<?endif;?>
+<?php endif;?>

@@ -9,9 +9,9 @@
 					</ul>
 				</div>
 				<div class="col-md-3">
-				    <?if(get_the_ID() === 282):?>
+				    <?php if(get_the_ID() === 282):?>
 				        <span class="cwo-btn cwo-btn-red cwo_loc_back">Abbrechen</span>
-				    <?else:?>
+				    <?php else:?>
 					    <a href="<?php echo get_permalink(282);?>" class="cwo-btn cwo-btn-red fadeLink">Newsletter abonnieren</a>
 					<?php endif;?>
 				</div>

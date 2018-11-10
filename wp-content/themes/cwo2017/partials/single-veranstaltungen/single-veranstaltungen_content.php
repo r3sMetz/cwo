@@ -1,44 +1,44 @@
 <main class="single-veranstaltungen_content puffer-both-xl">
 	<div class="container">
 		<!-- Bandlogos-->
-		<?if(get_field('alle_bandlogos')):?>
+		<?php if(get_field('alle_bandlogos')):?>
 		<div class="row hidden-xs bandrow">
-            <?foreach(get_field('alle_bandlogos') as $key => $logo):?>
+            <?php foreach(get_field('alle_bandlogos') as $key => $logo):?>
                 <div class="col-sm-4 gap-bottom-md text-center">
-                    <?if(get_field('bandlink'.($key+1))):?>
-                        <a href="<?the_field('bandlink'.($key+1));?>" target="_blank" class="se_bandlink">
-                            <img class="maxImage" src="<?php echo $logo['url'];?>" alt="<?php echo $logo['title'];?>" data-link="<?the_field('bandlink'.($key+1));?>">
+                    <?php if(get_field('bandlink'.($key+1))):?>
+                        <a href="<?php the_field('bandlink'.($key+1));?>" target="_blank" class="se_bandlink">
+                            <img class="maxImage" src="<?php echo $logo['url'];?>" alt="<?php echo $logo['title'];?>" data-link="<?php the_field('bandlink'.($key+1));?>">
                         </a>
-                    <?else:?>
-                        <img class="maxImage" src="<?php echo $logo['url'];?>" alt="<?php echo $logo['title'];?>" data-link="<?the_field('bandlink'.($key+1));?>">
-                    <?endif;?>
+                    <?php else:?>
+                        <img class="maxImage" src="<?php echo $logo['url'];?>" alt="<?php echo $logo['title'];?>" data-link="<?php the_field('bandlink'.($key+1));?>">
+                    <?php endif;?>
                 </div>
-            <?endforeach;?>
+            <?php endforeach;?>
         </div>
-        <?endif;?>
+        <?php endif;?>
 		<!-- Texting Top -->
 		<div class="row">
-		    <?if(get_field('infoblock_1')):?>
+		    <?php if(get_field('infoblock_1')):?>
             <article class="col-sm-4 gap-mobile-bottom-md">
                 <h2 class="font-heat fontsize-headline gap-bottom-sm"><?php the_field('uberschrift_infoblock_1');?></h2>
                 <p>
-                    <?foreach(cwo_buildList('infoblock_1',get_the_ID()) as $listpoint):?>
+                    <?php foreach(cwo_buildList('infoblock_1',get_the_ID()) as $listpoint):?>
                         <?php echo $listpoint;?><br/>
-                    <?endforeach;?>
+                    <?php endforeach;?>
                 </p>
             </article>
-            <?endif;?>
-            <?if(get_field('infoblock_2')):?>
+            <?php endif;?>
+            <?php if(get_field('infoblock_2')):?>
             <article class="col-sm-4">
                 <h2 class="font-heat fontsize-headline gap-bottom-sm"><?php the_field('uberschrift_infoblock2');?></h2>
-               <?foreach(cwo_buildList('infoblock_2',get_the_ID()) as $listpoint):?>
+               <?php foreach(cwo_buildList('infoblock_2',get_the_ID()) as $listpoint):?>
                     <?php echo $listpoint;?><br/>
-                <?endforeach;?>
+                <?php endforeach;?>
             </article>
-            <?endif;?>
+            <?php endif;?>
         </div>
 
-        <?if(get_field('groser_textblock') || get_field('flyer')):?>
+        <?php if(get_field('groser_textblock') || get_field('flyer')):?>
             <!-- Top Line -->
             <div class="row top-line">
                 <div class="col-md-12">
@@ -71,7 +71,7 @@
                     <hr>
                 </div>
             </div>
-        <?endif;?>
+        <?php endif;?>
 
         <!-- Go Back -->
         <aside class="row gap-top-sm">
