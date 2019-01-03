@@ -195,7 +195,7 @@ if (!empty($return_path)) {
                         <tr>
                             <th><?php _e('Dedicated page', 'newsletter') ?></th>
                             <td>
-                                <?php $controls->page('page', __('Unstyled page', 'newsletter')); ?>
+                                <?php $controls->page('page', __('Unstyled page', 'newsletter'), '', true); ?>
                                 <?php
                                 if (empty($controls->data['page'])) {
                                     $controls->button('create', __('Create the page', 'newsletter'));
@@ -238,6 +238,8 @@ if (!empty($return_path)) {
                             </td>
                         </tr>
                     </table>
+                    
+                    <?php do_action('newsletter_panel_main_speed', $controls) ?>
                 </div>
 
 

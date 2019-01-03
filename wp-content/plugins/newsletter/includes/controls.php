@@ -549,7 +549,7 @@ class NewsletterControls {
         $this->select($name, $options);
     }
 
-    function page($name = 'page', $first = null, $language = '') {
+    function page($name = 'page', $first = null, $language = '', $show_id = false) {
         $args = array(
             'post_type' => 'page',
             'posts_per_page' => 1000,
@@ -567,6 +567,9 @@ class NewsletterControls {
             $label = $page->post_title;
             if ($page->post_status != 'publish') {
                 $label .= ' (' . $page->post_status . ')';
+            }
+            if ($show_id) {
+                $label .= ' [' . $page->ID . ']';
             }
             $options[$page->ID] = $label;
         }
@@ -752,7 +755,7 @@ class NewsletterControls {
         echo esc_attr($value);
         echo '"/>';
     }
-
+    
     function hidden($name) {
         $value = $this->get_value($name);
         echo '<input name="options[' . $name . ']" type="hidden" value="';
@@ -1034,6 +1037,11 @@ class NewsletterControls {
             echo '</div>';
         }
     }
+    
+    function lists_checkboxes($name = 'lists')
+    {
+        $this->preferences_group($name);
+    }
 
     /**
      * Creates a set of checkboxes all names $name[] and the preference number as value
@@ -1052,9 +1060,9 @@ class NewsletterControls {
             echo '</div>';
         }
         echo '<div style="clear: both"></div>';
-        echo '<a href="https://www.thenewsletterplugin.com/plugins/newsletter/newsletter-preferences" target="_blank">'
-        . 'Click here to read more about preferences.'
-        . '</a> They can be configured on Subscription Form - Profile fields panel.';
+        echo '<a href="https://www.thenewsletterplugin.com/documentation/newsletter-lists" target="_blank">'
+        . 'Click here to read more about lists.'
+        . '</a>';
         echo '</div>';
     }
 
