@@ -581,7 +581,7 @@ class NewsletterSubscription extends NewsletterModule {
 
         $id = (int) $id;
 
-        $wpdb->update(NEWSLETTER_USERS_TABLE, array('updated' => $time, 'ip' => $ip), array('id' => $id));
+        $wpdb->update(NEWSLETTER_USERS_TABLE, array('updated' => $time, 'ip' => $ip, 'geo'=>0), array('id' => $id));
     }
 
     /**
@@ -695,6 +695,7 @@ class NewsletterSubscription extends NewsletterModule {
         $ip = $this->get_remote_ip();
         $ip = $this->process_ip($ip);
         $user['ip'] = $ip;
+        $user['geo'] = 0;
         $user['status'] = $opt_in == self::OPTIN_SINGLE ? Newsletter::STATUS_CONFIRMED : Newsletter::STATUS_NOT_CONFIRMED;
 
         $user['updated'] = time();
@@ -815,11 +816,16 @@ class NewsletterSubscription extends NewsletterModule {
     }
 
     /**
-     * Send emails during the subscription process. Emails are themes with email.php file.
-     * @global type $newsletter
+     * Sends a service message applying the template.
+     * 
+     * @param TNP_User $user
+     * @param string $subject
+     * @param string $message
      * @return type
      */
-    function mail($to, $subject, $message, $language = '') {
+    function mail($user, $subject, $message) {
+        $language = $this->get_user_language($user);
+        
         $options_template = $this->get_options('template', $language);
 
         $template = trim($options_template['template']);
@@ -831,8 +837,10 @@ class NewsletterSubscription extends NewsletterModule {
         $headers = array('Auto-Submitted' => 'auto-generated');
 
         // Replaces tags from the template
-        $message = $this->replace($message);
-        return Newsletter::instance()->mail($to, $subject, $message, $headers);
+        $message = $this->replace($message, $user);
+        $subject = $this->replace($subject, $user);
+        
+        return Newsletter::instance()->mail($user->email, $subject, $message, $headers);
     }
 
     /**
@@ -901,15 +909,17 @@ class NewsletterSubscription extends NewsletterModule {
         if (!$force && !empty($this->options[$type . '_disabled'])) {
             return true;
         }
+        
+        $language = $this->get_user_language($user);
 
-        $options = $this->get_options('', $this->get_user_language($user));
+        $options = $this->get_options('', $language);
         $message = $options[$type . '_message'];
         if ($user->status == Newsletter::STATUS_NOT_CONFIRMED) {
             $message = $this->add_microdata($message);
         }
         $subject = $options[$type . '_subject'];
-
-        return $this->mail($user->email, $this->replace($subject, $user), $this->replace($message, $user), $this->get_user_language($user));
+        
+        return $this->mail($user, $subject, $message);
     }
 
     /**
@@ -1681,7 +1691,7 @@ class NewsletterSubscription extends NewsletterModule {
 
         $message = apply_filters('newsletter_page_text', '', $message_key, $user);
 
-        $options = $this->get_options('', $this->get_user_language($user));
+        $options = $this->get_options('', $this->get_current_language($user));
 
         if (empty($message)) {
             $message = $options[$message_key . '_text'];

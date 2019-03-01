@@ -1,8 +1,8 @@
 === Newsletter ===
 Tags: newsletter,email,subscription,mass mail,list build,email marketing,direct mailing,automation,automated,mailing list
 Requires at least: 3.4.0
-Tested up to: 5.0.1
-Stable tag: 5.8.5
+Tested up to: 5.0.3
+Stable tag: 5.8.9
 Contributors: satollo,webagile,michael-travan
 
 Add a real newsletter system to your blog. For free. With unlimited newsletters and subscribers.
@@ -121,6 +121,33 @@ Thank you, The Newsletter Team
 3. The Reports extension
 
 == Changelog ==
+
+= 5.8.9 =
+
+* Global constant to block the media resizing
+* Resized thumbnails folder changed to the uploads folder (newsletter/thumbnails subfolder)
+* Fall back on first post gallery image if the featured image is missing
+* Patch to block third party plugins visual editor injection in out pages
+* Fix media selector button on visual composer 
+
+= 5.8.8 =
+
+* Fixed multilanguage text for newsletter page
+* Fixed a profile panel debug notice
+
+= 5.8.7 =
+
+* Tags replacement even on template for messages
+* Fixed profile page labels translation
+* Added text and title color on hero block
+* Added text color on preheader block
+* Fixed giphy options panel
+
+
+= 5.8.6 =
+
+* Improved geolocation support
+* Improved composer image block
 
 = 5.8.5 =
 
