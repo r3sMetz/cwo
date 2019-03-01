@@ -6,7 +6,7 @@
 </main>
 
 <aside class="page-bilder_content_detail">
-    <span class="close cwo-btn cwo-btn-red">Schliessen</span>
+    <span class="close cwo-btn cwo-btn-red">Schließen</span>
     <div class="loading">
         <img src="<?php echo get_theme_file_uri('/assets/img/svg/cap.svg');?>" alt="CWO - Horst Cap">
     </div>
