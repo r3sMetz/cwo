@@ -1,5 +1,4 @@
 .cwo_eventheader{
-  height: 250px;
   padding-top: 210px;
 
   .header_vereinsintern{
@@ -8,13 +7,22 @@
   }
 
   @include breakpoint($screen-sm){
-    height: 350px;
     padding-top: 270px;
   }
 
   @include breakpoint{
     padding-top: 48vh;
-    height: 60vh;
     background-position: bottom;
+  }
+}
+
+body:not(.single-veranstaltungen) .cwo_eventheader{
+  height: 250px;
+  @include breakpoint($screen-sm){
+    height: 350px;
+  }
+
+  @include breakpoint{
+    height: 60vh;
   }
 }
